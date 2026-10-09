@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12151c" />
+    <title>Games · The Curious Seekers</title>
+    <meta name="description" content="Games from The Curious Seekers: stories to play your way into the way of Jesus. Free, in your browser." />
+    <meta property="og:title" content="Games · The Curious Seekers" />
+    <meta property="og:description" content="Stories to play your way into the way of Jesus. Free, in your browser." />
+    <meta property="og:image" content="https://games.thecuriousseekers.com/images/pilgrim-way.jpg" />
+    <link rel="icon" href="images/church-mind.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { --bg: #12151c; --panel: #1c212b; --line: #2c3340; --ink: #f1ece2; --soft: #aab1bf; --gold: #e9c47a; --ember: #d9663a; }
+      * { box-sizing: border-box; }
+      html { background: var(--bg); }
+      body {
+        margin: 0; color: var(--ink); font: 400 17px/1.55 Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        background: radial-gradient(1200px 520px at 50% -140px, #2b2f45 0%, rgba(43, 47, 69, 0) 70%) no-repeat, var(--bg);
+        min-height: 100vh; display: flex; flex-direction: column;
+      }
+      a { color: inherit; }
+      header { text-align: center; padding: 64px 20px 34px; }
+      .kicker { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.74rem; font-weight: 600; color: var(--gold); text-decoration: none; }
+      .kicker:hover { text-decoration: underline; }
+      h1 { font: 700 clamp(2.3rem, 6vw, 3.5rem)/1.1 'Playfair Display', Georgia, serif; margin: 14px 0 12px; }
+      .lede { color: var(--soft); max-width: 34em; margin: 0 auto; }
+      main { width: min(1080px, 100%); margin: 0 auto; padding: 8px 20px 56px; flex: 1; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; }
+      .card {
+        display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+        overflow: hidden; text-decoration: none; transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      }
+      a.card:hover, a.card:focus-visible { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45); outline: none; }
+      .art { aspect-ratio: 16 / 9; background: #0c0e13 center / cover no-repeat; }
+      .body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+      .card h2 { font: 700 1.55rem/1.2 'Playfair Display', Georgia, serif; margin: 0; }
+      .tag { color: var(--gold); font-weight: 500; margin: -4px 0 0; }
+      .about { color: var(--soft); margin: 0; font-size: 0.96rem; }
+      .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+      .pill { font-size: 0.78rem; font-weight: 500; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); }
+      .play {
+        margin-top: auto; align-self: flex-start; background: var(--gold); color: #1b1408; font-weight: 600;
+        padding: 10px 22px; border-radius: 999px; font-size: 0.95rem;
+      }
+      .soon { border-style: dashed; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; color: var(--soft); min-height: 220px; }
+      .soon strong { display: block; color: var(--ink); font: 700 1.25rem 'Playfair Display', Georgia, serif; margin-bottom: 6px; }
+      footer { text-align: center; color: var(--soft); font-size: 0.85rem; padding: 26px 20px 40px; border-top: 1px solid var(--line); }
+      footer a { color: var(--gold); }
+      @media (prefers-reduced-motion: reduce) { .card { transition: none; } a.card:hover { transform: none; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="kicker" href="https://www.thecuriousseekers.com/">The Curious Seekers</a>
+      <h1>Games</h1>
+      <p class="lede">Stories you play your way through. Free, nothing to install. Pick one.</p>
+    </header>
+    <main>
+      <div class="grid" id="games">
+        <noscript>
+          <a class="card" href="church-mind/"><div class="body"><h2>Church Mind</h2><span class="play">Play</span></div></a>
+          <a class="card" href="pilgrims-progress/"><div class="body"><h2>The Unburdened Road</h2><span class="play">Play</span></div></a>
+        </noscript>
+      </div>
+    </main>
+    <footer>
+      Made by <a href="https://www.thecuriousseekers.com/">The Curious Seekers</a> · Building biblical intelligence, one seeker at a time.
+    </footer>
+    <script src="games.js"></script>
+    <script>
+      const PLAYS = { anywhere: 'Phone, tablet or computer', computer: 'Computer with a keyboard' };
+      const grid = document.getElementById('games');
+      const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
+      for (const g of window.GAMES || []) {
+        const card = el('a', 'card');
+        card.href = g.link;
+        const art = el('div', 'art');
+        art.style.backgroundImage = `url("${g.image}")`;
+        art.setAttribute('role', 'img');
+        art.setAttribute('aria-label', g.title);
+        const body = el('div', 'body');
+        const meta = el('div', 'meta');
+        meta.append(el('span', 'pill', PLAYS[g.plays] || g.plays), el('span', 'pill', g.length));
+        body.append(el('h2', '', g.title), el('p', 'tag', g.tagline), el('p', 'about', g.about), meta, el('span', 'play', 'Play'));
+        card.append(art, body);
+        grid.append(card);
+      }
+      const soon = el('div', 'card soon'), inner = el('div');
+      inner.append(el('strong', '', 'More on the way'), 'New games will appear here as they are finished.');
+      soon.append(inner);
+      grid.append(soon);
+    </script>
+  </body>
+</html>
