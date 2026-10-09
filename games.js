@@ -19,10 +19,10 @@ window.GAMES = [
     title: "The Unburdened Road",
     tagline: "A Pilgrim's Progress adventure.",
     about:
-      "Leave the City of Destruction with a burden on your back. Cross the Slough of Despond, knock at the Wicket Gate, and climb to the Cross. A 3D retelling of John Bunyan's dream; this is the first part.",
+      "Leave the City of Destruction with a burden on your back. Cross the Slough of Despond, knock at the Wicket Gate, and climb to the Cross. A 3D retelling of John Bunyan's dream, fully voiced; this is the first part.",
     image: "images/pilgrim-way.jpg",
     link: "pilgrims-progress/",
-    plays: "computer",
+    plays: "anywhere",
     length: "About 25 minutes",
   },
 ];
