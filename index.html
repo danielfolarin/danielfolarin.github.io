@@ -52,6 +52,8 @@
       footer a { color: var(--gold); }
       @media (prefers-reduced-motion: reduce) { .card { transition: none; } a.card:hover { transform: none; } }
     </style>
+    <!-- Anonymous visit counting (Umami): no cookies, no names. Only counts on the live site. -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="4bedbe1a-0561-4c58-9766-b02b2c00c4c4" data-domains="games.thecuriousseekers.com"></script>
   </head>
   <body>
     <header>
@@ -69,6 +71,7 @@
     </main>
     <footer>
       Made by <a href="https://www.thecuriousseekers.com/">The Curious Seekers</a> · Building biblical intelligence, one seeker at a time.
+      <br />We count visits anonymously: no cookies, no names.
     </footer>
     <script src="games.js"></script>
     <script>
@@ -78,6 +81,8 @@
       for (const g of window.GAMES || []) {
         const card = el('a', 'card');
         card.href = g.link;
+        card.dataset.umamiEvent = 'game-opened';
+        card.dataset.umamiEventGame = g.title;
         const art = el('div', 'art');
         art.style.backgroundImage = `url("${g.image}")`;
         art.setAttribute('role', 'img');
