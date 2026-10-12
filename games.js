@@ -9,11 +9,11 @@ window.GAMES = [
     title: "Church Mind",
     tagline: "See life through the way of Jesus.",
     about:
-      "A story game set in a living neighbourhood. Work, rent, friends and faith all want the same four days. What you do on Monday changes what people say on Thursday.",
+      "Choose who you are, then live a week in a neighbourhood, a university or an office, or a whole life in a home of your own. Work, money, friends and faith all want the same few days, and how it ends is up to you.",
     image: "images/church-mind.png",
     link: "church-mind/",
     plays: "anywhere",
-    length: "A week in Alder Row",
+    length: "Four worlds, fully voiced",
   },
   {
     title: "The Unburdened Road",
