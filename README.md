@@ -21,3 +21,9 @@ appears as a folder under the same address:
 
 So a new game needs only its own repository with Pages on, plus a card here.
 There is no build step for this page: GitHub Pages serves the files as they are.
+
+## Player counts
+
+`games.thecuriousseekers.com/stats` is a short address for the owner. It forwards to
+the private Umami dashboard (sign-in needed), where visits and play events for the
+hub and every game are counted. The page is `stats/index.html`.
