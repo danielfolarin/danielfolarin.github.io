@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#2b2350">
+  <meta name="description" content="Ninle: Adventure of Life Kids — a gentle, joyful adventure game for children.">
+  <title>Ninle: Adventure of Life Kids</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Adventure world"></canvas>
+
+  <!-- ============ TITLE SCREEN ============ -->
+  <section id="screen-title" class="screen active" aria-label="Title screen">
+    <div class="title-card">
+      <div class="logo">
+        <span class="logo-glow" aria-hidden="true"></span>
+        <h1>Ninle</h1>
+        <p class="subtitle">Adventure of Life Kids</p>
+      </div>
+      <p class="level-name"><span aria-hidden="true">🏮</span> Adventure 1: The Lantern Trail</p>
+
+      <div class="avatar-pick">
+        <p class="pick-label" id="pickLabel">Choose your explorer</p>
+        <div id="avatars" class="avatars" role="radiogroup" aria-labelledby="pickLabel"></div>
+      </div>
+
+      <button id="btnStart" class="btn btn-big btn-go">Start Adventure <span aria-hidden="true">✨</span></button>
+
+      <div class="title-row">
+        <button id="btnBookTitle" class="btn btn-small">Sticker Book</button>
+        <button id="btnSoundTitle" class="btn btn-small toggle" aria-pressed="true">Sound: On</button>
+        <button id="btnReadTitle" class="btn btn-small toggle" aria-pressed="false">Read to me: Off</button>
+      </div>
+      <p class="safe-note">No accounts · No ads · No chat · Progress stays on this device</p>
+    </div>
+  </section>
+
+  <!-- ============ HUD ============ -->
+  <div id="hud" class="hidden">
+    <div class="hud-left">
+      <div class="hud-pill" id="sparkBox" aria-label="Sparks collected">
+        <span class="spark-slot" aria-hidden="true"></span>
+        <span class="spark-slot" aria-hidden="true"></span>
+        <span class="spark-slot" aria-hidden="true"></span>
+        <span class="sr-only" id="sparkText">0 of 3 sparks</span>
+      </div>
+      <div class="hud-pill" id="starBox"><span class="star-ico" aria-hidden="true">★</span> <span id="starCount">0/6</span></div>
+    </div>
+    <div id="goal" class="goal" role="status" aria-live="polite"></div>
+    <div class="hud-right">
+      <button id="btnHint" class="icon-btn" aria-label="Ask Ninle for help" title="Help (H)">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="9" fill="#ffe36b"/><circle cx="20" cy="22" r="14" fill="#ffe36b" opacity=".25"/><ellipse cx="13" cy="12" rx="6" ry="4" fill="#dff3ff" stroke="#3b2a3f" stroke-width="1.5"/><ellipse cx="27" cy="12" rx="6" ry="4" fill="#dff3ff" stroke="#3b2a3f" stroke-width="1.5"/><text x="20" y="27" text-anchor="middle" font-size="13" font-weight="900" fill="#3b2a3f">?</text></svg>
+      </button>
+      <button id="btnSound" class="icon-btn" aria-label="Sound on" aria-pressed="true" title="Sound (M)">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 16h6l8-6v20l-8-6H8z" fill="#3b2a3f"/><g id="soundWaves" stroke="#3b2a3f" stroke-width="3" fill="none" stroke-linecap="round"><path d="M26 15c2 3 2 7 0 10"/><path d="M30 12c4 5 4 11 0 16"/></g><path id="soundOff" d="M26 14l10 12M36 14L26 26" stroke="#d6455b" stroke-width="3.5" stroke-linecap="round"/></svg>
+      </button>
+      <button id="btnPause" class="icon-btn" aria-label="Pause" title="Pause (P or Esc)">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="11" y="10" width="6" height="20" rx="2" fill="#3b2a3f"/><rect x="23" y="10" width="6" height="20" rx="2" fill="#3b2a3f"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ TOUCH CONTROLS ============ -->
+  <div id="controls" class="hidden">
+    <div id="stickZone" aria-hidden="true">
+      <div id="stickBase"><div id="stickKnob"></div></div>
+    </div>
+    <div id="runPad" class="run-pad">
+      <button id="btnLeft" class="run-btn" aria-label="Run left">◀</button>
+      <button id="btnRight" class="run-btn" aria-label="Run right">▶</button>
+    </div>
+    <button id="btnAction" class="action-btn" aria-label="Talk or look">
+      <span class="action-ico" id="actionIco" aria-hidden="true">✋</span>
+      <span class="action-label" id="actionLabel">Talk</span>
+      <span class="keycap desktop-only" aria-hidden="true">Space</span>
+    </button>
+  </div>
+
+  <div id="controlsHint" class="controls-hint hidden" role="note">
+    <div class="ch-item">
+      <span class="ch-pic touch-only" aria-hidden="true"><span class="mini-stick"><span></span></span></span>
+      <span class="ch-pic desktop-only keys" aria-hidden="true"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></span>
+      <span>Move</span>
+    </div>
+    <div class="ch-item">
+      <span class="ch-pic" aria-hidden="true"><span class="mini-hand">✋</span></span>
+      <span>Talk</span>
+    </div>
+    <div class="ch-item">
+      <span class="ch-pic" aria-hidden="true"><span class="mini-spark"></span></span>
+      <span>Find 3 sparks</span>
+    </div>
+  </div>
+
+  <!-- ============ DIALOGUE ============ -->
+  <div id="dialogue" class="dialogue hidden" role="dialog" aria-live="polite" aria-label="Conversation">
+    <div class="dlg-portrait"><canvas id="portrait" width="120" height="120"></canvas></div>
+    <div class="dlg-body">
+      <div class="dlg-name" id="dlgName"></div>
+      <p class="dlg-text" id="dlgText"></p>
+      <div class="dlg-choices" id="dlgChoices"></div>
+    </div>
+    <div class="dlg-actions">
+      <button id="dlgSpeak" class="icon-btn small" aria-label="Read this out loud" title="Read out loud">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 16h6l8-6v20l-8-6H8z" fill="#3b2a3f"/><path d="M26 15c2 3 2 7 0 10M30 12c4 5 4 11 0 16" stroke="#3b2a3f" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <button id="dlgNext" class="btn btn-next" aria-label="Next">Next <span aria-hidden="true">▶</span></button>
+    </div>
+  </div>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <!-- ============ PAUSE ============ -->
+  <div id="pause" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pauseTitle">
+    <div class="panel">
+      <h2 id="pauseTitle">Paused</h2>
+      <button class="btn btn-big btn-go" id="btnResume">Keep Playing</button>
+      <div class="grid2">
+        <button class="btn" id="btnRestart">Start Over</button>
+        <button class="btn" id="btnBook">Sticker Book</button>
+        <button class="btn toggle" id="btnSoundP" aria-pressed="true">Sound: On</button>
+        <button class="btn toggle" id="btnReadP" aria-pressed="false">Read to me: Off</button>
+        <button class="btn toggle" id="btnCalm" aria-pressed="false">Calm motion: Off</button>
+        <button class="btn" id="btnHome">Title Screen</button>
+      </div>
+      <button class="btn hidden" id="btnLeaveRun" style="width:100%;margin-top:10px">Leave the tunnel</button>
+      <p class="tiny">Keys: Arrows / WASD to move · Space to talk · H for help · P to pause</p>
+    </div>
+  </div>
+
+  <div id="confirm" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="panel">
+      <h2 id="confirmTitle">Start the Lantern Trail again?</h2>
+      <p>Your stickers stay safe in your Sticker Book.</p>
+      <div class="grid2">
+        <button class="btn btn-go" id="btnConfirmYes">Yes, start again</button>
+        <button class="btn" id="btnConfirmNo">No, keep playing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ STORY / REFLECTION ============ -->
+  <div id="reflection" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="storyTitle">
+    <div class="panel story">
+      <div class="story-art" id="storyArt"></div>
+      <p class="story-ref" id="storyRef"></p>
+      <h2 id="storyTitle"></h2>
+      <div class="story-text" id="storyText"></div>
+      <div class="story-nav">
+        <button class="btn" id="storyBack">◀ Back</button>
+        <span class="dots" id="storyDots" aria-hidden="true"></span>
+        <button class="icon-btn small" id="storySpeak" aria-label="Read this page out loud">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 16h6l8-6v20l-8-6H8z" fill="#3b2a3f"/><path d="M26 15c2 3 2 7 0 10M30 12c4 5 4 11 0 16" stroke="#3b2a3f" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <button class="btn btn-go" id="storyNext">Next ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ENDING ============ -->
+  <section id="screen-end" class="screen" aria-label="Celebration">
+    <div class="end-card">
+      <p class="end-kicker">Hooray!</p>
+      <h2>You lit the Lantern Trail!</h2>
+      <p class="end-sub">The whole valley is glowing — and a new place has appeared: the <strong>Starlight Hills</strong>.</p>
+      <div class="rewards" id="rewards"></div>
+      <p class="end-secret" id="endSecret"></p>
+      <div class="end-buttons">
+        <button class="btn btn-big btn-go" id="btnPlayAgain">Play Again</button>
+        <button class="btn" id="btnExplore">Keep Exploring</button>
+        <button class="btn" id="btnBookEnd">Sticker Book</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STICKER BOOK ============ -->
+  <div id="book" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+    <div class="panel book">
+      <h2 id="bookTitle">My Sticker Book</h2>
+      <div class="sticker-grid" id="stickerGrid"></div>
+      <div class="costumes" id="costumes"></div>
+      <button class="btn btn-go" id="btnBookClose">Close</button>
+    </div>
+  </div>
+
+  <div id="fade" aria-hidden="true"></div>
+
+  <script src="js/core/util.js"></script>
+  <script src="js/core/save.js"></script>
+  <script src="js/core/audio.js"></script>
+  <script src="js/core/speech.js"></script>
+  <script src="js/core/input.js"></script>
+  <script src="js/art/characters.js"></script>
+  <script src="js/art/world-art.js"></script>
+  <script src="js/art/run-art.js"></script>
+  <script src="js/content/characters.js"></script>
+  <script src="js/content/stickers.js"></script>
+  <script src="js/content/story-art.js"></script>
+  <script src="js/levels/lantern-trail.js"></script>
+  <script src="js/levels/hollow-run.js"></script>
+  <script src="js/engine/world.js"></script>
+  <script src="js/engine/story.js"></script>
+  <script src="js/engine/platformer.js"></script>
+  <script src="js/engine/game.js"></script>
+  <script src="js/ui/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
