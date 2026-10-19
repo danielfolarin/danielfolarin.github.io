@@ -16,8 +16,8 @@ window.GAMES = [
     length: "Four worlds, fully voiced",
   },
   {
-    title: "The Unburdened Road",
-    tagline: "A Pilgrim's Progress adventure.",
+    title: "The Pilgrim's Progress (The Unburdened Road)",
+    tagline: "John Bunyan's dream, to walk through yourself.",
     about:
       "Leave the City of Destruction with a burden on your back. Cross the Slough of Despond, knock at the Wicket Gate, and climb to the Cross. A 3D retelling of John Bunyan's dream, fully voiced; this is the first part.",
     image: "images/pilgrim-way.jpg",
