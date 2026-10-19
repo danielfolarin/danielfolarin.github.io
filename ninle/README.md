@@ -1,4 +1,4 @@
-# Ninle: Adventure of Life Kids
+# Ninle Bible Adventure Game
 
 A gentle, colourful adventure game for children aged 6–12. Explore Lantern Valley with
 Ninle the lantern-firefly, help friends, find secrets, and light up the Lantern Trail.

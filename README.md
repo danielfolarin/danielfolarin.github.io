@@ -21,8 +21,8 @@ appears as a folder under the same address:
 | `ninle/` folder in this repository | `games.thecuriousseekers.com/ninle/` |
 
 So a new game needs only its own repository with Pages on, plus a card here.
-A small game can also live in a folder of this repository, like `ninle/` (Ninle: Adventure
-of Life Kids). Its own README explains how it is built.
+A small game can also live in a folder of this repository, like `ninle/` (Ninle Bible
+Adventure Game). Its own README explains how it is built.
 There is no build step for this page: GitHub Pages serves the files as they are.
 
 ## Player counts

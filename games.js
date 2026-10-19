@@ -26,7 +26,7 @@ window.GAMES = [
     length: "About 25 minutes",
   },
   {
-    title: "Ninle: Adventure of Life Kids",
+    title: "Ninle Bible Adventure Game",
     tagline: "A kindness adventure for children aged 6 to 12.",
     about:
       "Help Ninle the lantern-firefly light up Lantern Valley again. Stop for a friend hurt on the road, welcome someone left out, help a fox be brave and tell the truth, then run and jump through the Temptation Tunnel. It ends with Jesus' story of the Good Samaritan.",
