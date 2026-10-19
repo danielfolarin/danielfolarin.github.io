@@ -72,7 +72,9 @@
   function stop() {
     if (current) {
       current.pause();
-      current.src = '';
+      // Detach the file without triggering a media error event.
+      current.removeAttribute('src');
+      current.load();
       current = null;
     }
   }
