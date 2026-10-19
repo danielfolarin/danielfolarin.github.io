@@ -35,4 +35,14 @@ window.GAMES = [
     plays: "anywhere",
     length: "Ages 6–12 · about 20 minutes",
   },
+  {
+    title: "Wayfinder",
+    tagline: "A journey through life with God, for hard seasons.",
+    about:
+      "Say what you're carrying, then walk one of eight stories from Scripture: Elijah under the juniper tree, Naomi on the road home, Peter at breakfast on the shore, and more. Explore, reflect, read the passage in context, and leave with one wise next step. For older teens and adults.",
+    image: "images/wayfinder.jpg",
+    link: "wayfinder/",
+    plays: "anywhere",
+    length: "Eight journeys · about 10 minutes each",
+  },
 ];

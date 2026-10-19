@@ -1,0 +1,34 @@
+{
+  "_help": "Fish Audio voices for each speaker. Each id is the code at the end of the voice's page address on fish.audio (https://fish.audio/m/<id>). All are Fish Audio's own official voices, the same family used in Church Mind and The Pilgrim's Progress. 'page' (story pages read aloud) uses the narrator's voice if left empty. Your API key goes in the FISH_API_KEY environment variable, never in this file. 's2.1-pro-free' is Fish Audio's free developer tier, as in the other games.",
+  "model": "s2.1-pro-free",
+  "mp3_bitrate": 128,
+  "language": "en",
+  "speed": { "default": 0.95, "hanan": 0.92, "nathan": 0.92, "note": 0.95 },
+  "voices": {
+    "narrator": "fbc1029c018041d4b17f2c1e57222dff",
+    "page": "",
+    "note": "933563129e564b19a115bedd57b7406a",
+    "hanan": "8634617958764b539e0cdd5eb6c7723e",
+    "abiel": "f1c025d3f1ce4018a26b47948c1e172b",
+    "miri": "41db1fc3c3624332bec9997ff3d3d353",
+    "sefa": "1258154bb41540c7b9dc0d10cd6704bf",
+    "iry": "6d7a45828f6a432c9233cd93bb93e5be",
+    "yona": "705690224f264386b87fb598083ab022",
+    "tavi": "f983ef416c87413f986e1a5a000c385e",
+    "nathan": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+    "ziva": "c70cfb98867a4bfb9ae20d2401257b92"
+  },
+  "_who": {
+    "narrator": "Richard: British storyteller (the Dreamer in The Pilgrim's Progress). Also reads the story pages",
+    "note": "Sarah: soft, intimate, sincere. Wayfinder's gentle notes, including safety notes",
+    "hanan": "Abel: warm man, slowed a little. Elijah journey's fellow traveller",
+    "abiel": "Hollis: warm, natural man. Gideon journey's farmer",
+    "miri": "Maeve: warm British woman. Naomi journey's widow",
+    "sefa": "Amara: Nigerian English woman, clear and confident. Hagar journey's spring keeper",
+    "iry": "Chidi: Nigerian English man, clear and warm. Joseph journey's fellow prisoner",
+    "yona": "Megan: London woman, warm and plain-spoken. Peter journey's net mender",
+    "tavi": "Miles: relaxed young man. David journey's court musician",
+    "nathan": "Jordan: older man, measured and assured. Nathan the prophet",
+    "ziva": "Delia: confident woman. Samson journey's vineyard keeper"
+  }
+}

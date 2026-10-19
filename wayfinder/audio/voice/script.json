@@ -1,0 +1,2984 @@
+[
+  {
+    "id": "4ce218d9",
+    "speaker": "narrator",
+    "text": "Evening in the wilderness. Wind moves through the scrub. You’ve been walking a long time — long enough that you’ve stopped noticing how tired you are.",
+    "journey": "elijah",
+    "where": "road:intro"
+  },
+  {
+    "id": "9f9ee0e6",
+    "speaker": "narrator",
+    "text": "Your pack is heavier than it looks. You’ve carried it so long you hardly notice the weight anymore.",
+    "journey": "elijah",
+    "where": "road:pack"
+  },
+  {
+    "id": "be879bbe",
+    "speaker": "narrator",
+    "text": "If you opened it, what might be weighing the most?",
+    "journey": "elijah",
+    "where": "road:pack"
+  },
+  {
+    "id": "5b70e9e4",
+    "speaker": "narrator",
+    "text": "You don’t need to sort it all out here. For now, it’s enough to notice it. You lift the pack back onto your shoulders.",
+    "journey": "elijah",
+    "where": "road:pack"
+  },
+  {
+    "id": "da07dceb",
+    "speaker": "narrator",
+    "text": "Still heavy. Still yours to carry for now — but you don’t have to carry it alone.",
+    "journey": "elijah",
+    "where": "road:pack:again"
+  },
+  {
+    "id": "87e966d8",
+    "speaker": "page",
+    "text": "Alone into the wilderness. And when he saw that, he arose, and went for his life, and came to Beersheba, which belongeth to Judah, and left his servant there. After Jezebel’s threat, Elijah ran for his life to Beersheba, at the southern edge of Judah. He left his servant there and went on alone, a day’s journey into the wilderness. Exhaustion and fear often come with withdrawal. Elijah left behind the one person travelling with him. If you have gone quiet with the people closest to you, you’re not unusual — and you’re not beyond reach.",
+    "journey": "elijah",
+    "where": "road:page-beersheba"
+  },
+  {
+    "id": "1394a5f8",
+    "speaker": "narrator",
+    "text": "Someone stacked these stones to mark the way for travellers who would come after them. You add a stone of your own. A small light catches between the cracks.",
+    "journey": "elijah",
+    "where": "road:cairn-road"
+  },
+  {
+    "id": "a5d606f7",
+    "speaker": "narrator",
+    "text": "The little light is still burning. Someone else will see it after you.",
+    "journey": "elijah",
+    "where": "road:cairn-road:again"
+  },
+  {
+    "id": "df823a96",
+    "speaker": "narrator",
+    "text": "Even here, something is blooming — small and pale, on a thornbush in dry ground. You don’t have to feel better to notice it.",
+    "journey": "elijah",
+    "where": "road:bloom"
+  },
+  {
+    "id": "94039b36",
+    "speaker": "narrator",
+    "text": "The heat of the day lingers. There’s no town in sight — only sand, stones, and one shrub with pale blossoms casting a thin shade.",
+    "journey": "elijah",
+    "where": "juniper:intro"
+  },
+  {
+    "id": "03edf3ae",
+    "speaker": "narrator",
+    "text": "Its shade isn’t much. It’s enough to sit down. You let the pack slide off your shoulders.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "64f157ed",
+    "speaker": "page",
+    "text": "It is enough. But he himself went a day’s journey into the wilderness, and came and sat down under a juniper tree: and he requested for himself that he might die; and said, It is enough; now, O LORD, take away my life; for I am not better than my fathers. Elijah sat down under a desert shrub and asked God to take his life. He said he was no better than those who had gone before him. Scripture doesn’t hide Elijah’s darkest words, and he speaks them to God. God’s response, as the story goes on, is not a rebuke. (“Juniper” is the older English rendering; most modern translations say “broom tree”, a desert shrub.)",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "b962e399",
+    "speaker": "narrator",
+    "text": "Have you ever felt something like “It is enough”?",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "75b9bb34",
+    "speaker": "note",
+    "text": "Thank you for being honest. Tiredness like this is real, and it matters.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "fa44e45c",
+    "speaker": "narrator",
+    "text": "Elijah’s words went as far as wishing to die. If yours have gone there too, please don’t carry that alone. Are you safe right now?",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "c45a9bb8",
+    "speaker": "note",
+    "text": "That’s okay. Support is always one tap away — the “Support” button at the top of the screen.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "e5fbbcb8",
+    "speaker": "narrator",
+    "text": "You lie down in the thin shade and close your eyes.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "c3757b89",
+    "speaker": "hanan",
+    "text": "Wake up, friend. There’s bread on the coals here, and water. Get up and eat.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "92dcb7eb",
+    "speaker": "narrator",
+    "text": "In Elijah’s story, an angel woke him with a touch and the words “Arise and eat.” On your road, it’s a fellow traveller — an older man named Hanan — who has kept a small fire going.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "0d913ba3",
+    "speaker": "page",
+    "text": "Arise and eat. And as he lay and slept under a juniper tree, behold, then an angel touched him, and said unto him, Arise and eat. And he looked, and, behold, there was a cake baken on the coals, and a cruse of water at his head. And he did eat and drink, and laid him down again. While Elijah slept, an angel touched him and told him to get up and eat. There was bread baked on hot stones and a jar of water. He ate, drank, and lay down again. Before any conversation about what happened, God’s care comes as sleep, food, water, and a gentle touch.",
+    "journey": "elijah",
+    "where": "juniper:tree"
+  },
+  {
+    "id": "e61b3777",
+    "speaker": "narrator",
+    "text": "The shade is waiting. Hanan thinks you should rest again — you could speak with him.",
+    "journey": "elijah",
+    "where": "juniper:tree:again"
+  },
+  {
+    "id": "fa3c7011",
+    "speaker": "narrator",
+    "text": "The shade will still be here. First, there’s bread and water nearby.",
+    "journey": "elijah",
+    "where": "juniper:tree:again"
+  },
+  {
+    "id": "95c69659",
+    "speaker": "narrator",
+    "text": "The shade is still here when you need it.",
+    "journey": "elijah",
+    "where": "juniper:tree:again"
+  },
+  {
+    "id": "476e91c7",
+    "speaker": "narrator",
+    "text": "Cool water. You hadn’t realised how thirsty you were. You drink slowly.",
+    "journey": "elijah",
+    "where": "juniper:jar"
+  },
+  {
+    "id": "5d770d04",
+    "speaker": "narrator",
+    "text": "There’s still water in the jar. Nobody is rationing it.",
+    "journey": "elijah",
+    "where": "juniper:jar:again"
+  },
+  {
+    "id": "fe1ba5db",
+    "speaker": "narrator",
+    "text": "Warm, plain bread, baked on hot stones. You eat. It’s better than you expected — or maybe you were hungrier than you knew.",
+    "journey": "elijah",
+    "where": "juniper:coals"
+  },
+  {
+    "id": "5f915d1f",
+    "speaker": "narrator",
+    "text": "The coals are still warm. There’s more if you want it.",
+    "journey": "elijah",
+    "where": "juniper:coals:again"
+  },
+  {
+    "id": "95371830",
+    "speaker": "hanan",
+    "text": "Eat first. Questions can wait.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "5a5eaf13",
+    "speaker": "hanan",
+    "text": "Have some water, too. The jar is by the tree.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "231d3e7a",
+    "speaker": "hanan",
+    "text": "Hanan pokes at the coals. “Ask me anything you like.”",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "39077946",
+    "speaker": "hanan",
+    "text": "Because the road is long, and nobody walks it well on an empty stomach. Besides — someone did this for me once.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "a59b51d0",
+    "speaker": "hanan",
+    "text": "Bread isn’t a prize. It’s bread. You’re hungry, so you eat. In the old story, Elijah wasn’t asked to earn his meal — or to explain himself first.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "824218d4",
+    "speaker": "hanan",
+    "text": "Look at the story. Before anything else, Elijah was given sleep, food, and water — twice. Caring for your body isn’t a lack of faith. It can be part of trusting God.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "4f9a465a",
+    "speaker": "hanan",
+    "text": "Maybe. But I found you asleep under a bush in the middle of the wilderness. You don’t have to be fine with me.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "ef2aa1ca",
+    "speaker": "hanan",
+    "text": "“Now — rest again. In the story, he ate, drank, and lay down again. Then care came a second time.”",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "f903f251",
+    "speaker": "narrator",
+    "text": "You lie back down. Hanan banks the fire. Nobody needs anything from you for a while.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "34d84352",
+    "speaker": "page",
+    "text": "The journey is too great. And the angel of the LORD came again the second time, and touched him, and said, Arise and eat; because the journey is too great for thee. The angel came a second time with the same care, and named the truth: the journey ahead was too much for Elijah on his own. Strengthened, he travelled forty days and nights to Horeb. Care was given twice, without impatience. “Too great for thee” isn’t an accusation of weakness. It’s simply honest.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "b7ce871b",
+    "speaker": "hanan",
+    "text": "The road ahead is too much for you on your own. That’s not failure. It’s just true. Eat a little more — then, if you’ll have me, I’ll walk with you for a while.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "5453c3a4",
+    "speaker": "hanan",
+    "text": "Take your time. I’ll be here.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "902a3b3e",
+    "speaker": "hanan",
+    "text": "Ready when you are. The path goes on to the east.",
+    "journey": "elijah",
+    "where": "juniper:hanan"
+  },
+  {
+    "id": "bb699ee3",
+    "speaker": "narrator",
+    "text": "In the strength of that food, Elijah travelled forty days and forty nights. Your road climbs into the mountains. Night is falling, and the far end of the pass is too dark to see.",
+    "journey": "elijah",
+    "where": "pass:intro"
+  },
+  {
+    "id": "a7f4443c",
+    "speaker": "hanan",
+    "text": "Travellers leave waymarks along here. Light each one and the path ahead will show itself — one stretch at a time.",
+    "journey": "elijah",
+    "where": "pass:intro"
+  },
+  {
+    "id": "0157dacc",
+    "speaker": "hanan",
+    "text": "Hanan walks beside you, steady and unhurried.",
+    "journey": "elijah",
+    "where": "pass:hanan-walk"
+  },
+  {
+    "id": "ede2256c",
+    "speaker": "hanan",
+    "text": "The text says forty days and nights of walking just to reach Horeb. And when he got there, he still had hard questions. Healing that takes time isn’t a sign that God has stopped caring.",
+    "journey": "elijah",
+    "where": "pass:hanan-walk"
+  },
+  {
+    "id": "9eaec525",
+    "speaker": "hanan",
+    "text": "More than I’d like. I’ve learned to say it out loud to a few people I trust — and to my doctor, once. That helped more than pretending.",
+    "journey": "elijah",
+    "where": "pass:hanan-walk"
+  },
+  {
+    "id": "b916dca3",
+    "speaker": "hanan",
+    "text": "Elijah was one of the great prophets, and he came apart. Being tired is human. Jesus himself slept in a boat during a storm (Mark 4:38), and he told his friends to come away to a quiet place and rest a while (Mark 6:31).",
+    "journey": "elijah",
+    "where": "pass:hanan-walk"
+  },
+  {
+    "id": "93fcbb2f",
+    "speaker": "narrator",
+    "text": "As you set your stone on the pile, Hanan says, “Every waymark is a remembering. Remember a time someone cared for you when you needed it.”",
+    "journey": "elijah",
+    "where": "pass:cairn-a"
+  },
+  {
+    "id": "f5ed9bcf",
+    "speaker": "narrator",
+    "text": "Can you think of a time someone cared for you?",
+    "journey": "elijah",
+    "where": "pass:cairn-a"
+  },
+  {
+    "id": "2aa0587e",
+    "speaker": "narrator",
+    "text": "Hold them in mind for a moment. That care was real — and it may be a clue about who to turn to now.",
+    "journey": "elijah",
+    "where": "pass:cairn-a"
+  },
+  {
+    "id": "1e26d8ad",
+    "speaker": "narrator",
+    "text": "That’s okay. Sometimes care has been hard to find, or hard to remember when we’re worn out. You can hold the question gently, without forcing an answer.",
+    "journey": "elijah",
+    "where": "pass:cairn-a"
+  },
+  {
+    "id": "ce16603d",
+    "speaker": "narrator",
+    "text": "The waymark glows steadily.",
+    "journey": "elijah",
+    "where": "pass:cairn-a:again"
+  },
+  {
+    "id": "d7bbd3f8",
+    "speaker": "narrator",
+    "text": "“Another remembering,” says Hanan. “A time you came through something hard.”",
+    "journey": "elijah",
+    "where": "pass:cairn-b"
+  },
+  {
+    "id": "593ede69",
+    "speaker": "narrator",
+    "text": "Is there a hard time you came through?",
+    "journey": "elijah",
+    "where": "pass:cairn-b"
+  },
+  {
+    "id": "637c5421",
+    "speaker": "narrator",
+    "text": "You may not have come through it neatly, or alone. But you came through. That memory is a waymark too.",
+    "journey": "elijah",
+    "where": "pass:cairn-b"
+  },
+  {
+    "id": "1f20844d",
+    "speaker": "narrator",
+    "text": "Then this is a waymark for the middle of the road, not the end of it. Elijah was in the middle of his, too.",
+    "journey": "elijah",
+    "where": "pass:cairn-b"
+  },
+  {
+    "id": "b790dadb",
+    "speaker": "narrator",
+    "text": "“One more,” says Hanan. “What gives you real rest? Not just distraction — rest.”",
+    "journey": "elijah",
+    "where": "pass:cairn-c"
+  },
+  {
+    "id": "2668c839",
+    "speaker": "narrator",
+    "text": "What gives you real rest?",
+    "journey": "elijah",
+    "where": "pass:cairn-c"
+  },
+  {
+    "id": "c44e594b",
+    "speaker": "narrator",
+    "text": "As the last stone settles, light runs along the path ahead. The way through the dark is open.",
+    "journey": "elijah",
+    "where": "pass:cairn-c"
+  },
+  {
+    "id": "0a2a7597",
+    "speaker": "narrator",
+    "text": "The path ahead is lit now.",
+    "journey": "elijah",
+    "where": "pass:cairn-c:again"
+  },
+  {
+    "id": "8a567ad3",
+    "speaker": "page",
+    "text": "The mountain of God. And he arose, and did eat and drink, and went in the strength of that meat forty days and forty nights unto Horeb the mount of God. Elijah walked forty days and nights to Horeb — also called Sinai, where God had made his covenant with Israel generations before. There he went into a cave and spent the night. Elijah’s recovery wasn’t instant. It was a long walk, one day at a time — back toward a place where God had met his people before.",
+    "journey": "elijah",
+    "where": "pass:page-horeb"
+  },
+  {
+    "id": "17b9e1cc",
+    "speaker": "narrator",
+    "text": "Horeb. The mountain rises dark against more stars than you can count. Hanan sits down on a rock to wait. “Go on,” he says. “Some of this you walk on your own.”",
+    "journey": "elijah",
+    "where": "cave:intro"
+  },
+  {
+    "id": "35ee797b",
+    "speaker": "narrator",
+    "text": "You step into the cave. It’s cold and very quiet. Outside, the stars are bright.",
+    "journey": "elijah",
+    "where": "cave:cave"
+  },
+  {
+    "id": "65fca655",
+    "speaker": "page",
+    "text": "What doest thou here?. And he came thither unto a cave, and lodged there; and, behold, the word of the LORD came to him, and he said unto him, What doest thou here, Elijah? In the cave, God asked Elijah what he was doing there. Elijah answered honestly: he had served God passionately, Israel had abandoned the covenant and killed the prophets — “I, even I only, am left” — and now they wanted to kill him too. God’s first word to Elijah at the mountain is a question, not a lecture. Elijah’s answer is raw, and partly shaped by exhaustion: he believed he was completely alone.",
+    "journey": "elijah",
+    "where": "cave:cave"
+  },
+  {
+    "id": "ed45bfa2",
+    "speaker": "narrator",
+    "text": "If someone asked you gently, “What are you doing here?” — what might you say?",
+    "journey": "elijah",
+    "where": "cave:cave"
+  },
+  {
+    "id": "d320783b",
+    "speaker": "narrator",
+    "text": "However you answered, it’s allowed. Honest words are a place where prayer can begin.",
+    "journey": "elijah",
+    "where": "cave:cave"
+  },
+  {
+    "id": "cb99f84c",
+    "speaker": "narrator",
+    "text": "The cave is quiet. Outside, at the edge of the mountain, there’s a ledge under the stars.",
+    "journey": "elijah",
+    "where": "cave:cave:again"
+  },
+  {
+    "id": "775db12e",
+    "speaker": "narrator",
+    "text": "In the story, Elijah was told to go out and stand on the mountain, because the LORD was about to pass by. You step out onto the ledge.",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "58b56750",
+    "speaker": "narrator",
+    "text": "A great and strong wind tore at the mountain and broke the rocks — but the LORD was not in the wind.",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "6a59b5e0",
+    "speaker": "narrator",
+    "text": "After the wind, an earthquake — but the LORD was not in the earthquake.",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "3241dbb9",
+    "speaker": "narrator",
+    "text": "After the earthquake, a fire — but the LORD was not in the fire.",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "663d5bb0",
+    "speaker": "narrator",
+    "text": "After the fire…",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "d093314a",
+    "speaker": "page",
+    "text": "A still small voice. And after the earthquake a fire; but the LORD was not in the fire: and after the fire a still small voice. God passed by. A great wind broke the rocks, then came an earthquake, then fire — but the LORD was not in them. Then came what modern translations render “a gentle whisper”, “a low whisper”, or “a sound of sheer silence”. Elijah wrapped his face in his cloak and stood at the mouth of the cave. God’s presence isn’t always loud or dramatic. This story doesn’t promise you a voice or a particular feeling. It shows God coming near, quietly, to someone worn out.",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "dfa13d90",
+    "speaker": "narrator",
+    "text": "You stand at the edge of the mountain a little longer. Nothing dramatic happens. The quiet is not empty.",
+    "journey": "elijah",
+    "where": "cave:ledge"
+  },
+  {
+    "id": "78757563",
+    "speaker": "narrator",
+    "text": "The night is calm now. Hanan is waiting further along the path.",
+    "journey": "elijah",
+    "where": "cave:ledge:again"
+  },
+  {
+    "id": "c64c3715",
+    "speaker": "narrator",
+    "text": "Dawn. The path winds down toward farmland. In the story, God gave Elijah renewed direction: go back the way you came. There was real work still to do — and he would not do it alone.",
+    "journey": "elijah",
+    "where": "dawn:intro"
+  },
+  {
+    "id": "731c52a2",
+    "speaker": "narrator",
+    "text": "Below, cooking fires are being lit in the villages, one after another — far more than you could count. You thought you were alone on this road. You weren’t.",
+    "journey": "elijah",
+    "where": "dawn:overlook"
+  },
+  {
+    "id": "452e58a2",
+    "speaker": "page",
+    "text": "Not the only one. Yet I have left me seven thousand in Israel, all the knees which have not bowed unto Baal, and every mouth which hath not kissed him. God gave Elijah direction — go back the way you came, with real work to do — and a wider view: seven thousand in Israel had stayed faithful. Elijah was not the only one left. Exhaustion can shrink our view until we feel completely alone. Sometimes part of the way forward is letting someone show us what we can’t see.",
+    "journey": "elijah",
+    "where": "dawn:overlook"
+  },
+  {
+    "id": "3fa333b1",
+    "speaker": "narrator",
+    "text": "The valley is full of small lights.",
+    "journey": "elijah",
+    "where": "dawn:overlook:again"
+  },
+  {
+    "id": "2424a6b1",
+    "speaker": "narrator",
+    "text": "A man is ploughing behind a team of oxen, steady and patient. He lifts a hand to you as you pass.",
+    "journey": "elijah",
+    "where": "dawn:elisha"
+  },
+  {
+    "id": "00a525b4",
+    "speaker": "page",
+    "text": "A companion for the road. Elijah found Elisha ploughing with twelve yoke of oxen and threw his cloak over him — a sign of calling. Elisha said goodbye to his family, shared a meal with his people, and went with Elijah to serve him. God’s care for Elijah included a companion. Elijah didn’t go back alone.",
+    "journey": "elijah",
+    "where": "dawn:elisha"
+  },
+  {
+    "id": "d77fa35d",
+    "speaker": "narrator",
+    "text": "The ploughman keeps working, row by row.",
+    "journey": "elijah",
+    "where": "dawn:elisha:again"
+  },
+  {
+    "id": "a4e2201b",
+    "speaker": "hanan",
+    "text": "This is where our roads part, friend.",
+    "journey": "elijah",
+    "where": "dawn:hanan-farewell"
+  },
+  {
+    "id": "ec10b722",
+    "speaker": "hanan",
+    "text": "“Before you go — who might walk the next stretch with you?”",
+    "journey": "elijah",
+    "where": "dawn:hanan-farewell"
+  },
+  {
+    "id": "173e2775",
+    "speaker": "hanan",
+    "text": "That’s an honest answer. Keep the question open. Sometimes it starts with one small, true conversation.",
+    "journey": "elijah",
+    "where": "dawn:hanan-farewell"
+  },
+  {
+    "id": "5db7cd2d",
+    "speaker": "hanan",
+    "text": "Then maybe one next step is letting them know how you’re really doing.",
+    "journey": "elijah",
+    "where": "dawn:hanan-farewell"
+  },
+  {
+    "id": "0e98dd61",
+    "speaker": "hanan",
+    "text": "Elijah went back as the same man — still tired in places, with hard work ahead. But he had been fed, he had rested, he had been met, and he wasn’t going back alone. Go gently.",
+    "journey": "elijah",
+    "where": "dawn:hanan-farewell"
+  },
+  {
+    "id": "7f91d276",
+    "speaker": "hanan",
+    "text": "Go gently, friend. The path goes on.",
+    "journey": "elijah",
+    "where": "dawn:hanan-farewell:again"
+  },
+  {
+    "id": "e303e135",
+    "speaker": "narrator",
+    "text": "Elijah’s story doesn’t end with everything fixed. It ends with a man who had been fed and rested, met by God in the quiet, shown he was not alone, and given a companion and a next step. Wherever you are on your own road, you don’t walk it alone. Go gently.",
+    "journey": "elijah",
+    "where": "closing"
+  },
+  {
+    "id": "c26302c9",
+    "speaker": "narrator",
+    "text": "Night in the hill country of Manasseh. For seven harvests, raiders have come. Families hide grain in caves. You move quietly between the terraces, keeping low.",
+    "journey": "gideon",
+    "where": "winepress:intro"
+  },
+  {
+    "id": "c0631c7d",
+    "speaker": "narrator",
+    "text": "Someone has been threshing wheat down in the stone pit — out of sight, where no one would think to look.",
+    "journey": "gideon",
+    "where": "winepress:winepress"
+  },
+  {
+    "id": "4701003b",
+    "speaker": "page",
+    "text": "Hiding the harvest. And there came an angel of the LORD, and sat under an oak which was in Ophrah, that pertained unto Joash the Abiezrite: and his son Gideon threshed wheat by the winepress, to hide it from the Midianites. For seven years Midianite raiders swept through Israel at harvest time, taking crops and animals. People hid in mountain dens and caves. Gideon was threshing wheat down in a winepress — a pit meant for grapes — so no one would see. This is where God finds Gideon: not on a battlefield, but hiding, trying to keep his family fed.",
+    "journey": "gideon",
+    "where": "winepress:winepress"
+  },
+  {
+    "id": "4e1a72c1",
+    "speaker": "narrator",
+    "text": "What are you keeping low about right now?",
+    "journey": "gideon",
+    "where": "winepress:winepress"
+  },
+  {
+    "id": "3b3ccb8a",
+    "speaker": "narrator",
+    "text": "Hiding isn’t the same as having no courage. Sometimes it’s simply how frightened people survive.",
+    "journey": "gideon",
+    "where": "winepress:winepress"
+  },
+  {
+    "id": "968b53f3",
+    "speaker": "narrator",
+    "text": "The wheat is still there, half-threshed, waiting.",
+    "journey": "gideon",
+    "where": "winepress:winepress:again"
+  },
+  {
+    "id": "7a0f88a9",
+    "speaker": "narrator",
+    "text": "Under this kind of oak, the story says, an angel of the LORD sat down — and spoke to a man who did not feel brave at all.",
+    "journey": "gideon",
+    "where": "winepress:oak"
+  },
+  {
+    "id": "dee16520",
+    "speaker": "page",
+    "text": "Mighty man of valour?. And the angel of the LORD appeared unto him, and said unto him, The LORD is with thee, thou mighty man of valour. Gideon answers with an honest, almost sharp question: “if the LORD be with us, why then is all this befallen us?” (6:13). He says his clan is the poorest and he is the least in his family (6:15). God’s reply is not a plan or a pep talk, but a promise: “Surely I will be with thee” (6:16). God isn’t offended by Gideon’s question. Courage in this story begins with presence, not with Gideon feeling brave.",
+    "journey": "gideon",
+    "where": "winepress:oak"
+  },
+  {
+    "id": "f00f5939",
+    "speaker": "narrator",
+    "text": "Gideon answered with an honest question. What is yours?",
+    "journey": "gideon",
+    "where": "winepress:oak"
+  },
+  {
+    "id": "c3364163",
+    "speaker": "narrator",
+    "text": "God didn’t rebuke Gideon’s question. The answer was “Surely I will be with thee” — not a full plan, but a presence.",
+    "journey": "gideon",
+    "where": "winepress:oak"
+  },
+  {
+    "id": "143e3378",
+    "speaker": "narrator",
+    "text": "The oak’s shade is wide and quiet.",
+    "journey": "gideon",
+    "where": "winepress:oak:again"
+  },
+  {
+    "id": "dec4c797",
+    "speaker": "abiel",
+    "text": "You’re out late too. Hiding a harvest? Sit — quietly.",
+    "journey": "gideon",
+    "where": "winepress:abiel"
+  },
+  {
+    "id": "e4ccba3e",
+    "speaker": "abiel",
+    "text": "Abiel keeps one eye on the ridge.",
+    "journey": "gideon",
+    "where": "winepress:abiel"
+  },
+  {
+    "id": "ae614ef0",
+    "speaker": "abiel",
+    "text": "Same as everyone. If they see the grain, they take it. If they take it, my children go hungry. Fear is just good sense, most days.",
+    "journey": "gideon",
+    "where": "winepress:abiel"
+  },
+  {
+    "id": "f36bd5ee",
+    "speaker": "abiel",
+    "text": "Some nights I’m sure. Some nights I ask Gideon’s question: then why is all this happening? I don’t think God minds the asking.",
+    "journey": "gideon",
+    "where": "winepress:abiel"
+  },
+  {
+    "id": "c44cc05e",
+    "speaker": "abiel",
+    "text": "I can’t tell you that. Nobody should pretend they can hear God for you. But I can walk with you while you work it out.",
+    "journey": "gideon",
+    "where": "winepress:abiel"
+  },
+  {
+    "id": "b3117d92",
+    "speaker": "abiel",
+    "text": "Dawn’s coming. The threshing floor is up the hill.",
+    "journey": "gideon",
+    "where": "winepress:abiel:again"
+  },
+  {
+    "id": "7e1b50f0",
+    "speaker": "narrator",
+    "text": "Up on the hill, the stone threshing floor lies open to the sky. Dew is beginning to settle.",
+    "journey": "gideon",
+    "where": "threshing:intro"
+  },
+  {
+    "id": "c4173c31",
+    "speaker": "abiel",
+    "text": "This is where Gideon laid out the fleece. People argue about it to this day.",
+    "journey": "gideon",
+    "where": "threshing:intro"
+  },
+  {
+    "id": "b49802ca",
+    "speaker": "abiel",
+    "text": "Take your time. Courage doesn’t come faster for being rushed.",
+    "journey": "gideon",
+    "where": "threshing:abiel-walk"
+  },
+  {
+    "id": "dd599f8b",
+    "speaker": "abiel",
+    "text": "Whatever you decide, decide it with people who love you and with your Bible open. That’s been my way.",
+    "journey": "gideon",
+    "where": "threshing:abiel-walk"
+  },
+  {
+    "id": "53330dda",
+    "speaker": "page",
+    "text": "Courage by night. Then Gideon took ten men of his servants, and did as the LORD had said unto him: and so it was, because he feared his father’s household, and the men of the city, that he could not do it by day, that he did it by night. Gideon’s first task was close to home: tear down his father’s altar to Baal. He did it — but at night, because he was afraid of his family and his town. Obedience and fear arrived together. Gideon did the right thing while still frightened, and the story doesn’t mock him for it.",
+    "journey": "gideon",
+    "where": "threshing:altar"
+  },
+  {
+    "id": "92ec931d",
+    "speaker": "narrator",
+    "text": "Is there a right thing you could do, even while you’re still afraid?",
+    "journey": "gideon",
+    "where": "threshing:altar"
+  },
+  {
+    "id": "12fb4e7c",
+    "speaker": "narrator",
+    "text": "You don’t have to do it tonight. Just notice that fear and faithfulness can share the same hands.",
+    "journey": "gideon",
+    "where": "threshing:altar"
+  },
+  {
+    "id": "c813df21",
+    "speaker": "narrator",
+    "text": "That’s honest. Gideon’s courage grew one step at a time.",
+    "journey": "gideon",
+    "where": "threshing:altar"
+  },
+  {
+    "id": "e4deaf0d",
+    "speaker": "narrator",
+    "text": "The broken altar lies where Gideon left it.",
+    "journey": "gideon",
+    "where": "threshing:altar:again"
+  },
+  {
+    "id": "0ea9afe8",
+    "speaker": "narrator",
+    "text": "A woollen fleece lies on the stone. As the sky pales, it is soaked with dew — and the floor around it is dry.",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "320c3b82",
+    "speaker": "page",
+    "text": "The fleece. Gideon asked God for a sign: dew on a fleece but dry ground around it. Then he asked again, the other way round. Both times, God did it. Notice that Gideon had already been told what to do (6:14, 16). The fleece wasn’t how he discovered God’s will; it was a frightened man asking for reassurance, and God was patient with him. Scripture never presents it as a method for making decisions, and Wayfinder doesn’t either.",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "e5989865",
+    "speaker": "abiel",
+    "text": "Abiel turns to you. “So — how do you think a person should decide what to do?”",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "49c4fdda",
+    "speaker": "abiel",
+    "text": "God was patient with Gideon’s fleece. But Gideon had already been told what to do; the fleece was for his fear. Signs aren’t promised for every choice. Wisdom, Scripture, prayer, and wise people are the usual way.",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "258d7618",
+    "speaker": "abiel",
+    "text": "That’s how most of Israel’s wisdom worked. Proverbs says plans go wrong without counsel, and with many counsellors they are established (15:22).",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "a48af78d",
+    "speaker": "abiel",
+    "text": "Good. And ask for wisdom plainly — James says God gives it generously and doesn’t scold you for asking (James 1:5).",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "58cfac94",
+    "speaker": "abiel",
+    "text": "Sometimes waiting is wise. But Gideon never stopped being afraid. Watch what God does with that fear tonight.",
+    "journey": "gideon",
+    "where": "threshing:fleece"
+  },
+  {
+    "id": "24fbf4a9",
+    "speaker": "narrator",
+    "text": "The fleece is heavy with dew.",
+    "journey": "gideon",
+    "where": "threshing:fleece:again"
+  },
+  {
+    "id": "78973846",
+    "speaker": "page",
+    "text": "Whoever is afraid may go home. God told Gideon his army was too big, so Israel couldn’t boast that they had saved themselves. Anyone afraid was free to go home, and 22,000 left (7:3). In the end, three hundred remained. Fear was named openly, and no one was shamed for it. The story keeps pointing away from human strength and toward God’s faithfulness.",
+    "journey": "gideon",
+    "where": "threshing:page-300"
+  },
+  {
+    "id": "1d5e9278",
+    "speaker": "narrator",
+    "text": "Night again. Below, the valley is full of tents and fires — the text says the camp lay “like grasshoppers for multitude” (Judges 7:12).",
+    "journey": "gideon",
+    "where": "camp:intro"
+  },
+  {
+    "id": "aba663dd",
+    "speaker": "abiel",
+    "text": "Stay close. We only need to listen tonight.",
+    "journey": "gideon",
+    "where": "camp:abiel-camp"
+  },
+  {
+    "id": "62656ece",
+    "speaker": "abiel",
+    "text": "This is where I turn back. Gideon’s story isn’t tidy — there were battles ahead, and later mistakes. Courage once doesn’t make you finished. Keep walking with wise people, and keep listening.",
+    "journey": "gideon",
+    "where": "camp:abiel-camp"
+  },
+  {
+    "id": "01749810",
+    "speaker": "page",
+    "text": "If you are afraid, take a friend. But if thou fear to go down, go thou with Phurah thy servant down to the host: On the night before the battle, God told Gideon to go down to the enemy camp. Then God added: if you’re afraid, take your servant Purah with you, and listen to what they are saying. God makes room for Gideon’s fear. The answer to it is not a lecture, but a companion and something to hear.",
+    "journey": "gideon",
+    "where": "camp:overlook"
+  },
+  {
+    "id": "32bde222",
+    "speaker": "abiel",
+    "text": "You said you might ask for a sign. Notice what God gave Gideon here instead of another sign: a companion, and something to listen to.",
+    "journey": "gideon",
+    "where": "camp:overlook"
+  },
+  {
+    "id": "83530c7d",
+    "speaker": "abiel",
+    "text": "You said wise people help you decide. Well — here’s one going down the hill with you.",
+    "journey": "gideon",
+    "where": "camp:overlook"
+  },
+  {
+    "id": "2a3d2c2d",
+    "speaker": "abiel",
+    "text": "You said prayer and Scripture. Gideon’s courage tonight comes from hearing, not seeing. Let’s go and listen.",
+    "journey": "gideon",
+    "where": "camp:overlook"
+  },
+  {
+    "id": "fb68edba",
+    "speaker": "abiel",
+    "text": "You said you’d wait until you were less afraid. God didn’t make Gideon wait for that. He said: if you’re afraid, take a friend.",
+    "journey": "gideon",
+    "where": "camp:overlook"
+  },
+  {
+    "id": "5e9c6957",
+    "speaker": "narrator",
+    "text": "The fires below flicker like stars on the ground.",
+    "journey": "gideon",
+    "where": "camp:overlook:again"
+  },
+  {
+    "id": "eaa5a10f",
+    "speaker": "narrator",
+    "text": "You crouch in the shadow of a tent. Inside, two soldiers are talking in low voices about a strange dream.",
+    "journey": "gideon",
+    "where": "camp:tent"
+  },
+  {
+    "id": "1648301b",
+    "speaker": "page",
+    "text": "A loaf of barley bread. And it was so, when Gideon heard the telling of the dream, and the interpretation thereof, that he worshipped, and returned into the host of Israel, and said, Arise; for the LORD hath delivered into your hand the host of Midian. Creeping to the edge of the camp, Gideon overheard a soldier describing a dream: a loaf of barley bread tumbled into the camp and flattened a tent. His friend said it meant Gideon would win. Gideon worshipped, then went back to his people. Gideon’s courage came from hearing, and he worshipped before he acted. His story doesn’t end tidily — later he made an ephod that became a snare to Israel (8:27) — but this night, fear and faith walked down the hill together.",
+    "journey": "gideon",
+    "where": "camp:tent"
+  },
+  {
+    "id": "61b352b0",
+    "speaker": "narrator",
+    "text": "What would a faithful next step look like, even with fear still here?",
+    "journey": "gideon",
+    "where": "camp:tent"
+  },
+  {
+    "id": "d1af4ae2",
+    "speaker": "narrator",
+    "text": "The voices inside have gone quiet.",
+    "journey": "gideon",
+    "where": "camp:tent:again"
+  },
+  {
+    "id": "12f0c0f9",
+    "speaker": "narrator",
+    "text": "Gideon didn’t stop being afraid before God used him. He was met in hiding, heard honestly, given a friend, and given something to hear. Your decision may still feel hard. But you don’t have to face it alone, or wait for perfect certainty, to take one faithful step.",
+    "journey": "gideon",
+    "where": "closing"
+  },
+  {
+    "id": "3d6749a7",
+    "speaker": "narrator",
+    "text": "Grey morning in the fields of Moab. Beside the road there are three heaps of stones. You have come to say goodbye before you leave.",
+    "journey": "naomi",
+    "where": "moab:intro"
+  },
+  {
+    "id": "486aa221",
+    "speaker": "narrator",
+    "text": "Three markers of piled stones. Someone has left small flowers.",
+    "journey": "naomi",
+    "where": "moab:graves"
+  },
+  {
+    "id": "ed204c58",
+    "speaker": "page",
+    "text": "Left of her two sons and her husband. And Mahlon and Chilion died also both of them; and the woman was left of her two sons and her husband. During a famine, Naomi’s family moved from Bethlehem to Moab. There her husband Elimelech died. Her two sons married Moabite women, Orpah and Ruth. About ten years later, both sons died too. The story begins with loss upon loss and doesn’t hurry past it. Naomi is defined, for a while, by who is missing.",
+    "journey": "naomi",
+    "where": "moab:graves"
+  },
+  {
+    "id": "cb4f71e9",
+    "speaker": "narrator",
+    "text": "If you could say something honest about your own loss, what would it be?",
+    "journey": "naomi",
+    "where": "moab:graves"
+  },
+  {
+    "id": "4ca26d6c",
+    "speaker": "narrator",
+    "text": "Whatever you said — or didn’t — can stand as it is. You don’t have to tidy it up for God.",
+    "journey": "naomi",
+    "where": "moab:graves"
+  },
+  {
+    "id": "0fd8f3c0",
+    "speaker": "narrator",
+    "text": "The flowers by the graves stir in the wind.",
+    "journey": "naomi",
+    "where": "moab:graves:again"
+  },
+  {
+    "id": "7490d6b3",
+    "speaker": "narrator",
+    "text": "A flat stone where travellers leave a pebble for those they have lost. You add one.",
+    "journey": "naomi",
+    "where": "moab:stone"
+  },
+  {
+    "id": "b45ba79d",
+    "speaker": "narrator",
+    "text": "How long would you like to stay?",
+    "journey": "naomi",
+    "where": "moab:stone"
+  },
+  {
+    "id": "30d93028",
+    "speaker": "narrator",
+    "text": "You sit by the stones. Nobody asks you to be anywhere else.",
+    "journey": "naomi",
+    "where": "moab:stone"
+  },
+  {
+    "id": "f9df57db",
+    "speaker": "narrator",
+    "text": "Your pebble sits among the others.",
+    "journey": "naomi",
+    "where": "moab:stone:again"
+  },
+  {
+    "id": "16dea59b",
+    "speaker": "miri",
+    "text": "I buried my husband in this ground two winters ago. I’m going home now — to Bethlehem. I hear there’s bread there again.",
+    "journey": "naomi",
+    "where": "moab:miri"
+  },
+  {
+    "id": "9547fd91",
+    "speaker": "miri",
+    "text": "Miri pulls her shawl tighter.",
+    "journey": "naomi",
+    "where": "moab:miri"
+  },
+  {
+    "id": "99a71f88",
+    "speaker": "miri",
+    "text": "Badly, some days. I’ve stopped pretending otherwise. That helped more than anything anyone said.",
+    "journey": "naomi",
+    "where": "moab:miri"
+  },
+  {
+    "id": "2a638253",
+    "speaker": "miri",
+    "text": "It gets different. I won’t promise you more than that. People who promised me more didn’t help.",
+    "journey": "naomi",
+    "where": "moab:miri"
+  },
+  {
+    "id": "9d0a37f7",
+    "speaker": "miri",
+    "text": "I’ve asked that too. Naomi asked it out loud, in front of the whole town. I think God can bear the question.",
+    "journey": "naomi",
+    "where": "moab:miri"
+  },
+  {
+    "id": "f4409ca4",
+    "speaker": "miri",
+    "text": "The road west goes up through the hills. We can go slowly.",
+    "journey": "naomi",
+    "where": "moab:miri:again"
+  },
+  {
+    "id": "90e654bb",
+    "speaker": "narrator",
+    "text": "The road climbs west toward Judah. At a crossroads, travellers part ways — some back to Moab, some on toward Bethlehem.",
+    "journey": "naomi",
+    "where": "crossroads:intro"
+  },
+  {
+    "id": "58a11871",
+    "speaker": "page",
+    "text": "Turning toward home. And they lifted up their voice, and wept again: and Orpah kissed her mother in law; but Ruth clave unto her. Naomi heard that the famine in Judah had ended and set out for home. She urged both daughters-in-law to go back to their own families. After much weeping, Orpah went home, as Naomi had asked. Ruth would not leave her. Orpah isn’t blamed; she did what Naomi urged. Grief often pushes people away “for their own good”. Ruth simply stays.",
+    "journey": "naomi",
+    "where": "crossroads:page-turning"
+  },
+  {
+    "id": "1e27a698",
+    "speaker": "narrator",
+    "text": "An older woman and a younger one stand close together. The older one is still telling her to go back. The younger one shakes her head.",
+    "journey": "naomi",
+    "where": "crossroads:pair"
+  },
+  {
+    "id": "4c0041dc",
+    "speaker": "page",
+    "text": "Whither thou goest. And Ruth said, Intreat me not to leave thee, or to return from following after thee: for whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God: Ruth, a foreigner and a widow herself, bound her life to Naomi’s — her road, her home, her people, and her God. Naomi, the text says, stopped arguing. Ruth doesn’t explain Naomi’s loss or try to cheer her up. Her comfort is presence: “I will go where you go.”",
+    "journey": "naomi",
+    "where": "crossroads:pair"
+  },
+  {
+    "id": "49660257",
+    "speaker": "narrator",
+    "text": "Ruth doesn’t fix Naomi’s grief. She simply refuses to leave.",
+    "journey": "naomi",
+    "where": "crossroads:pair"
+  },
+  {
+    "id": "f2f3ca9b",
+    "speaker": "narrator",
+    "text": "They walk on together, slowly.",
+    "journey": "naomi",
+    "where": "crossroads:pair:again"
+  },
+  {
+    "id": "5e0d1888",
+    "speaker": "miri",
+    "text": "I’m going on to Bethlehem. Same way as you.",
+    "journey": "naomi",
+    "where": "crossroads:signpost"
+  },
+  {
+    "id": "ba9a62d1",
+    "speaker": "miri",
+    "text": "Miri hesitates. “Shall we walk together?”",
+    "journey": "naomi",
+    "where": "crossroads:signpost"
+  },
+  {
+    "id": "856a8ff2",
+    "speaker": "miri",
+    "text": "Then we’ll go at the pace of whoever is slower that day.",
+    "journey": "naomi",
+    "where": "crossroads:signpost"
+  },
+  {
+    "id": "09ad828e",
+    "speaker": "miri",
+    "text": "That’s honest. I’ll be a little way behind, if you want me.",
+    "journey": "naomi",
+    "where": "crossroads:signpost"
+  },
+  {
+    "id": "2a7eb9d4",
+    "speaker": "miri",
+    "text": "Then I won’t crowd you. Grief has its own pace.",
+    "journey": "naomi",
+    "where": "crossroads:signpost"
+  },
+  {
+    "id": "65da26f3",
+    "speaker": "narrator",
+    "text": "There is no wrong answer here. Some seasons we need company close; some seasons we need it at a distance.",
+    "journey": "naomi",
+    "where": "crossroads:signpost"
+  },
+  {
+    "id": "e265cea7",
+    "speaker": "narrator",
+    "text": "The sign points west: Bethlehem.",
+    "journey": "naomi",
+    "where": "crossroads:signpost:again"
+  },
+  {
+    "id": "7bcfcef7",
+    "speaker": "narrator",
+    "text": "Golden fields, and a small town on the hill. Reapers are already at work. It is the beginning of barley harvest.",
+    "journey": "naomi",
+    "where": "harvest:intro"
+  },
+  {
+    "id": "959f1732",
+    "speaker": "miri",
+    "text": "I’m glad not to walk into town alone. They’ll all stare. Let them.",
+    "journey": "naomi",
+    "where": "harvest:miri-walk"
+  },
+  {
+    "id": "248210fb",
+    "speaker": "page",
+    "text": "A restorer of thy life. And he shall be unto thee a restorer of thy life, and a nourisher of thine old age: for thy daughter in law, which loveth thee, which is better to thee than seven sons, hath born him. Boaz married Ruth, and they had a son, Obed. The same women who had heard Naomi’s bitterness now blessed God with her. Naomi held the child. Obed became the grandfather of King David. The ending is beautiful — but it came over a long season, and it didn’t erase the graves in Moab. Hope grew alongside grief, through people who stayed.",
+    "journey": "naomi",
+    "where": "harvest:miri-walk"
+  },
+  {
+    "id": "8209d004",
+    "speaker": "miri",
+    "text": "Naomi held a grandson in the end. But she still had graves in Moab. Hope came slowly, alongside the grief — through people who stayed. I won’t tell you how your story will go. I’ll just say: keep letting people walk with you.",
+    "journey": "naomi",
+    "where": "harvest:miri-walk"
+  },
+  {
+    "id": "a141ccdc",
+    "speaker": "narrator",
+    "text": "Miri catches up, a little out of breath.",
+    "journey": "naomi",
+    "where": "harvest:gate"
+  },
+  {
+    "id": "306f8c48",
+    "speaker": "miri",
+    "text": "I followed at a distance. I hope that’s all right.",
+    "journey": "naomi",
+    "where": "harvest:gate"
+  },
+  {
+    "id": "83fdfec0",
+    "speaker": "narrator",
+    "text": "Women at the gate turn and stare. “Is this Naomi?” someone whispers.",
+    "journey": "naomi",
+    "where": "harvest:gate"
+  },
+  {
+    "id": "b859262c",
+    "speaker": "page",
+    "text": "Call me Mara. And she said unto them, Call me not Naomi, call me Mara: for the Almighty hath dealt very bitterly with me. When they arrived in Bethlehem, the whole town stirred: “Is this Naomi?” She told them not to call her Naomi (“pleasant”) but Mara (“bitter”). She said she went away full and came back empty. They arrived at the beginning of barley harvest. Scripture records Naomi’s bitterness — even toward God — without correcting her. Lament is a form of faith: she still speaks to and about God. And quietly, the story notes: it was harvest time.",
+    "journey": "naomi",
+    "where": "harvest:gate"
+  },
+  {
+    "id": "e6a0b550",
+    "speaker": "narrator",
+    "text": "If you could name this season honestly, what would you call it?",
+    "journey": "naomi",
+    "where": "harvest:gate"
+  },
+  {
+    "id": "d045c28e",
+    "speaker": "narrator",
+    "text": "Naomi’s honest name for her season is part of Scripture. So is the quiet detail that follows: it was the beginning of harvest.",
+    "journey": "naomi",
+    "where": "harvest:gate"
+  },
+  {
+    "id": "f9bdbf87",
+    "speaker": "narrator",
+    "text": "The women at the gate have gone back to their work.",
+    "journey": "naomi",
+    "where": "harvest:gate:again"
+  },
+  {
+    "id": "6458b414",
+    "speaker": "narrator",
+    "text": "At the edge of the field, stalks of barley have been left behind — on purpose.",
+    "journey": "naomi",
+    "where": "harvest:sheaf"
+  },
+  {
+    "id": "95bac7d1",
+    "speaker": "page",
+    "text": "Under whose wings. The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust. God’s law told farmers to leave the edges of their fields for the poor and the foreigner to gather (Leviticus 19:9–10). Ruth gleaned in the field of Boaz, a relative of Naomi’s husband. Boaz protected her, blessed her, and quietly told his workers to leave extra grain for her (2:16). Hope arrives here in very ordinary forms: leftover barley, a kind word, someone noticing. Naomi’s first glimmer comes when Ruth brings the grain home (2:20).",
+    "journey": "naomi",
+    "where": "harvest:sheaf"
+  },
+  {
+    "id": "195531cc",
+    "speaker": "narrator",
+    "text": "Is there a small kindness you could let someone give you?",
+    "journey": "naomi",
+    "where": "harvest:sheaf"
+  },
+  {
+    "id": "eb287b11",
+    "speaker": "narrator",
+    "text": "Many grieving people do. Ruth received leftover barley without having to earn it. That’s what it was left there for.",
+    "journey": "naomi",
+    "where": "harvest:sheaf"
+  },
+  {
+    "id": "4ba0dfe4",
+    "speaker": "narrator",
+    "text": "There’s still barley at the edges. There will be tomorrow, too.",
+    "journey": "naomi",
+    "where": "harvest:sheaf:again"
+  },
+  {
+    "id": "2d0a495a",
+    "speaker": "miri",
+    "text": "Go and see the edges of the field first. Then come back.",
+    "journey": "naomi",
+    "where": "harvest:miri-end"
+  },
+  {
+    "id": "74ff728e",
+    "speaker": "miri",
+    "text": "Naomi held a grandson in the end. But she still had graves in Moab. Hope came slowly, alongside the grief — through people who stayed, even at a distance. I won’t tell you how your story will go. Just keep letting people near, a little at a time.",
+    "journey": "naomi",
+    "where": "harvest:miri-end"
+  },
+  {
+    "id": "a6848737",
+    "speaker": "narrator",
+    "text": "Naomi came home empty and said so. Ruth stayed, the harvest came, and over a long season hope grew alongside her grief rather than replacing it. Your grief is not a problem to be solved quickly. May you find people who stay, small kindnesses at the edges, and the God who is near to the broken-hearted.",
+    "journey": "naomi",
+    "where": "closing"
+  },
+  {
+    "id": "e8838dfb",
+    "speaker": "narrator",
+    "text": "Afternoon heat over a camp of tents. Everyone is busy. No one looks at you.",
+    "journey": "hagar",
+    "where": "camp:intro"
+  },
+  {
+    "id": "6dcab05e",
+    "speaker": "page",
+    "text": "Used for someone else’s plan. Sarai could not have children. Following a custom of the time, she gave her Egyptian servant Hagar to Abram so that Hagar would bear a child for them. Hagar conceived, and tension grew between the two women. Hagar is a foreigner and a servant. The text never records her being asked what she wanted. She is used to solve other people’s problem.",
+    "journey": "hagar",
+    "where": "camp:tent"
+  },
+  {
+    "id": "feeb156b",
+    "speaker": "narrator",
+    "text": "Where have you felt unseen, used, or overlooked?",
+    "journey": "hagar",
+    "where": "camp:tent"
+  },
+  {
+    "id": "4868dd0a",
+    "speaker": "narrator",
+    "text": "Being overlooked or used is a real wound. It isn’t a sign that you matter less.",
+    "journey": "hagar",
+    "where": "camp:tent"
+  },
+  {
+    "id": "2a1cf4d1",
+    "speaker": "narrator",
+    "text": "The tent flap moves in the hot wind.",
+    "journey": "hagar",
+    "where": "camp:tent:again"
+  },
+  {
+    "id": "9ed9fa3f",
+    "speaker": "page",
+    "text": "She fled from her face. But Abram said unto Sarai, Behold, thy maid is in thy hand; do to her as it pleaseth thee. And when Sarai dealt hardly with her, she fled from her face. When conflict came, Abram stepped back and left Hagar in Sarai’s power. Sarai treated her harshly, and Hagar — pregnant and alone — ran into the wilderness. The people with power failed her. Scripture tells this honestly; it doesn’t make Abram and Sarai heroes in this moment.",
+    "journey": "hagar",
+    "where": "camp:page-fled"
+  },
+  {
+    "id": "48bdadd9",
+    "speaker": "narrator",
+    "text": "Hagar ran from harsh treatment. Is anyone hurting, threatening, or controlling you now?",
+    "journey": "hagar",
+    "where": "camp:page-fled"
+  },
+  {
+    "id": "9feb7f24",
+    "speaker": "note",
+    "text": "Thank you for telling us. Past harm can still affect us a great deal. A counsellor or pastor you trust can help you carry it.",
+    "journey": "hagar",
+    "where": "camp:page-fled"
+  },
+  {
+    "id": "34f171d0",
+    "speaker": "note",
+    "text": "You deserve to be safe. Domestic abuse and harm services can help you make a safety plan — your local emergency number or helplines can connect you. None of this story means you should stay where you are being hurt.",
+    "journey": "hagar",
+    "where": "camp:page-fled"
+  },
+  {
+    "id": "ec4ed4d1",
+    "speaker": "narrator",
+    "text": "The page is weighed down with a small stone.",
+    "journey": "hagar",
+    "where": "camp:page-fled:again"
+  },
+  {
+    "id": "88fa4559",
+    "speaker": "sefa",
+    "text": "You look like someone who’s leaving. I keep a spring on the road to Shur. Walk with me, if you like.",
+    "journey": "hagar",
+    "where": "camp:sefa"
+  },
+  {
+    "id": "1d9468d8",
+    "speaker": "sefa",
+    "text": "Sefa shades her eyes from the sun.",
+    "journey": "hagar",
+    "where": "camp:sefa"
+  },
+  {
+    "id": "ffebe70e",
+    "speaker": "sefa",
+    "text": "Someone once left me out in this wilderness. I lived. I stayed to help the next one.",
+    "journey": "hagar",
+    "where": "camp:sefa"
+  },
+  {
+    "id": "d835c4de",
+    "speaker": "sefa",
+    "text": "That’s the question this road answers. Come and see.",
+    "journey": "hagar",
+    "where": "camp:sefa"
+  },
+  {
+    "id": "5da018d8",
+    "speaker": "sefa",
+    "text": "The spring is south, along the road.",
+    "journey": "hagar",
+    "where": "camp:sefa:again"
+  },
+  {
+    "id": "26987967",
+    "speaker": "narrator",
+    "text": "The road south is long and bright. Then — green. Palms, reeds, and the sound of water.",
+    "journey": "hagar",
+    "where": "spring:intro"
+  },
+  {
+    "id": "5e370ea9",
+    "speaker": "sefa",
+    "text": "Drink, rest. Nobody here will send you away.",
+    "journey": "hagar",
+    "where": "spring:sefa-walk"
+  },
+  {
+    "id": "a1d4bca5",
+    "speaker": "page",
+    "text": "Found by a spring. And the angel of the LORD found her by a fountain of water in the wilderness, by the fountain in the way to Shur. The angel of the LORD found Hagar by a spring on the road toward Egypt. He called her by name and asked two questions: “whence camest thou? and whither wilt thou go?” She answered honestly that she was running from her mistress. This is the first time in the Bible that the angel of the LORD appears to anyone — and it is to a runaway, foreign, pregnant servant. She is addressed by name and invited to tell her own story.",
+    "journey": "hagar",
+    "where": "spring:pool"
+  },
+  {
+    "id": "f6a19ef9",
+    "speaker": "narrator",
+    "text": "Where have you come from — and where are you going?",
+    "journey": "hagar",
+    "where": "spring:pool"
+  },
+  {
+    "id": "a334f56c",
+    "speaker": "narrator",
+    "text": "Hagar was asked to tell her own story — and she was listened to.",
+    "journey": "hagar",
+    "where": "spring:pool"
+  },
+  {
+    "id": "88600ea8",
+    "speaker": "narrator",
+    "text": "The water is cool and clear.",
+    "journey": "hagar",
+    "where": "spring:pool:again"
+  },
+  {
+    "id": "ac317345",
+    "speaker": "page",
+    "text": "A hard word, and a promise. And the angel of the LORD said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the LORD hath heard thy affliction. Hagar was told to go back and submit to Sarai — and promised descendants too many to count. Her son would be named Ishmael, which means “God hears”, because the LORD had heard her affliction. This is a hard passage, and Christians have wrestled with it. It describes what happened to one woman in a particular time; it is not an instruction that anyone should stay where they are being harmed. What the text insists on is that God heard her suffering.",
+    "journey": "hagar",
+    "where": "spring:page-hard"
+  },
+  {
+    "id": "dcceb864",
+    "speaker": "sefa",
+    "text": "If someone is harming you, God’s care for Hagar is not a reason to stay unsafe. Getting safe and getting help is right. Hear the promise in it: God heard her.",
+    "journey": "hagar",
+    "where": "spring:page-hard"
+  },
+  {
+    "id": "0909dcba",
+    "speaker": "narrator",
+    "text": "Someone has carved a few words into the stone: “the One who sees me.”",
+    "journey": "hagar",
+    "where": "spring:naming"
+  },
+  {
+    "id": "f2c0924d",
+    "speaker": "page",
+    "text": "Thou God seest me. And she called the name of the LORD that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me? Hagar gave God a name: El Roi, “the God who sees me.” The well was named after the encounter: Beer-lahai-roi, “the well of the Living One who sees me.” Hagar is the only person in Scripture who gives God a name. The one nobody saw became the one who named God as the One who sees.",
+    "journey": "hagar",
+    "where": "spring:naming"
+  },
+  {
+    "id": "cfd28847",
+    "speaker": "narrator",
+    "text": "If God truly sees you, what would you most want him to see?",
+    "journey": "hagar",
+    "where": "spring:naming"
+  },
+  {
+    "id": "5fdfe610",
+    "speaker": "narrator",
+    "text": "You don’t have to prove any of it. Being seen by God doesn’t depend on being noticed by anyone else.",
+    "journey": "hagar",
+    "where": "spring:naming"
+  },
+  {
+    "id": "a9b5711d",
+    "speaker": "narrator",
+    "text": "“The One who sees me.”",
+    "journey": "hagar",
+    "where": "spring:naming:again"
+  },
+  {
+    "id": "db1f687c",
+    "speaker": "narrator",
+    "text": "Years pass in the story. Hagar is sent away again — this time with her son, a little bread, and one skin of water — into the wilderness of Beersheba.",
+    "journey": "hagar",
+    "where": "wilderness:intro"
+  },
+  {
+    "id": "4fd99c2f",
+    "speaker": "sefa",
+    "text": "Keep going. I know this part of the road.",
+    "journey": "hagar",
+    "where": "wilderness:sefa-desert"
+  },
+  {
+    "id": "cf2cbe15",
+    "speaker": "narrator",
+    "text": "The skin is empty. You shake it. Nothing.",
+    "journey": "hagar",
+    "where": "wilderness:skin"
+  },
+  {
+    "id": "96bcba80",
+    "speaker": "page",
+    "text": "Sent away with bread and water. Years later, after Isaac was born, Sarah demanded that Hagar and her son be driven out. Abraham was grieved (21:11) but sent them into the wilderness of Beersheba with some bread and a skin of water. Hagar is abandoned a second time — this time with a child to protect. The story doesn’t soften how little they were given.",
+    "journey": "hagar",
+    "where": "wilderness:skin"
+  },
+  {
+    "id": "4b7acee2",
+    "speaker": "narrator",
+    "text": "Still empty.",
+    "journey": "hagar",
+    "where": "wilderness:skin:again"
+  },
+  {
+    "id": "ee5f7522",
+    "speaker": "narrator",
+    "text": "Thin shade under a desert shrub. A bowshot away, a mother once sat and wept.",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "bf6c81c1",
+    "speaker": "page",
+    "text": "God heard the voice of the lad. And God heard the voice of the lad; and the angel of God called to Hagar out of heaven, and said unto her, What aileth thee, Hagar? fear not; for God hath heard the voice of the lad where he is. When the water ran out, Hagar laid her son under a shrub and sat a bowshot away, because she could not bear to watch him die. She wept. God heard — “where he is.” God meets them in the exact place of despair — “where he is” — not after they have found their own way out.",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "1816b79d",
+    "speaker": "sefa",
+    "text": "You said you’d want God to see how much it hurts. Here, God hears a boy crying and a mother weeping a bowshot away — and answers them where they are.",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "705868ff",
+    "speaker": "sefa",
+    "text": "You said how hard you’ve been trying. Hagar had nothing left to try with. God came anyway.",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "eb7c7afd",
+    "speaker": "sefa",
+    "text": "You said how afraid you are. The first words here are “fear not” — not a rebuke, but a promise that she isn’t alone.",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "db17e614",
+    "speaker": "sefa",
+    "text": "You said all of you, even what you hide. That’s what “the God who sees me” means: nothing about you is hidden from his care.",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "34aa2097",
+    "speaker": "narrator",
+    "text": "Lift your eyes…",
+    "journey": "hagar",
+    "where": "wilderness:shrub"
+  },
+  {
+    "id": "3a36b3fd",
+    "speaker": "narrator",
+    "text": "The shade is still here.",
+    "journey": "hagar",
+    "where": "wilderness:shrub:again"
+  },
+  {
+    "id": "63b06b6a",
+    "speaker": "page",
+    "text": "Her eyes were opened. And God opened her eyes, and she saw a well of water; and she went, and filled the bottle with water, and gave the lad drink. God opened Hagar’s eyes, and she saw a well. She filled the skin and gave her son a drink. God was with the boy as he grew up in the wilderness. The well may have been there all along. Sometimes what changes first is not our circumstances, but what we are able to see.",
+    "journey": "hagar",
+    "where": "wilderness:well"
+  },
+  {
+    "id": "d8375152",
+    "speaker": "narrator",
+    "text": "You fill the skin. Nothing about the wilderness has changed. But there is water for the next part of the road.",
+    "journey": "hagar",
+    "where": "wilderness:well"
+  },
+  {
+    "id": "49d5202d",
+    "speaker": "sefa",
+    "text": "I’ll go back to my spring now. Go gently — and tell someone what you’ve seen. Being seen by God often starts with letting one person see you too.",
+    "journey": "hagar",
+    "where": "wilderness:well"
+  },
+  {
+    "id": "d0fb07d0",
+    "speaker": "narrator",
+    "text": "Cool water, deep in the stone.",
+    "journey": "hagar",
+    "where": "wilderness:well:again"
+  },
+  {
+    "id": "de73e45f",
+    "speaker": "narrator",
+    "text": "Hagar’s circumstances stayed hard. But she was found by name, heard where she was, and her eyes were opened to water for the road. Whatever others have overlooked in you, you are not unseen by God. May you find safe people who see you too — and the next well on your road.",
+    "journey": "hagar",
+    "where": "closing"
+  },
+  {
+    "id": "c750951c",
+    "speaker": "narrator",
+    "text": "Open pasture near Dothan. Sheep graze on the hillside. Something bright lies on a rock by the path.",
+    "journey": "joseph",
+    "where": "dothan:intro"
+  },
+  {
+    "id": "a920f2e8",
+    "speaker": "narrator",
+    "text": "A richly coloured coat, torn and dusty, thrown over a rock.",
+    "journey": "joseph",
+    "where": "dothan:coat"
+  },
+  {
+    "id": "61596672",
+    "speaker": "page",
+    "text": "The pit was empty. And they took him, and cast him into a pit: and the pit was empty, there was no water in it. Joseph’s brothers saw him coming across the fields near Dothan. They stripped off the coat their father had given him, threw him into an empty cistern, sat down to eat, and then sold him to traders for twenty pieces of silver. This was a betrayal by family — people who should have protected him. Scripture names it as cruelty, not as a misunderstanding.",
+    "journey": "joseph",
+    "where": "dothan:coat"
+  },
+  {
+    "id": "6997f1e5",
+    "speaker": "narrator",
+    "text": "Have you been hurt by someone you trusted?",
+    "journey": "joseph",
+    "where": "dothan:coat"
+  },
+  {
+    "id": "84fb7c7c",
+    "speaker": "narrator",
+    "text": "The colours are still bright under the dust.",
+    "journey": "joseph",
+    "where": "dothan:coat:again"
+  },
+  {
+    "id": "7b81471a",
+    "speaker": "narrator",
+    "text": "A dry, dark pit in the ground. Your voice would echo down there — and up here, no one would answer.",
+    "journey": "joseph",
+    "where": "dothan:cistern"
+  },
+  {
+    "id": "23389040",
+    "speaker": "page",
+    "text": "The anguish of his soul. And they said one to another, We are verily guilty concerning our brother, in that we saw the anguish of his soul, when he besought us, and we would not hear; therefore is this distress come upon us. Years later, the brothers remembered: Joseph had pleaded with them from the pit, and they had refused to listen. Joseph’s pain was seen and ignored. The text lets that memory return — harm doesn’t simply disappear because time passes.",
+    "journey": "joseph",
+    "where": "dothan:cistern"
+  },
+  {
+    "id": "24608af0",
+    "speaker": "narrator",
+    "text": "How does that hurt sit with you now?",
+    "journey": "joseph",
+    "where": "dothan:cistern"
+  },
+  {
+    "id": "0e5ee0fc",
+    "speaker": "narrator",
+    "text": "What was done to Joseph was wrong. The story never says otherwise — and neither will we about what was done to you.",
+    "journey": "joseph",
+    "where": "dothan:cistern"
+  },
+  {
+    "id": "b68b1b45",
+    "speaker": "narrator",
+    "text": "The cistern is still empty.",
+    "journey": "joseph",
+    "where": "dothan:cistern:again"
+  },
+  {
+    "id": "a0e36732",
+    "speaker": "page",
+    "text": "A favoured son. Jacob loved Joseph more than his other sons and gave him a special coat. Joseph told his brothers about dreams in which they bowed down to him. Their resentment grew. Joseph wasn’t perfect, and his family was complicated. None of that excuses what was done to him. People can be imperfect and still be wronged.",
+    "journey": "joseph",
+    "where": "dothan:page-dreams"
+  },
+  {
+    "id": "3b00f062",
+    "speaker": "narrator",
+    "text": "In the distance, a caravan is heading south toward Egypt.",
+    "journey": "joseph",
+    "where": "dothan:page-dreams"
+  },
+  {
+    "id": "afa96cce",
+    "speaker": "narrator",
+    "text": "Stone walls, a barred window, a thin square of moonlight on the floor. Time moves slowly here.",
+    "journey": "joseph",
+    "where": "prison:intro"
+  },
+  {
+    "id": "e2e8d870",
+    "speaker": "iry",
+    "text": "New here? I’m Iry. I scratch the days on the wall over there. It helps me remember time is still moving.",
+    "journey": "joseph",
+    "where": "prison:iry"
+  },
+  {
+    "id": "b83a2383",
+    "speaker": "iry",
+    "text": "Iry leans back against the cold stone.",
+    "journey": "joseph",
+    "where": "prison:iry"
+  },
+  {
+    "id": "570f6e2c",
+    "speaker": "iry",
+    "text": "Someone with more power than me needed someone to blame. It happens. It still isn’t right.",
+    "journey": "joseph",
+    "where": "prison:iry"
+  },
+  {
+    "id": "5bc768ec",
+    "speaker": "iry",
+    "text": "Everyone did. He kept working, kept helping, even in here. I never understood how he wasn’t bitter. Maybe he was, some nights.",
+    "journey": "joseph",
+    "where": "prison:iry"
+  },
+  {
+    "id": "bda25036",
+    "speaker": "iry",
+    "text": "The wall is over there. Add a mark.",
+    "journey": "joseph",
+    "where": "prison:iry:again"
+  },
+  {
+    "id": "b8277873",
+    "speaker": "narrator",
+    "text": "You scratch a mark beside the others. Then another. Then you stop counting.",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "8a05546a",
+    "speaker": "page",
+    "text": "The LORD was with Joseph. But the LORD was with Joseph, and shewed him mercy, and gave him favour in the sight of the keeper of the prison. In Egypt, Joseph served in Potiphar’s household and refused the advances of Potiphar’s wife. She falsely accused him, and he was thrown into prison. There he kept serving faithfully, and was given responsibility. Joseph’s integrity didn’t protect him from injustice. Yet the text says, more than once, that the LORD was with him — in the prison, not only after it.",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "f7b5d44c",
+    "speaker": "narrator",
+    "text": "What do you tend to do with long waiting?",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "e06edccc",
+    "speaker": "iry",
+    "text": "Keep doing the next good thing — that’s what Joseph did. It won’t make the waiting fair, but it keeps you yourself.",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "8a68b720",
+    "speaker": "iry",
+    "text": "I do that too. Replaying it over and over. Joseph must have, some nights. Maybe the first step is saying it out loud to God instead of only to the wall.",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "8179b352",
+    "speaker": "iry",
+    "text": "Complaints count as prayers. Half the psalms are complaints. “How long, O LORD?” — that’s in the Bible.",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "7a07ae07",
+    "speaker": "iry",
+    "text": "Numb gets you through a night. It doesn’t get you through years. Find one person you can feel things with.",
+    "journey": "joseph",
+    "where": "prison:tally"
+  },
+  {
+    "id": "aa2a33ce",
+    "speaker": "narrator",
+    "text": "So many marks.",
+    "journey": "joseph",
+    "where": "prison:tally:again"
+  },
+  {
+    "id": "1cd2c7af",
+    "speaker": "narrator",
+    "text": "A fine cup, left behind by someone who was released — and who promised to put in a good word.",
+    "journey": "joseph",
+    "where": "prison:cup"
+  },
+  {
+    "id": "fa998234",
+    "speaker": "page",
+    "text": "Forgotten. Yet did not the chief butler remember Joseph, but forgat him. Joseph helped Pharaoh’s cupbearer understand a dream and asked only to be remembered. The cupbearer was restored to his position — and forgot him. Two full years passed. Being forgotten is its own kind of pain. The story counts the time honestly: two full years.",
+    "journey": "joseph",
+    "where": "prison:cup"
+  },
+  {
+    "id": "67d96ddb",
+    "speaker": "narrator",
+    "text": "Have you been forgotten by someone — or been afraid you would be?",
+    "journey": "joseph",
+    "where": "prison:cup"
+  },
+  {
+    "id": "e648b323",
+    "speaker": "narrator",
+    "text": "That ache is real. Scripture doesn’t rush past it either: two full years.",
+    "journey": "joseph",
+    "where": "prison:cup"
+  },
+  {
+    "id": "4517091b",
+    "speaker": "narrator",
+    "text": "Fear of being forgotten can be heavy to carry. God did not forget Joseph, even when people did.",
+    "journey": "joseph",
+    "where": "prison:cup"
+  },
+  {
+    "id": "4ab4dee2",
+    "speaker": "narrator",
+    "text": "The cup gathers dust.",
+    "journey": "joseph",
+    "where": "prison:cup:again"
+  },
+  {
+    "id": "d1672539",
+    "speaker": "narrator",
+    "text": "Years later. A great hall in Egypt, full of grain stored up for a famine. Hungry travellers from Canaan have come to buy food.",
+    "journey": "joseph",
+    "where": "palace:intro"
+  },
+  {
+    "id": "45fdfcc6",
+    "speaker": "narrator",
+    "text": "Jars and sacks of grain, saved through seven good years. Enough to keep many people alive.",
+    "journey": "joseph",
+    "where": "palace:grain"
+  },
+  {
+    "id": "001b2bef",
+    "speaker": "page",
+    "text": "Has anything changed?. In a famine, Joseph’s brothers came to Egypt for grain. Joseph — now governor — recognised them, but they didn’t recognise him. He tested them carefully. In the end Judah, who had once suggested selling Joseph, offered himself as a slave so that their youngest brother, Benjamin, could go free (44:33). Joseph wept more than once (42:24; 43:30). Joseph didn’t rush to reconcile. He watched for real change, and he grieved. Wise caution is not the same as unforgiveness.",
+    "journey": "joseph",
+    "where": "palace:grain"
+  },
+  {
+    "id": "78a4ddbb",
+    "speaker": "narrator",
+    "text": "Enough grain for a whole region.",
+    "journey": "joseph",
+    "where": "palace:grain:again"
+  },
+  {
+    "id": "cd4b123f",
+    "speaker": "narrator",
+    "text": "Three weathered men bow low, asking to buy grain. They don’t recognise the face in front of them.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "79873bd4",
+    "speaker": "page",
+    "text": "He wept aloud. And he wept aloud: and the Egyptians and the house of Pharaoh heard. When Joseph saw Judah’s change of heart, he could no longer hold back. He sent everyone else out, wept so loudly that the Egyptians heard, and told his brothers who he was. Reconciliation here is full of tears. It comes after years, after testing, and after the brothers had changed.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "010d147c",
+    "speaker": "narrator",
+    "text": "If the person who hurt you came back, what would you need?",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "2d4af5a0",
+    "speaker": "narrator",
+    "text": "Safety comes first. Forgiveness never requires putting yourself back in harm’s way.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "20a2a737",
+    "speaker": "narrator",
+    "text": "Joseph looked for that too. He tested his brothers before he trusted them. That was wisdom, not bitterness.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "2f96d542",
+    "speaker": "narrator",
+    "text": "The brothers did, in the end: “We are verily guilty.” Truth-telling matters in repair.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "cf57d37a",
+    "speaker": "narrator",
+    "text": "That is allowed. Joseph kept his distance for a long time. Forgiveness and reconciliation are not the same thing.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "c750cd3e",
+    "speaker": "narrator",
+    "text": "That’s honest. You don’t have to decide today.",
+    "journey": "joseph",
+    "where": "palace:brothers"
+  },
+  {
+    "id": "03c6d7fe",
+    "speaker": "narrator",
+    "text": "The travellers wait, uneasy.",
+    "journey": "joseph",
+    "where": "palace:brothers:again"
+  },
+  {
+    "id": "8382c650",
+    "speaker": "iry",
+    "text": "They let me out too, in the end. I came to see the Hebrew’s hall.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "1951abf0",
+    "speaker": "page",
+    "text": "Ye thought evil against me. But as for you, ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive. After their father died, the brothers feared revenge. Joseph wept, reassured them, and promised to provide for their families. Joseph names what they did as evil. He does not say the betrayal was good or necessary. He says God brought good through it — a conclusion he reached after many years, about his own story. It is not a quick explanation anyone should press on someone else’s pain.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "e50105f9",
+    "speaker": "iry",
+    "text": "You said you keep doing the next good thing. Joseph did that in the dark for years. It didn’t make the betrayal good — but it meant he was still himself when the doors opened.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "bbd0ad63",
+    "speaker": "iry",
+    "text": "You said you replay it. Joseph named what his brothers did as evil — he didn’t pretend. But he wasn’t ruled by it forever. That took years, and tears. It may for you, too.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "dd0f9ab9",
+    "speaker": "iry",
+    "text": "You said you bring it to God, complaints and all. Keep doing that. The God who was with Joseph in the prison can handle your honesty.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "31b9bf73",
+    "speaker": "iry",
+    "text": "You said you try not to feel. Joseph wept — loudly, more than once. Feeling it was part of his healing, not a sign he’d failed.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "708c2fbd",
+    "speaker": "iry",
+    "text": "Your story isn’t finished. Neither was his, in the pit. Go gently.",
+    "journey": "joseph",
+    "where": "palace:iry-free"
+  },
+  {
+    "id": "04bfe4b1",
+    "speaker": "iry",
+    "text": "Go gently, friend.",
+    "journey": "joseph",
+    "where": "palace:iry-free:again"
+  },
+  {
+    "id": "fb409953",
+    "speaker": "narrator",
+    "text": "Joseph’s brothers meant evil, and the story says so. Through long years of waiting, God was with him in the pit and the prison, and good grew in places no one expected. Your hurt matters, your waiting is seen, and your story is not finished. You don’t have to call what happened good — and you don’t have to walk the road alone.",
+    "journey": "joseph",
+    "where": "closing"
+  },
+  {
+    "id": "29e280f7",
+    "speaker": "narrator",
+    "text": "Night in Jerusalem. A cold courtyard, a fire of coals, servants warming their hands. Something terrible is happening inside the house.",
+    "journey": "peter",
+    "where": "courtyard:intro"
+  },
+  {
+    "id": "24dbb445",
+    "speaker": "page",
+    "text": "I have prayed for thee. But I have prayed for thee, that thy faith fail not: and when thou art converted, strengthen thy brethren. At the Last Supper, Jesus told Peter that he would deny him three times that night. Peter insisted he was ready to go to prison and death. Jesus had already prayed for him — and spoke of a future after the failure. Before Peter failed, Jesus had already prayed for his restoration. The failure was not a surprise to him.",
+    "journey": "peter",
+    "where": "courtyard:fire"
+  },
+  {
+    "id": "d5f59cbf",
+    "speaker": "narrator",
+    "text": "A servant girl peers at a man across the fire. “This man was also with him.” He shakes his head.",
+    "journey": "peter",
+    "where": "courtyard:fire"
+  },
+  {
+    "id": "33fc8546",
+    "speaker": "page",
+    "text": "I know him not. And he denied him, saying, Woman, I know him not. After Jesus was arrested, Peter followed at a distance into the high priest’s courtyard and sat by a fire. A servant girl said he had been with Jesus. He denied it. Twice more, people recognised him; twice more he denied knowing Jesus. Peter’s failure came from fear, in a cold courtyard, beside a warm fire. Most failures are not as dramatic as we imagine — just small, frightened words.",
+    "journey": "peter",
+    "where": "courtyard:fire"
+  },
+  {
+    "id": "2489fbba",
+    "speaker": "narrator",
+    "text": "When have you kept quiet — or said something you regret — out of fear?",
+    "journey": "peter",
+    "where": "courtyard:fire"
+  },
+  {
+    "id": "5b381a6f",
+    "speaker": "narrator",
+    "text": "The coals glow. People keep their eyes down.",
+    "journey": "peter",
+    "where": "courtyard:fire:again"
+  },
+  {
+    "id": "fb0e4597",
+    "speaker": "page",
+    "text": "The Lord turned, and looked. And the Lord turned, and looked upon Peter. And Peter remembered the word of the Lord, how he had said unto him, Before the cock crow, thou shalt deny me thrice. As Peter spoke the third denial, the rooster crowed. Jesus turned and looked at him. Peter remembered — and went out and wept bitterly (22:62). The story doesn’t describe the look as angry. But it was enough for Peter to see himself clearly. Real sorrow over what we have done is not the same as being destroyed by shame.",
+    "journey": "peter",
+    "where": "courtyard:rooster"
+  },
+  {
+    "id": "433026f4",
+    "speaker": "narrator",
+    "text": "And Peter went out, and wept bitterly.",
+    "journey": "peter",
+    "where": "courtyard:rooster"
+  },
+  {
+    "id": "0d18bee1",
+    "speaker": "narrator",
+    "text": "What do you regret?",
+    "journey": "peter",
+    "where": "courtyard:rooster"
+  },
+  {
+    "id": "4dd3940f",
+    "speaker": "narrator",
+    "text": "Sorrow over what we have done can be a gift. It means we see clearly. Shame says we are beyond repair. The rest of this story disagrees.",
+    "journey": "peter",
+    "where": "courtyard:rooster"
+  },
+  {
+    "id": "f790ebf4",
+    "speaker": "narrator",
+    "text": "The rooster is quiet now. The sky is still dark.",
+    "journey": "peter",
+    "where": "courtyard:rooster:again"
+  },
+  {
+    "id": "1019771a",
+    "speaker": "yona",
+    "text": "Come away from the fire. You look like someone who wants to disappear.",
+    "journey": "peter",
+    "where": "courtyard:yona"
+  },
+  {
+    "id": "01b7623e",
+    "speaker": "yona",
+    "text": "Yona pulls her shawl against the cold.",
+    "journey": "peter",
+    "where": "courtyard:yona"
+  },
+  {
+    "id": "bea44f23",
+    "speaker": "yona",
+    "text": "North, home to the lake. The fishermen have gone back there too. When men don’t know what to do, they go fishing.",
+    "journey": "peter",
+    "where": "courtyard:yona"
+  },
+  {
+    "id": "7ce25693",
+    "speaker": "yona",
+    "text": "Not by pretending it didn’t happen. But I’ve seen worse mended than you’d think. Come and see.",
+    "journey": "peter",
+    "where": "courtyard:yona"
+  },
+  {
+    "id": "bb041876",
+    "speaker": "yona",
+    "text": "The road north is long. Let’s go.",
+    "journey": "peter",
+    "where": "courtyard:yona:again"
+  },
+  {
+    "id": "dfe78e58",
+    "speaker": "narrator",
+    "text": "The Sea of Galilee at night. Boats rock gently at the water’s edge. Fishing all night, and nothing to show for it.",
+    "journey": "peter",
+    "where": "lake:intro"
+  },
+  {
+    "id": "b2b036d2",
+    "speaker": "yona",
+    "text": "Every net I mend has been torn before. That’s what mending is for.",
+    "journey": "peter",
+    "where": "lake:yona-lake"
+  },
+  {
+    "id": "1d0d33cc",
+    "speaker": "page",
+    "text": "I go a fishing. Simon Peter saith unto them, I go a fishing. They say unto him, We also go with thee. They went forth, and entered into a ship immediately; and that night they caught nothing. After the resurrection, Peter and several disciples were back in Galilee. Peter went back to what he knew: fishing. They worked all night and caught nothing. After failure, it’s natural to go back to what feels safe and familiar. The story doesn’t scold Peter for it.",
+    "journey": "peter",
+    "where": "lake:boat"
+  },
+  {
+    "id": "290cf8b6",
+    "speaker": "narrator",
+    "text": "Grey light is creeping over the hills. Where will you cast the net?",
+    "journey": "peter",
+    "where": "lake:boat"
+  },
+  {
+    "id": "de3e8bca",
+    "speaker": "narrator",
+    "text": "Nothing. Again.",
+    "journey": "peter",
+    "where": "lake:boat"
+  },
+  {
+    "id": "2c818699",
+    "speaker": "narrator",
+    "text": "A figure on the shore calls out: “Cast the net on the right side of the ship.”",
+    "journey": "peter",
+    "where": "lake:boat"
+  },
+  {
+    "id": "6bfc4540",
+    "speaker": "narrator",
+    "text": "The net goes heavy — so heavy you can barely hold it. Silver fish, everywhere.",
+    "journey": "peter",
+    "where": "lake:boat"
+  },
+  {
+    "id": "534085af",
+    "speaker": "page",
+    "text": "Cast the net on the right side. And he said unto them, Cast the net on the right side of the ship, and ye shall find. They cast therefore, and now they were not able to draw it for the multitude of fishes. At dawn, a figure on the shore told them to cast on the right side. The net filled. John said, “It is the Lord.” Peter threw himself into the water and swam to shore; the others brought the boat and the net. Different people came to Jesus in different ways that morning — some in a rush, some slowly with the work in their hands. All were welcomed.",
+    "journey": "peter",
+    "where": "lake:boat"
+  },
+  {
+    "id": "bc3bfd07",
+    "speaker": "narrator",
+    "text": "The net is full to bursting.",
+    "journey": "peter",
+    "where": "lake:boat:again"
+  },
+  {
+    "id": "1928e8b6",
+    "speaker": "narrator",
+    "text": "Someone in the boat says quietly, “It is the Lord.”",
+    "journey": "peter",
+    "where": "lake:shoreline"
+  },
+  {
+    "id": "51d437e7",
+    "speaker": "narrator",
+    "text": "How do you come to the shore?",
+    "journey": "peter",
+    "where": "lake:shoreline"
+  },
+  {
+    "id": "daec2688",
+    "speaker": "narrator",
+    "text": "There’s no single right way to come back. The shore is the same either way.",
+    "journey": "peter",
+    "where": "lake:shoreline"
+  },
+  {
+    "id": "19d02804",
+    "speaker": "narrator",
+    "text": "Smoke rises from a fire on the beach.",
+    "journey": "peter",
+    "where": "lake:shoreline:again"
+  },
+  {
+    "id": "15b03b4d",
+    "speaker": "narrator",
+    "text": "Daybreak. Pebbles, gentle waves, and the smell of bread and fish cooking.",
+    "journey": "peter",
+    "where": "shore:intro"
+  },
+  {
+    "id": "a0741248",
+    "speaker": "narrator",
+    "text": "You arrive dripping and out of breath, a little embarrassed. Nobody laughs. There’s already a fire.",
+    "journey": "peter",
+    "where": "shore:shorefire"
+  },
+  {
+    "id": "f0059355",
+    "speaker": "narrator",
+    "text": "You drag the heavy net up the beach with the others — a hundred and fifty-three fish, the story says (John 21:11). There’s already a fire.",
+    "journey": "peter",
+    "where": "shore:shorefire"
+  },
+  {
+    "id": "298f58a5",
+    "speaker": "narrator",
+    "text": "You stay at the edge of the firelight, not sure you belong. Someone shifts over to make room for you.",
+    "journey": "peter",
+    "where": "shore:shorefire"
+  },
+  {
+    "id": "fe72ab2f",
+    "speaker": "page",
+    "text": "Come and dine. As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread. On the shore, Jesus had already made a fire of coals, with fish and bread on it. He said, “Come and dine” (21:12), and served them breakfast. Peter had denied Jesus beside a fire of coals (John 18:18). Now Jesus meets him beside another one. Grace often returns us to the place of failure — not to shame us, but to make something new there.",
+    "journey": "peter",
+    "where": "shore:shorefire"
+  },
+  {
+    "id": "5a566cf1",
+    "speaker": "narrator",
+    "text": "A fire of coals — like the one in the courtyard. Some memories are met right where they happened.",
+    "journey": "peter",
+    "where": "shore:shorefire"
+  },
+  {
+    "id": "545f8a07",
+    "speaker": "narrator",
+    "text": "There’s more bread if you want it.",
+    "journey": "peter",
+    "where": "shore:shorefire:again"
+  },
+  {
+    "id": "58656e85",
+    "speaker": "page",
+    "text": "Lovest thou me?. He saith unto him the third time, Simon, son of Jonas, lovest thou me? Peter was grieved because he said unto him the third time, Lovest thou me? And he said unto him, Lord, thou knowest all things; thou knowest that I love thee. Jesus saith unto him, Feed my sheep. After breakfast, Jesus asked Peter three times — once for each denial — whether he loved him. Each time, Jesus gave him work to do: feed and tend his sheep. Then he said, “Follow me” (21:19). The questions hurt (“Peter was grieved”). Restoration wasn’t pretending nothing happened. It faced it, three times, and then gave Peter a purpose again.",
+    "journey": "peter",
+    "where": "shore:questions"
+  },
+  {
+    "id": "2654d43c",
+    "speaker": "narrator",
+    "text": "If you were asked, “Do you love me?”, what might you say?",
+    "journey": "peter",
+    "where": "shore:questions"
+  },
+  {
+    "id": "02b2b353",
+    "speaker": "narrator",
+    "text": "Peter’s answer wasn’t a speech. “Thou knowest all things.” Jesus didn’t ask him to prove himself first. He gave him work: “Feed my sheep.”",
+    "journey": "peter",
+    "where": "shore:questions"
+  },
+  {
+    "id": "d1c6a3fa",
+    "speaker": "yona",
+    "text": "Forgiven by Jesus — and still with things to put right with people. Both can be true at once. Peter’s restoration happened in front of the others, and he spent the rest of his life serving the people he’d let down.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "503fa39f",
+    "speaker": "narrator",
+    "text": "“Is there something to mend?” Yona asks.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "49266bae",
+    "speaker": "yona",
+    "text": "Then keep it simple and honest. No excuses, no demands. Let them respond in their own time.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "22f0253b",
+    "speaker": "yona",
+    "text": "Good. Repair might cost you something. That’s part of what makes it real.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "9b453227",
+    "speaker": "yona",
+    "text": "That’s wise. Some situations need a pastor, a counsellor, or other help — especially if contact could hurt someone more.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "b8251468",
+    "speaker": "yona",
+    "text": "Then receive the breakfast. Sometimes the person we most need to stop punishing is ourselves.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "adcf7570",
+    "speaker": "yona",
+    "text": "That’s honest. Keep the question near you.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "09d841cf",
+    "speaker": "yona",
+    "text": "Follow on from here. You’re not done — but you’re not finished, either.",
+    "journey": "peter",
+    "where": "shore:yona-shore"
+  },
+  {
+    "id": "f1206891",
+    "speaker": "yona",
+    "text": "Go gently. Mend what you can.",
+    "journey": "peter",
+    "where": "shore:yona-shore:again"
+  },
+  {
+    "id": "a2507da0",
+    "speaker": "narrator",
+    "text": "Peter’s failure was real, and so was his grief. Jesus met him with breakfast, faced the past with him three times, and gave him work to do. Your regret doesn’t have to be the last word. Grace may lead you toward honest repair — and it also says you are not finished.",
+    "journey": "peter",
+    "where": "closing"
+  },
+  {
+    "id": "f2206a07",
+    "speaker": "narrator",
+    "text": "Evening in Jerusalem. The army is away at war. On the palace roof, the air is warm and the city spreads out below.",
+    "journey": "david",
+    "where": "rooftop:intro"
+  },
+  {
+    "id": "047177b5",
+    "speaker": "page",
+    "text": "David tarried still at Jerusalem. But David tarried still at Jerusalem. In the spring, when kings went out to war, David sent his army out under Joab — and stayed home in his palace. The story begins with a king comfortable, idle, and powerful. Nothing has happened yet. But the setting matters.",
+    "journey": "david",
+    "where": "rooftop:parapet"
+  },
+  {
+    "id": "eda50f77",
+    "speaker": "page",
+    "text": "He sent messengers, and took her. And David sent messengers, and took her; and she came in unto him, and he lay with her; for she was purified from her uncleanness: and she returned unto her house. From his roof, David saw a woman bathing. He found out she was Bathsheba, the wife of Uriah, one of his soldiers. He sent messengers to take her to the palace and slept with her. She became pregnant. This is not a love story. David was the king; Bathsheba’s husband was away at David’s war. Every verb belongs to David — he saw, sent, took. Scripture places the responsibility on him.",
+    "journey": "david",
+    "where": "rooftop:parapet"
+  },
+  {
+    "id": "c96ad200",
+    "speaker": "narrator",
+    "text": "Where do you hold power or influence over other people?",
+    "journey": "david",
+    "where": "rooftop:parapet"
+  },
+  {
+    "id": "f8211d5b",
+    "speaker": "narrator",
+    "text": "Power isn’t wrong in itself. But Jesus said, “unto whomsoever much is given, of him shall be much required” (Luke 12:48).",
+    "journey": "david",
+    "where": "rooftop:parapet"
+  },
+  {
+    "id": "b4e9cf45",
+    "speaker": "narrator",
+    "text": "Lamps are being lit across the city.",
+    "journey": "david",
+    "where": "rooftop:parapet:again"
+  },
+  {
+    "id": "287fe783",
+    "speaker": "page",
+    "text": "A letter carried by Uriah. And when the mourning was past, David sent and fetched her to his house, and she became his wife, and bare him a son. But the thing that David had done displeased the LORD. To hide the pregnancy, David brought Uriah home, hoping he would sleep with his wife. Uriah, loyal to his fellow soldiers, refused. So David sent a letter — carried by Uriah himself — telling Joab to put Uriah where the fighting was fiercest and pull back. Uriah was killed. Bathsheba mourned her husband. The cover-up was worse than the first wrong: a loyal, honourable man was murdered. Bathsheba lost her husband because of the king’s choices.",
+    "journey": "david",
+    "where": "rooftop:letter"
+  },
+  {
+    "id": "297831c3",
+    "speaker": "narrator",
+    "text": "When something you’ve done goes wrong, what’s your first instinct?",
+    "journey": "david",
+    "where": "rooftop:letter"
+  },
+  {
+    "id": "986cb1e2",
+    "speaker": "narrator",
+    "text": "David’s instinct was to cover it up. Each step of the cover-up harmed someone else.",
+    "journey": "david",
+    "where": "rooftop:letter"
+  },
+  {
+    "id": "c4bcc6f6",
+    "speaker": "narrator",
+    "text": "The seal is broken now.",
+    "journey": "david",
+    "where": "rooftop:letter:again"
+  },
+  {
+    "id": "7b25b123",
+    "speaker": "tavi",
+    "text": "I play for the king. Everybody in the palace knew. Nobody said a word.",
+    "journey": "david",
+    "where": "rooftop:tavi"
+  },
+  {
+    "id": "3fa8eb87",
+    "speaker": "tavi",
+    "text": "Tavi tightens a string on his lyre.",
+    "journey": "david",
+    "where": "rooftop:tavi"
+  },
+  {
+    "id": "58e4f9ee",
+    "speaker": "tavi",
+    "text": "Who tells a king no? That’s what power does — it makes the truth expensive. So people stay quiet, and the harm grows.",
+    "journey": "david",
+    "where": "rooftop:tavi"
+  },
+  {
+    "id": "14444317",
+    "speaker": "tavi",
+    "text": "She lost her husband, then her child. People talk about David’s sin and forget she was the one it happened to. Don’t forget her.",
+    "journey": "david",
+    "where": "rooftop:tavi"
+  },
+  {
+    "id": "40f3e04b",
+    "speaker": "tavi",
+    "text": "Wait for the prophet. Forgiveness is real in this story. But it doesn’t arrive the way a king would choose — and it doesn’t make the harm disappear.",
+    "journey": "david",
+    "where": "rooftop:tavi"
+  },
+  {
+    "id": "c782cbfb",
+    "speaker": "tavi",
+    "text": "The hall is below. Nathan has asked to see the king.",
+    "journey": "david",
+    "where": "rooftop:tavi:again"
+  },
+  {
+    "id": "5e8af651",
+    "speaker": "narrator",
+    "text": "A cedar hall, bright with daylight. An old prophet waits with his staff. He looks tired, and very calm.",
+    "journey": "david",
+    "where": "hall:intro"
+  },
+  {
+    "id": "59c3cbe5",
+    "speaker": "tavi",
+    "text": "Nathan could lose his life for this. Listen closely.",
+    "journey": "david",
+    "where": "hall:tavi-hall"
+  },
+  {
+    "id": "bf74b236",
+    "speaker": "nathan",
+    "text": "Let me tell you a story. There were two men in one city: one rich, one poor.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "d8393b20",
+    "speaker": "page",
+    "text": "The poor man’s lamb. But the poor man had nothing, save one little ewe lamb, which he had bought and nourished up: and it grew up together with him, and with his children; it did eat of his own meat, and drank of his own cup, and lay in his bosom, and was unto him as a daughter. God sent the prophet Nathan to David. Nathan told a story: a rich man with many flocks took a poor man’s only, beloved lamb to feed a guest. David burned with anger and said the man deserved to die and must repay fourfold. Nathan’s story makes the harm visible from the side of the one who was wronged. Power often hides that view.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "88aaf662",
+    "speaker": "nathan",
+    "text": "“What do you think of the rich man?” Nathan asks.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "febe2ef4",
+    "speaker": "page",
+    "text": "Thou art the man. And Nathan said to David, Thou art the man. Nathan turned the story on David: God had given him everything, yet he had despised God’s word, taken Uriah’s wife, and killed Uriah with the sword of the Ammonites. Nathan named consequences that would follow in David’s own house. Truth was spoken to power, at real risk. Nathan named both the sexual sin and the murder — no softer words.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "16f10d3d",
+    "speaker": "narrator",
+    "text": "Not as David, but as yourself: if someone confronted you with harm you had caused, what might your first instinct be?",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "eca5af13",
+    "speaker": "nathan",
+    "text": "Explaining is the instinct of power. But listen to Psalm 51: no explanation. “I acknowledge my transgressions.” The way back begins with the truth, not with the reasons.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "b9447533",
+    "speaker": "nathan",
+    "text": "Others had a part — Joab followed orders. But a confession that points elsewhere isn’t a confession yet. Each of us can only repent of our own part.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "f316063f",
+    "speaker": "nathan",
+    "text": "Admitting it plainly is the hardest and best first step. It is only a first step. Repair, protection of others, and accountability come next.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "ab7c7218",
+    "speaker": "nathan",
+    "text": "Going silent is human. David hid this for months. Psalm 32 says that when he kept silence, his bones grew old. Speaking was the way out.",
+    "journey": "david",
+    "where": "hall:nathan"
+  },
+  {
+    "id": "d768d8bc",
+    "speaker": "nathan",
+    "text": "The truth has been spoken. What happens next matters.",
+    "journey": "david",
+    "where": "hall:nathan:again"
+  },
+  {
+    "id": "a763a3c9",
+    "speaker": "narrator",
+    "text": "A small lamb, the kind a poor family might raise like one of their own children.",
+    "journey": "david",
+    "where": "hall:lamb"
+  },
+  {
+    "id": "ac5aa517",
+    "speaker": "narrator",
+    "text": "Nathan’s story makes us look from the side of the one who was harmed. Repentance that only thinks about our own guilt has not yet looked at them.",
+    "journey": "david",
+    "where": "hall:lamb"
+  },
+  {
+    "id": "4d977878",
+    "speaker": "narrator",
+    "text": "Is there someone your choices have harmed?",
+    "journey": "david",
+    "where": "hall:lamb"
+  },
+  {
+    "id": "38ea9e6f",
+    "speaker": "narrator",
+    "text": "Thank you for being honest. Their wellbeing matters most now: telling the truth, taking responsibility, and not making them carry your healing.",
+    "journey": "david",
+    "where": "hall:lamb"
+  },
+  {
+    "id": "831d999d",
+    "speaker": "note",
+    "text": "Thank you for saying so. Please reach out now — to emergency services if anyone is in danger, to a crisis line, or to a professional who can help you keep others and yourself safe.",
+    "journey": "david",
+    "where": "hall:lamb"
+  },
+  {
+    "id": "68bcaf1d",
+    "speaker": "narrator",
+    "text": "The lamb nuzzles at the floor rushes.",
+    "journey": "david",
+    "where": "hall:lamb:again"
+  },
+  {
+    "id": "7e0948a1",
+    "speaker": "narrator",
+    "text": "Night. One lamp burning. In tradition, Psalm 51 is linked with this time — a prayer written after Nathan came.",
+    "journey": "david",
+    "where": "night:intro"
+  },
+  {
+    "id": "e964336d",
+    "speaker": "page",
+    "text": "I have sinned. And David said unto Nathan, I have sinned against the LORD. And Nathan said unto David, The LORD also hath put away thy sin; thou shalt not die. David confessed without excuse. Nathan told him God had put away his sin — and that the child born to Bathsheba would die. The child became ill; David fasted and prayed, and the child died. Forgiveness and consequences stand side by side here. The death of the child is painful and hard to understand; Wayfinder won’t explain it away. Repentance did not undo the harm David had done.",
+    "journey": "david",
+    "where": "night:lamp"
+  },
+  {
+    "id": "1ed40abf",
+    "speaker": "narrator",
+    "text": "The lamp burns low and steady.",
+    "journey": "david",
+    "where": "night:lamp:again"
+  },
+  {
+    "id": "bcab33b6",
+    "speaker": "narrator",
+    "text": "Tavi plays quietly. The words are old: “Create in me a clean heart, O God; and renew a right spirit within me” (Psalm 51:10).",
+    "journey": "david",
+    "where": "night:harp"
+  },
+  {
+    "id": "91169055",
+    "speaker": "tavi",
+    "text": "You said your instinct might be to explain. Psalm 51 doesn’t explain. It just tells the truth. That’s where healing starts.",
+    "journey": "david",
+    "where": "night:harp"
+  },
+  {
+    "id": "2b31c199",
+    "speaker": "tavi",
+    "text": "You said you might point to others. This psalm only speaks for the one praying it. That’s the only confession any of us can make.",
+    "journey": "david",
+    "where": "night:harp"
+  },
+  {
+    "id": "b753b483",
+    "speaker": "tavi",
+    "text": "You said you’d admit it plainly. Then this psalm is for you — and so is the work after it: repair, where it’s safe and wanted.",
+    "journey": "david",
+    "where": "night:harp"
+  },
+  {
+    "id": "c10ad2ff",
+    "speaker": "tavi",
+    "text": "You said you might go silent. This psalm is what it sounds like when silence breaks.",
+    "journey": "david",
+    "where": "night:harp"
+  },
+  {
+    "id": "485b133e",
+    "speaker": "narrator",
+    "text": "What would you most want God to make new in you?",
+    "journey": "david",
+    "where": "night:harp"
+  },
+  {
+    "id": "ba82e8ec",
+    "speaker": "narrator",
+    "text": "The lyre is quiet.",
+    "journey": "david",
+    "where": "night:harp:again"
+  },
+  {
+    "id": "45a2d266",
+    "speaker": "page",
+    "text": "Her that had been the wife of Urias. And Jesse begat David the king; and David the king begat Solomon of her that had been the wife of Urias; Bathsheba mourned her husband and then her child. David comforted her (12:24), and she later bore Solomon. She became a woman of influence (1 Kings 1–2). Generations later, Matthew’s genealogy of Jesus names her — and pointedly remembers Uriah. The story of David’s repentance is also the story of a woman who was wronged and grieved twice. Scripture doesn’t forget her, or Uriah. Neither should we.",
+    "journey": "david",
+    "where": "night:window"
+  },
+  {
+    "id": "b9843ef9",
+    "speaker": "tavi",
+    "text": "Forgiven isn’t the same as consequence-free. David lived with what he’d done for the rest of his life. If you’ve harmed someone: tell the truth, take responsibility, protect them from more harm, and get wise help. And remember the people it happened to.",
+    "journey": "david",
+    "where": "night:window"
+  },
+  {
+    "id": "b6db1498",
+    "speaker": "narrator",
+    "text": "David used his power to harm others, and Scripture says so plainly. When the truth was spoken, he confessed without excuse and was forgiven — and he still lived with real consequences. Bathsheba and Uriah are remembered. There is mercy for those who have done harm and turn honestly to God. That mercy leads toward truth, responsibility, and protecting others, not away from them.",
+    "journey": "david",
+    "where": "closing"
+  },
+  {
+    "id": "f403382c",
+    "speaker": "narrator",
+    "text": "Bright day in the vineyards of Timnah. Grapes hang heavy on the vines — a strange place for someone who promised never to touch them.",
+    "journey": "samson",
+    "where": "vineyard:intro"
+  },
+  {
+    "id": "4b0ff109",
+    "speaker": "page",
+    "text": "Set apart from the womb. For, lo, thou shalt conceive, and bear a son; and no razor shall come on his head: for the child shall be a Nazarite unto God from the womb: and he shall begin to deliver Israel out of the hand of the Philistines. Before Samson was born, his parents were told he would be a Nazirite — set apart to God for life. Nazirites didn’t drink wine or eat grapes, didn’t cut their hair, and avoided contact with the dead (Numbers 6). As he grew, “the Spirit of the LORD began to move him” (13:25). Samson’s strength was a gift, given for a purpose. His boundaries were part of the gift too — not rules to shrink him, but lines marking whose he was.",
+    "journey": "samson",
+    "where": "vineyard:vow"
+  },
+  {
+    "id": "584f6ce2",
+    "speaker": "narrator",
+    "text": "What strengths or gifts have you been given?",
+    "journey": "samson",
+    "where": "vineyard:vow"
+  },
+  {
+    "id": "73bc3e06",
+    "speaker": "narrator",
+    "text": "Gifts are good. Boundaries help protect them — and protect the people around us.",
+    "journey": "samson",
+    "where": "vineyard:vow"
+  },
+  {
+    "id": "db368f92",
+    "speaker": "narrator",
+    "text": "Old, sun-bleached bones in the rocks — and bees, and the gold glint of honey.",
+    "journey": "samson",
+    "where": "vineyard:carcass"
+  },
+  {
+    "id": "f75a0204",
+    "speaker": "page",
+    "text": "He told not them. And he took thereof in his hands, and went on eating, and came to his father and mother, and he gave them, and they did eat: but he told not them that he had taken the honey out of the carcase of the lion. Near the vineyards of Timnah, Samson killed a young lion with his bare hands. Later he found bees and honey in its carcass. He scooped it out, ate it, and gave some to his parents — without telling them where it came from. Touching a carcass broke his Nazirite vow. The quiet detail is the hiding: he didn’t tell. Patterns often begin small, and secret.",
+    "journey": "samson",
+    "where": "vineyard:carcass"
+  },
+  {
+    "id": "1f82d08c",
+    "speaker": "narrator",
+    "text": "Samson hid where the honey came from. What do you tend to keep hidden?",
+    "journey": "samson",
+    "where": "vineyard:carcass"
+  },
+  {
+    "id": "bb1f1690",
+    "speaker": "narrator",
+    "text": "Secrecy is often the soil patterns grow in. You don’t have to tell everyone. But telling someone changes things.",
+    "journey": "samson",
+    "where": "vineyard:carcass"
+  },
+  {
+    "id": "2e45ce1d",
+    "speaker": "narrator",
+    "text": "The bees go on working.",
+    "journey": "samson",
+    "where": "vineyard:carcass:again"
+  },
+  {
+    "id": "ff911879",
+    "speaker": "ziva",
+    "text": "Funny place for a Nazirite to walk, a vineyard. Come on — I’ll show you the valley.",
+    "journey": "samson",
+    "where": "vineyard:ziva"
+  },
+  {
+    "id": "77cedc6b",
+    "speaker": "ziva",
+    "text": "Ziva wipes her hands on her apron.",
+    "journey": "samson",
+    "where": "vineyard:ziva"
+  },
+  {
+    "id": "0a2a796c",
+    "speaker": "ziva",
+    "text": "Someone set apart. No wine or grapes, no razor, no touching the dead (Numbers 6). Lines drawn around a life — as a gift, not a cage.",
+    "journey": "samson",
+    "where": "vineyard:ziva"
+  },
+  {
+    "id": "46ce6374",
+    "speaker": "ziva",
+    "text": "Why do any of us walk right up to the edge of what we said we wouldn’t do? Usually because part of us wants to.",
+    "journey": "samson",
+    "where": "vineyard:ziva"
+  },
+  {
+    "id": "906a7e4c",
+    "speaker": "ziva",
+    "text": "Samson had more strength than anyone. It didn’t keep him. Strength is a gift. It’s a poor substitute for honesty and help.",
+    "journey": "samson",
+    "where": "vineyard:ziva"
+  },
+  {
+    "id": "79d95803",
+    "speaker": "ziva",
+    "text": "The valley of Sorek is west of here.",
+    "journey": "samson",
+    "where": "vineyard:ziva:again"
+  },
+  {
+    "id": "bdd0d0a8",
+    "speaker": "narrator",
+    "text": "Evening in the valley of Sorek. A stream runs through it. Wooden posts stand along the path, each with a lantern waiting to be lit.",
+    "journey": "samson",
+    "where": "sorek:intro"
+  },
+  {
+    "id": "a7b0258d",
+    "speaker": "ziva",
+    "text": "A boundary isn’t a wall around your life. It’s a lantern on the path where you’ve fallen before.",
+    "journey": "samson",
+    "where": "sorek:ziva-walk"
+  },
+  {
+    "id": "788de4ad",
+    "speaker": "page",
+    "text": "Three times, and a fourth. Samson loved Delilah, who lived in the valley of Sorek. The Philistine rulers each offered her eleven hundred pieces of silver to discover the secret of his strength (16:5). Three times she asked; three times he gave a false answer, was tied up, and broke free. Still he stayed. The fourth time, he told her everything. Delilah betrayed Samson for money, and powerful men schemed against him. Samson also walked back into danger again and again, and gave away what had been entrusted to him. Responsibility is shared — and his choices were still his own.",
+    "journey": "samson",
+    "where": "sorek:page-delilah"
+  },
+  {
+    "id": "d2593c51",
+    "speaker": "page",
+    "text": "Back to the edge, again. Samson’s story repeats: desire, anger, revenge, escape. He burned Philistine fields, killed many, visited a prostitute in Gaza and tore off the city gates (16:1–3). His strength kept getting him out of trouble — until it didn’t. Great strength didn’t protect Samson from his own patterns. Sometimes being able to “handle it” is exactly what keeps us from asking for help.",
+    "journey": "samson",
+    "where": "sorek:page-delilah"
+  },
+  {
+    "id": "e765b4a6",
+    "speaker": "narrator",
+    "text": "Where or when does your pattern usually begin?",
+    "journey": "samson",
+    "where": "sorek:post-a"
+  },
+  {
+    "id": "501a98bc",
+    "speaker": "narrator",
+    "text": "You hang the lantern on the post. Now you’ll see this place coming.",
+    "journey": "samson",
+    "where": "sorek:post-a"
+  },
+  {
+    "id": "b7178e73",
+    "speaker": "narrator",
+    "text": "The lantern glows steadily.",
+    "journey": "samson",
+    "where": "sorek:post-a:again"
+  },
+  {
+    "id": "b4f7fb64",
+    "speaker": "narrator",
+    "text": "When the pattern starts again, what will you do?",
+    "journey": "samson",
+    "where": "sorek:post-b"
+  },
+  {
+    "id": "99cdd8c2",
+    "speaker": "ziva",
+    "text": "Tell someone right away — yes. Patterns lose power when they’re spoken out loud to someone safe. “Confess your faults one to another” (James 5:16).",
+    "journey": "samson",
+    "where": "sorek:post-b"
+  },
+  {
+    "id": "8fac86cb",
+    "speaker": "ziva",
+    "text": "Leaving is wise. Joseph ran from temptation and left his coat behind (Genesis 39:12). That’s not weakness. It’s wisdom.",
+    "journey": "samson",
+    "where": "sorek:post-b"
+  },
+  {
+    "id": "67cbd0ea",
+    "speaker": "ziva",
+    "text": "Pause and pray — good. And let your prayer lead you to people, too. Samson prayed at the end; imagine if he’d prayed, and been honest with someone, at the beginning.",
+    "journey": "samson",
+    "where": "sorek:post-b"
+  },
+  {
+    "id": "a705fb40",
+    "speaker": "ziva",
+    "text": "Handle it alone, with willpower? Samson had more strength than anyone who ever lived. It didn’t keep him. Strength was never meant to be used alone.",
+    "journey": "samson",
+    "where": "sorek:post-b"
+  },
+  {
+    "id": "8cdbda6b",
+    "speaker": "narrator",
+    "text": "Two lanterns now, along the dark path.",
+    "journey": "samson",
+    "where": "sorek:post-b:again"
+  },
+  {
+    "id": "3dd4e3fe",
+    "speaker": "page",
+    "text": "He wist not. And she said, The Philistines be upon thee, Samson. And he awoke out of his sleep, and said, I will go out as at other times before, and shake myself. And he wist not that the LORD was departed from him. While Samson slept, his hair was shaved. He woke expecting to escape “as at other times before” — but his strength was gone. The Philistines seized him, put out his eyes, and made him grind grain in prison in Gaza. “As at other times before.” Patterns convince us that this time will be like the last. The consequences here were devastating and real.",
+    "journey": "samson",
+    "where": "sorek:page-departed"
+  },
+  {
+    "id": "c3f7404f",
+    "speaker": "narrator",
+    "text": "Gaza at dusk. Somewhere a crowd is celebrating. In a prison yard, a millstone turns and turns.",
+    "journey": "samson",
+    "where": "gaza:intro"
+  },
+  {
+    "id": "a2b1a677",
+    "speaker": "narrator",
+    "text": "A heavy millstone, worn smooth by a blinded man walking in circles.",
+    "journey": "samson",
+    "where": "gaza:mill"
+  },
+  {
+    "id": "eb56cef5",
+    "speaker": "page",
+    "text": "The hair began to grow again. Howbeit the hair of his head began to grow again after he was shaven. Blind, captive, and grinding at the mill, Samson’s hair began to grow back. One small sentence of grace in the darkest place. It didn’t undo the consequences. But it says Samson was not abandoned.",
+    "journey": "samson",
+    "where": "gaza:mill"
+  },
+  {
+    "id": "103e6f56",
+    "speaker": "narrator",
+    "text": "Consequences are real here — Samson remained blind and captive. And still: the hair began to grow again.",
+    "journey": "samson",
+    "where": "gaza:mill"
+  },
+  {
+    "id": "8eb0fed4",
+    "speaker": "narrator",
+    "text": "The stone keeps turning.",
+    "journey": "samson",
+    "where": "gaza:mill:again"
+  },
+  {
+    "id": "8d049557",
+    "speaker": "page",
+    "text": "O Lord GOD, remember me. And Samson called unto the LORD, and said, O Lord GOD, remember me, I pray thee, and strengthen me, I pray thee, only this once, O God, that I may be at once avenged of the Philistines for my two eyes. At a Philistine festival, Samson was brought out to entertain the crowd. He prayed, pushed against the temple pillars, and the building fell, killing him along with many others. Hebrews 11:32 later names Samson among people of faith. Samson’s story ends in tragedy as well as faith, and even his last prayer is tangled with revenge. It is not a model for violence or for ending a life. What it shows is that God still heard a broken man who cried “remember me.”",
+    "journey": "samson",
+    "where": "gaza:pillars"
+  },
+  {
+    "id": "96d7728a",
+    "speaker": "note",
+    "text": "If you’ve had thoughts of ending your life, or of hurting others, please talk to someone now. The Support button at the top has crisis lines.",
+    "journey": "samson",
+    "where": "gaza:pillars"
+  },
+  {
+    "id": "ccd4200c",
+    "speaker": "narrator",
+    "text": "Samson’s last prayer was “remember me.” What would you ask God to remember?",
+    "journey": "samson",
+    "where": "gaza:pillars"
+  },
+  {
+    "id": "c58e8db8",
+    "speaker": "narrator",
+    "text": "The pillars stand silent.",
+    "journey": "samson",
+    "where": "gaza:pillars:again"
+  },
+  {
+    "id": "3bab7ded",
+    "speaker": "ziva",
+    "text": "You said you’d handle it alone. Samson tried that his whole life. Who could know about this — this week?",
+    "journey": "samson",
+    "where": "gaza:ziva-end"
+  },
+  {
+    "id": "53586c5e",
+    "speaker": "ziva",
+    "text": "You said you’d tell someone. That’s how chains start to loosen: out loud, with others.",
+    "journey": "samson",
+    "where": "gaza:ziva-end"
+  },
+  {
+    "id": "0c45a61f",
+    "speaker": "ziva",
+    "text": "You said you’d leave the situation. Plan the exit before you need it — that’s what the lanterns are for.",
+    "journey": "samson",
+    "where": "gaza:ziva-end"
+  },
+  {
+    "id": "63c2a155",
+    "speaker": "ziva",
+    "text": "You said you’d pause and pray. Keep doing that — and let prayer send you toward people who can help.",
+    "journey": "samson",
+    "where": "gaza:ziva-end"
+  },
+  {
+    "id": "07b0ddde",
+    "speaker": "ziva",
+    "text": "Your story isn’t Samson’s. Habits rarely change in one moment, and there may be setbacks. But hair grows back. Ask for help today — a friend, a support group, a doctor, a specialist service. Strength was never meant to be used alone.",
+    "journey": "samson",
+    "where": "gaza:ziva-end"
+  },
+  {
+    "id": "4af06a4a",
+    "speaker": "ziva",
+    "text": "Go gently. Light the lanterns ahead of time.",
+    "journey": "samson",
+    "where": "gaza:ziva-end:again"
+  },
+  {
+    "id": "9807c73b",
+    "speaker": "narrator",
+    "text": "Samson’s gifts were real, and so were his patterns and their cost. Even in the dark at Gaza, his hair began to grow again, and God heard his cry. Change may be slow, with setbacks along the way. But you don’t have to rely on willpower alone. Light the lanterns, tell someone, get help — and keep asking God to remember you.",
+    "journey": "samson",
+    "where": "closing"
+  }
+]
