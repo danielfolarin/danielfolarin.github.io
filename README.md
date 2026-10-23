@@ -20,6 +20,7 @@ appears as a folder under the same address:
 | `pilgrims-progress` | `games.thecuriousseekers.com/pilgrims-progress/` |
 | `ninle/` folder in this repository | `games.thecuriousseekers.com/ninle/` |
 | `wayfinder/` folder in this repository | `games.thecuriousseekers.com/wayfinder/` |
+| `run-the-course/` folder in this repository | `games.thecuriousseekers.com/run-the-course/` |
 
 So a new game needs only its own repository with Pages on, plus a card here.
 A small game can also live in a folder of this repository, like `ninle/` (Ninle Bible
@@ -35,3 +36,5 @@ Ninle is a children's game, so it counts nothing inside the game itself; only th
 "game-opened" click on its card here is counted.
 Wayfinder handles personal reflection, so it also counts nothing inside the game; only
 the click on its card here is counted. Its own README (`wayfinder/README.md`) explains it.
+Run the Course is a children's game too, so it counts nothing inside the game; only the
+click on its card here is counted. Its own README (`run-the-course/README.md`) explains it.

@@ -45,4 +45,14 @@ window.GAMES = [
     plays: "anywhere",
     length: "Eight journeys · about 10 minutes each",
   },
+  {
+    title: "Run the Course",
+    tagline: "A Bible race for children, run in the strength of the Lord.",
+    about:
+      "Pray at the starting line, then sprint, jump and slide toward the crown. Flee temptations like Malice and Lying, stop to feed the hungry and pray for the sick, and watch the Fruit of the Spirit grow in your heart. Seven courses and an endless marathon.",
+    image: "images/run-the-course.jpg",
+    link: "run-the-course/",
+    plays: "anywhere",
+    length: "Ages 6–12 · seven courses and a marathon",
+  },
 ];
