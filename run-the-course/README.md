@@ -22,6 +22,9 @@ device, the game falls back to a shaded 2D runner.
 - **Good works** are green signs: give to the poor, lay hands on the sick, serve at church,
   comfort a friend, share the Gospel, carry a burden. The clock waits while the child serves,
   and each good work adds a jewel to the crown.
+- **The Hill Country** is a side-scrolling stage partway through each course: run, jump, hit
+  Word blocks and stomp walking temptations. The clock waits there, a fall into a pit is never
+  a game over, and finishing it gives 8 seconds back.
 - **The finish** ends with laying the crown at Jesus' feet (Revelation 4:10–11).
 
 There are seven courses, each with its own sky, plus the endless **Marathon of Faith**,
