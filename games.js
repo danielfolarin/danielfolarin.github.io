@@ -43,7 +43,7 @@ window.GAMES = [
     image: "images/wayfinder.jpg",
     link: "wayfinder/",
     plays: "anywhere",
-    length: "Eight journeys · about 10 minutes each",
+    length: "Eight journeys, fully voiced · about 10 minutes each",
   },
   {
     title: "Run the Course",
