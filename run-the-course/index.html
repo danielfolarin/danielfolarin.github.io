@@ -1343,7 +1343,7 @@ function solveRig(P, roll){
   J.head = add(J.neck, upAt(P.lean * .4), .14);
   [-1, 1].forEach((sd, i) => {
     const Lg = P.legs[i], A = P.arms[i];
-    const hip = add(J.pel, v(sd * .1, -.04, -sd * P.twist * .5), 1);
+    const hip = add(J.pel, v(sd * .09, -.04, -sd * P.twist * .5), 1);
     const knee = add(hip, sag(Lg.a), .43);
     const b = Lg.a - Lg.k, ankle = add(knee, sag(b), .41);
     const fa = b + Math.PI / 2 - Lg.f;
@@ -1704,7 +1704,7 @@ function makeCharacter(L){
 
   // Clothing on the lower body.
   const pants = L.bottom !== 'knee';
-  const thighProf = pants ? [[0, 0], [.04, .084], [.3, .092], [.65, .08], [.96, .064], [1, 0]] : [[0, 0], [.04, .084], [.3, .094], [.65, .084], [.96, .07], [1, 0]];
+  const thighProf = pants ? [[0, 0], [.04, .072], [.3, .086], [.65, .08], [.96, .064], [1, 0]] : [[0, 0], [.04, .072], [.3, .088], [.65, .084], [.96, .07], [1, 0]];
   const shinSkin = [[0, 0], [.04, .05], [.28, .058], [.72, .04], [.98, .032], [1, 0]];
   const shinPant = [[0, 0], [.04, .066], [.3, .07], [.8, .056], [.97, .05], [1, 0]];
   for (let i = 0; i < 2; i++) {
@@ -1730,7 +1730,7 @@ function makeCharacter(L){
   // Upper body: a fitted athletic shirt, long enough to cover the seat.
   ch.torso = add(new THREE.Group());
   add(new THREE.Mesh(loftGeo([
-    { y: -.13, rx: .18, rz: .14 }, { y: -.02, rx: .17, rz: .128 }, { y: .16, rx: .14, rz: .098, z: -.005 }, { y: .3, rx: .162, rz: .114, z: -.008 },
+    { y: -.12, rx: .182, rz: .165, z: .022 }, { y: -.02, rx: .172, rz: .148, z: .016 }, { y: .16, rx: .14, rz: .098, z: -.005 }, { y: .3, rx: .162, rz: .114, z: -.008 },
     { y: .4, rx: .184, rz: .118, z: -.008 }, { y: .455, rx: .165, rz: .098, z: -.002 }, { y: .49, rx: .082, rz: .068 }, { y: .5, rx: .05, rz: .05 },
   ]), shirt), ch.torso);
   const band = new THREE.Mesh(new THREE.CylinderGeometry(.064, .07, .026, 22, 1, true), mat(shade(L.jersey.c, -.28), .7, { side: THREE.DoubleSide }));
@@ -2138,7 +2138,12 @@ $('#muteBtn').onclick = () => { muted = !muted; try { localStorage.setItem('rtc-
 
 /* ---------- Boot ---------- */
 let last = performance.now();
-function frame(now){ const dt = Math.min(.05, (now - last) / 1000); last = now; update(dt); render(); if (!runnerScreen.hidden) drawPreview(); requestAnimationFrame(frame); }
+function frame(now){
+  const dt = Math.min(.05, (now - last) / 1000); last = now;
+  if (!W || !H) resize(); // a tab opened in the background can start with no size
+  if (W && H) { update(dt); render(); if (!runnerScreen.hidden) drawPreview(); }
+  requestAnimationFrame(frame);
+}
 function start(data){
   loadProgress(); loadLook();
   if (data && data.progress) progress = { ...progress, ...data.progress };
