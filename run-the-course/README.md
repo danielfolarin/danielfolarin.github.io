@@ -5,7 +5,9 @@ It is built on 2 Timothy 4:7, Hebrews 12:1 and Philippians 3:13: a race with a r
 run in the strength of the Lord.
 
 The whole game is one file, `index.html`. There is no build step and nothing to install.
-It loads two Google Fonts (Lilita One and Fredoka) and works with any static web host.
+It loads two Google Fonts (Lilita One and Fredoka) and the three.js library from jsDelivr,
+which draws the 3D runner, and works with any static web host. If 3D is not available on a
+device, the game falls back to a shaded 2D runner.
 
 ## What happens in the game
 

@@ -428,6 +428,7 @@ button:focus-visible { outline: 3px solid var(--chalk); outline-offset: 3px; }
   <div class="panel result" id="resultBox"></div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
 <script>
 (() => {
 'use strict';
@@ -686,8 +687,8 @@ function objX(o, d){
 }
 
 /* ---------- Projection ---------- */
-const LANES = [-2.2, 0, 2.2], CAM_D = 6, FAR = 170, SEG = 3;
-let W = 0, H = 0, F = 0, HZ = 0, CAMH = 3, camX = 0;
+const LANES = [-2.2, 0, 2.2], CAM_D = 5, FAR = 170, SEG = 3;
+let W = 0, H = 0, F = 0, HZ = 0, CAMH = 3, camX = 0, camBob = 0;
 function resize(){
   const dpr = Math.min(2, window.devicePixelRatio || 1);
   W = window.innerWidth; H = window.innerHeight;
@@ -698,7 +699,7 @@ function resize(){
 function curveOff(d){ return d > 0 ? S.curve * d * d : 0; }
 function proj(x, y, d){
   const depth = Math.max(0.3, d + CAM_D), s = F / depth;
-  return { x: W / 2 + (x - camX + curveOff(d)) * s, y: HZ + (CAMH - y) * s, s };
+  return { x: W / 2 + (x - camX + curveOff(d)) * s, y: HZ + (CAMH + camBob - y) * s, s };
 }
 
 /* ---------- State ---------- */
@@ -1193,7 +1194,7 @@ function drawWork(o, d){
     J = solveRig(pose, 0);
     shadow(base.x, base.y, .4 * sc, s);
     const V = { front: true, headBias: -.5, map: j => { const q = proj(px - j.x * sc, j.y * sc, d - j.z * sc); return { x: q.x, y: q.y, s: q.s * sc, k: d - j.z * sc }; } };
-    drawFigure(ctx, J, V, personLook(P), { t: S.t, sw: 0 });
+    if (s < 14 || !draw3D(personLook(P), J, { t: S.t, sw: 0 }, px, 0, d, Math.PI, sc, 2.8, 1.05)) drawFigure(ctx, J, V, personLook(P), { t: S.t, sw: 0 });
     if (P.pose === 'BURDEN' && !o.served) J.arms.forEach(A => {
       const h = V.map(A.hand); ctx.fillStyle = '#8a5a2b'; rrect(h.x - .11 * h.s, h.y, .22 * h.s, .28 * h.s, .04 * h.s); ctx.fill();
       ctx.strokeStyle = '#5a3a1b'; ctx.lineWidth = Math.max(1, .02 * h.s); ctx.beginPath(); ctx.arc(h.x, h.y, .07 * h.s, Math.PI, 0); ctx.stroke();
@@ -1285,14 +1286,14 @@ const PERSON_POSES = {
 function runPose(ph, amp){
   const leg = p => ({ a: .2 + .75 * amp * Math.sin(p), k: .2 + 1.5 * amp * Math.pow(Math.max(0, Math.cos(p - .2)), 2), f: .5 * Math.max(0, -Math.sin(p)) });
   const arm = p => ({ s: .9 * amp * Math.sin(p), e: 1.4 + .3 * amp * Math.sin(p), ab: .3 });
-  return { hipH: .89 - .05 * amp + .05 * amp * (1 - Math.abs(Math.cos(ph))), lean: .1 + .22 * amp, twist: .06 * amp * Math.sin(ph),
+  return { hipH: .89 - .05 * amp + .05 * amp * (1 - Math.abs(Math.cos(ph))), lean: .1 + .22 * amp, twist: .075 * amp * Math.sin(ph), sway: .028 * amp * Math.cos(ph), feetIn: amp, cross: .5 * amp,
     legs: [leg(ph), leg(ph + Math.PI)], arms: [arm(ph + Math.PI), arm(ph)] };
 }
 function lerpPose(A, B, w){
   if (w <= .001) return A;
   if (typeof A === 'number') return A + (B - A) * w;
   if (Array.isArray(A)) return A.map((v, i) => lerpPose(v, B[i], w));
-  const o = {}; for (const k in A) o[k] = lerpPose(A[k], B[k], w); return o;
+  const o = {}; for (const k in A) o[k] = lerpPose(A[k], B[k] === undefined ? 0 : B[k], w); return o;
 }
 const R = { air:0, slide:0, idle:0, ready:0, fly:0, cheer:0, roll:0, pray:0, fall:0, lift:0, give:0 };
 function updateRig(dt){
@@ -1336,7 +1337,7 @@ function solveRig(P, roll){
   const add = (a, b, m) => v(a.x + b.x * m, a.y + b.y * m, a.z + b.z * m);
   const sag = ang => v(0, -Math.cos(ang), Math.sin(ang));
   const upAt = l => v(0, Math.cos(l), Math.sin(l));
-  const J = { pel: v(0, P.hipH, 0), legs: [], arms: [] };
+  const J = { pel: v(P.sway || 0, P.hipH, 0), legs: [], arms: [] }, inw = clamp(P.feetIn || 0, 0, 1);
   J.chest = add(J.pel, upAt(P.lean), .45);
   J.neck = add(J.chest, upAt(P.lean * .6), .08);
   J.head = add(J.neck, upAt(P.lean * .4), .14);
@@ -1346,9 +1347,10 @@ function solveRig(P, roll){
     const knee = add(hip, sag(Lg.a), .43);
     const b = Lg.a - Lg.k, ankle = add(knee, sag(b), .41);
     const fa = b + Math.PI / 2 - Lg.f;
+    knee.x -= sd * .02 * inw; ankle.x -= sd * .035 * inw;
     J.legs.push({ hip, knee, ankle, toe: add(ankle, sag(fa), .19), heel: add(ankle, sag(fa), -.06) });
     const sh = add(J.chest, v(sd * .19, -.04, sd * P.twist), 1);
-    const s = A.s + P.lean * .4, s2 = s + A.e, ab2 = A.ab * .7;
+    const s = A.s + P.lean * .4, s2 = s + A.e, ab2 = A.ab * .7 - (P.cross || 0);
     const d2 = v(sd * Math.sin(ab2), -Math.cos(ab2) * Math.cos(s2), Math.cos(ab2) * Math.sin(s2));
     const elbow = add(sh, v(sd * Math.sin(A.ab), -Math.cos(A.ab) * Math.cos(s), Math.cos(A.ab) * Math.sin(s)), .29);
     const hand = add(elbow, d2, .25);
@@ -1607,6 +1609,269 @@ function drawFigure(c, J, V, L, fx){
   }
   c.restore();
 }
+/* ---------- 3D characters ----------
+   Real 3D bodies on the same rig, drawn with three.js into an offscreen buffer and copied
+   into the 2D scene at the right depth. If WebGL or the library is missing, the shaded 2D
+   figure above is used instead. In three.js space x is right, y is up, and forward is -z. */
+const R3 = { ok:null, renderer:null, scene:null, cam:null, hemi:null, key:null, rim:null, chars:new Map(), size:0 };
+function init3D(){
+  if (R3.ok !== null) return R3.ok;
+  R3.ok = false;
+  if (!window.THREE) return false;
+  try {
+    THREE.ColorManagement.enabled = true;
+    const r = new THREE.WebGLRenderer({ alpha:true, antialias:true });
+    r.outputEncoding = THREE.sRGBEncoding; r.setClearColor(0x000000, 0); r.setPixelRatio(1);
+    r.domElement.addEventListener('webglcontextlost', () => { R3.ok = false; });
+    R3.renderer = r; R3.scene = new THREE.Scene(); R3.cam = new THREE.PerspectiveCamera();
+    R3.hemi = new THREE.HemisphereLight(0xffffff, 0x8f8068, .62);
+    R3.key = new THREE.DirectionalLight(0xffffff, .62); R3.key.position.set(-2.5, 5, 6);
+    R3.rim = new THREE.DirectionalLight(0xffe2b0, .4); R3.rim.position.set(1, 3, -6);
+    R3.scene.add(R3.hemi, R3.key, R3.rim);
+    R3.ok = true;
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(clearChars);
+  } catch (e) { R3.ok = false; }
+  return R3.ok;
+}
+function clearChars(){
+  R3.chars.forEach(ch => ch.group.traverse(o => {
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) { if (o.material.map) o.material.map.dispose(); o.material.dispose(); }
+  }));
+  R3.chars.clear();
+}
+const toW = p => new THREE.Vector3(p.x, p.y, -p.z);
+// A round limb along +Y; prof is [[t, radius], ...] with t from 0 to 1 along its length.
+function latheGeo(len, prof){
+  const pts = new THREE.SplineCurve(prof.map(([t, r]) => new THREE.Vector2(r, t * len))).getPoints(22)
+    .map(p => new THREE.Vector2(Math.max(0, p.x), p.y));
+  return new THREE.LatheGeometry(pts, 18);
+}
+// A body shape lofted through elliptical rings [{y, rx, rz, z}], smoothed between them.
+function loftGeo(rings, capped = true){
+  const u = rings.map((_, i) => i / (rings.length - 1)), sample = key => new THREE.SplineCurve(rings.map(r => new THREE.Vector2(r.y, r[key] || 0)));
+  const cy = sample('rx'), cz = sample('rz'), co = sample('z'), N = 26, SEG = 30, pos = [], idx = [];
+  for (let i = 0; i <= N; i++) {
+    const t = i / N, a = cy.getPoint(t), b = cz.getPoint(t), o = co.getPoint(t);
+    for (let j = 0; j < SEG; j++) { const q = j / SEG * Math.PI * 2; pos.push(Math.cos(q) * Math.max(.001, a.y), a.x, Math.sin(q) * Math.max(.001, b.y) + o.y); }
+  }
+  for (let i = 0; i < N; i++) for (let j = 0; j < SEG; j++) {
+    const a = i * SEG + j, b = i * SEG + (j + 1) % SEG, c = (i + 1) * SEG + j, d = (i + 1) * SEG + (j + 1) % SEG;
+    idx.push(a, c, b, b, c, d);
+  }
+  if (capped) {
+    const bot = pos.length / 3; pos.push(0, rings[0].y, rings[0].z || 0);
+    const top = bot + 1, last = rings[rings.length - 1]; pos.push(0, last.y, last.z || 0);
+    for (let j = 0; j < SEG; j++) {
+      idx.push(bot, j, (j + 1) % SEG);
+      idx.push(top, N * SEG + (j + 1) % SEG, N * SEG + j);
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setIndex(idx); g.computeVertexNormals();
+  return g;
+}
+// Curly hair: a sphere with a tight, bumpy surface.
+function curlGeo(r, amp){
+  const g = new THREE.SphereGeometry(r, 36, 26), p = g.attributes.position;
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i), y = p.getY(i), z = p.getZ(i), f = 34 / (r / .1);
+    const n = Math.sin(x * f) * Math.sin(y * f * 1.1) * Math.sin(z * f * .9), k = 1 + n * amp / r;
+    p.setXYZ(i, x * k, y * k, z * k);
+  }
+  g.computeVertexNormals();
+  return g;
+}
+function numberTexture(num, col){
+  const cv2 = document.createElement('canvas'); cv2.width = 256; cv2.height = 160;
+  const c = cv2.getContext('2d'); c.fillStyle = col; c.textAlign = 'center'; c.textBaseline = 'middle';
+  c.font = '112px ' + DISPLAY; c.fillText(num, 128, 84, 240);
+  const t = new THREE.CanvasTexture(cv2); t.encoding = THREE.sRGBEncoding; t.anisotropy = 4;
+  return t;
+}
+function makeCharacter(L){
+  const mat = (color, roughness = .72, extra = {}) => new THREE.MeshStandardMaterial({ color, roughness, metalness: 0, ...extra });
+  const skin = mat(L.skin, .58), shirt = mat(L.jersey.c, .68), hair = mat(L.hairC, .88, { side: THREE.DoubleSide });
+  const leggings = L.bottom === 'skirt';
+  const pant = mat(leggings ? shade(L.pantC, -.35) : L.pantC, .8), shoeM = mat(SHOE, .55), soleM = mat(SOLE, .9);
+  const accent = mat(L.jersey.c === '#fffaf0' ? SHORTS : L.jersey.c, .6);
+  const group = new THREE.Group(), add = (m, parent = group) => { parent.add(m); return m; };
+  const limb = (g, m, len) => { const o = add(new THREE.Mesh(g, m)); o.userData.len = len; return o; };
+  const ball = (r, m, parent, x = 0, y = 0, z = 0, sx = 1, sy = 1, sz = 1) => {
+    const o = new THREE.Mesh(new THREE.SphereGeometry(r, 22, 16), m); o.position.set(x, y, z); o.scale.set(sx, sy, sz); parent.add(o); return o;
+  };
+  const ch = { L, group, legs: [], arms: [] };
+
+  // Clothing on the lower body.
+  const pants = L.bottom !== 'knee';
+  const thighProf = pants ? [[0, 0], [.04, .084], [.3, .092], [.65, .08], [.96, .064], [1, 0]] : [[0, 0], [.04, .084], [.3, .094], [.65, .084], [.96, .07], [1, 0]];
+  const shinSkin = [[0, 0], [.04, .05], [.28, .058], [.72, .04], [.98, .032], [1, 0]];
+  const shinPant = [[0, 0], [.04, .066], [.3, .07], [.8, .056], [.97, .05], [1, 0]];
+  for (let i = 0; i < 2; i++) {
+    const thigh = limb(latheGeo(.43, thighProf), pant, .43);
+    const knee = ball(.066, pant, group);
+    const shin = limb(latheGeo(.41, pants ? shinPant : shinSkin), pants ? pant : skin, .41);
+    const cuff = pants ? null : limb(latheGeo(.11, [[0, 0], [.05, .066], [.9, .064], [1, 0]]), pant, .41);
+    const foot = limb(latheGeo(.25, [[0, 0], [.08, .04], [.4, .048], [.82, .044], [1, 0]]), shoeM, .25);
+    foot.scale.x = .86;
+    const sole = new THREE.Mesh(latheGeo(.26, [[0, 0], [.06, .043], [.5, .05], [.9, .045], [1, 0]]), soleM);
+    sole.position.set(0, -.005, -.024); sole.scale.set(1.04, 1, .42); foot.add(sole);
+    const stripe = new THREE.Mesh(new THREE.BoxGeometry(.09, .1, .012), accent);
+    stripe.position.set(0, .13, .036); foot.add(stripe);
+    ch.legs.push({ thigh, knee, shin, cuff, foot });
+  }
+  ch.pelvis = add(new THREE.Group());
+  add(new THREE.Mesh(loftGeo([{ y: -.2, rx: .05, rz: .05 }, { y: -.15, rx: .145, rz: .105 }, { y: -.03, rx: .158, rz: .118 }, { y: .05, rx: .125, rz: .088 }, { y: .1, rx: .085, rz: .06 }]), pant), ch.pelvis);
+  if (L.bottom === 'skirt') {
+    const g = loftGeo([{ y: -.48, rx: .3, rz: .23 }, { y: -.3, rx: .25, rz: .19 }, { y: -.1, rx: .19, rz: .145 }, { y: .1, rx: .15, rz: .108 }], false);
+    add(new THREE.Mesh(g, mat(L.pantC, .85, { side: THREE.DoubleSide })), ch.pelvis);
+  }
+
+  // Upper body: a fitted athletic shirt, long enough to cover the seat.
+  ch.torso = add(new THREE.Group());
+  add(new THREE.Mesh(loftGeo([
+    { y: -.13, rx: .18, rz: .14 }, { y: -.02, rx: .17, rz: .128 }, { y: .16, rx: .14, rz: .098, z: -.005 }, { y: .3, rx: .162, rz: .114, z: -.008 },
+    { y: .4, rx: .184, rz: .118, z: -.008 }, { y: .455, rx: .165, rz: .098, z: -.002 }, { y: .49, rx: .082, rz: .068 }, { y: .5, rx: .05, rz: .05 },
+  ]), shirt), ch.torso);
+  const band = new THREE.Mesh(new THREE.CylinderGeometry(.064, .07, .026, 22, 1, true), mat(shade(L.jersey.c, -.28), .7, { side: THREE.DoubleSide }));
+  band.position.y = .485; ch.torso.add(band);
+  if (L.num) {
+    const tex = numberTexture(L.num, L.jersey.t), nm = () => new THREE.MeshStandardMaterial({ map: tex, transparent: true, roughness: .75, polygonOffset: true, polygonOffsetFactor: -2 });
+    const back = new THREE.Mesh(new THREE.PlaneGeometry(.2, .125), nm()); back.position.set(0, .3, .112); ch.torso.add(back);
+    const front = new THREE.Mesh(new THREE.PlaneGeometry(.115, .072), nm()); front.position.set(0, .34, -.133); front.rotation.y = Math.PI; ch.torso.add(front);
+  }
+  ch.neck = limb(latheGeo(.16, [[0, 0], [.1, .05], [.6, .046], [1, .05]]), skin, .16);
+  for (let i = 0; i < 2; i++) {
+    const upper = limb(latheGeo(.29, [[0, 0], [.03, .05], [.32, .052], [.8, .04], [.98, .037], [1, 0]]), skin, .29);
+    const delt = ball(.056, shirt, group);
+    const sleeve = limb(latheGeo(.29, [[0, 0], [.04, .058], [.3, .057], [.47, .05], [.5, 0]]), shirt, .29);
+    const elbow = ball(.038, skin, group);
+    const fore = limb(latheGeo(.25, [[0, 0], [.03, .037], [.3, .041], [.9, .027], [.98, .026], [1, 0]]), skin, .25);
+    const hand = limb(latheGeo(.09, [[0, 0], [.14, .027], [.5, .034], [.88, .025], [1, 0]]), skin, .09);
+    ch.arms.push({ upper, delt, sleeve, elbow, fore, hand });
+  }
+
+  // Head: skull and jaw with real features. The face looks toward -z.
+  const head = ch.head = add(new THREE.Group());
+  ball(1, skin, head, 0, .015, 0, .104, .118, .112);
+  ball(1, skin, head, 0, -.052, -.014, .082, .086, .088);
+  [-1, 1].forEach(sd => {
+    ball(1, skin, head, sd * .105, -.004, .003, .014, .028, .02);
+    ball(.019, mat('#f6f2ec', .3), head, sd * .043, .012, -.096, 1.15, .68, .55);
+    ball(.0105, mat('#3f2513', .25), head, sd * .043, .012, -.1055);
+    ball(.0056, mat('#0c0705', .2), head, sd * .043, .012, -.114);
+    const brow = new THREE.Mesh(new THREE.BoxGeometry(.04, .0075, .008), mat(shade(L.hairC, L.hairC === '#e3bb6a' ? -.35 : 0), .9));
+    brow.position.set(sd * .044, .04, -.106); brow.rotation.z = sd * -.14; head.add(brow);
+    const lid = new THREE.Mesh(new THREE.BoxGeometry(.04, .0042, .006), mat('#1a100a', .7));
+    lid.position.set(sd * .043, .0235, -.1075); head.add(lid);
+  });
+  ball(.015, skin, head, 0, -.018, -.113, .9, 1.15, 1.25);
+  const lip = mix(L.skin, '#a8433f', .34);
+  ball(1, mat(lip, .5), head, 0, -.061, -.098, .032, .0075, .012);
+  ball(1, mat(shade(lip, .06), .5), head, 0, -.0705, -.096, .027, .0095, .012);
+
+  // Hair.
+  const capGeo = new THREE.SphereGeometry(1, 34, 22, 0, Math.PI * 2, 0, 1.75);
+  const cap = new THREE.Mesh(capGeo, hair); cap.position.y = .02; cap.scale.set(.111, .125, .12); cap.rotation.x = .45; head.add(cap);
+  const afro = L.hair === 'afro';
+  if (afro) { const m = new THREE.Mesh(curlGeo(.168, .009), hair); m.position.set(0, .055, .022); head.add(m); }
+  if (L.hair === 'puffs') [-1, 1].forEach(sd => { const m = new THREE.Mesh(curlGeo(.074, .006), hair); m.position.set(sd * .092, .125, .03); head.add(m); });
+  ch.swing = [];
+  if (L.hair === 'ponytail') {
+    const tail = new THREE.Group(); tail.position.set(0, .04, .118);
+    const m = new THREE.Mesh(latheGeo(.3, [[0, 0], [.08, .026], [.42, .04], [.88, .014], [1, 0]]), hair); m.rotation.x = Math.PI; tail.add(m);
+    head.add(tail); ch.swing.push({ o: tail, x: -.28, k: .36 });
+    ball(1, mat(L.band || shade(L.hairC, -.3), .6), head, 0, .04, .115, .027, .017, .027);
+  }
+  if (L.hair === 'braids') [-1, 1].forEach((sd, b) => {
+    const p = new THREE.Group(); p.position.set(sd * .06, -.015, .09);
+    for (let i = 0; i < 10; i++) ball(.0185 - i * .0005, hair, p, (i % 2 ? .006 : -.006), -i * .03, 0, 1, 1.15, 1);
+    ball(.014, mat(L.band || '#ffc93c', .35), p, 0, -.305, 0);
+    head.add(p); ch.swing.push({ o: p, x: -.12, k: b ? .22 : -.22 });
+  });
+  if (L.band) {
+    const r = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, .024, 34, 1, true), mat(L.band, .7, { side: THREE.DoubleSide }));
+    r.position.set(0, afro ? .03 : .052, afro ? .012 : 0); r.rotation.x = .18;
+    if (afro) r.scale.set(.172, 1, .176); else r.scale.set(.116, 1, .125);
+    head.add(r);
+  }
+
+  // Eagle wings, shown only while flying.
+  ch.wings = [-1, 1].map(sd => {
+    const s = new THREE.Shape(); s.moveTo(0, 0); s.quadraticCurveTo(.5, .42, 1.22, .3); s.lineTo(1.04, .1); s.lineTo(.92, .02); s.lineTo(.78, -.05); s.lineTo(.62, -.12); s.lineTo(.44, -.2); s.lineTo(.2, -.24); s.closePath();
+    const w = new THREE.Mesh(new THREE.ShapeGeometry(s, 16), mat('#fffaf0', .55, { side: THREE.DoubleSide, emissive: '#6f5a22', emissiveIntensity: .25 }));
+    w.scale.x = sd; w.visible = false; add(w); return w;
+  });
+  return ch;
+}
+function placeLimb(o, A, B){
+  const d = B.clone().sub(A), len = d.length() || 1e-4;
+  o.position.copy(A); o.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.divideScalar(len));
+  o.scale.y = len / o.userData.len;
+}
+function setBasis(o, origin, X, Y){
+  const y = Y.clone().normalize(), z = X.clone().cross(y).normalize(), x = y.clone().cross(z).normalize();
+  o.position.copy(origin); o.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(x, y, z));
+}
+function poseCharacter(ch, J, fx){
+  const pel = toW(J.pel), chest = toW(J.chest), neck = toW(J.neck), headP = toW(J.head);
+  const up = chest.clone().sub(pel), ls = toW(J.arms[0].sh), rs = toW(J.arms[1].sh), lh = toW(J.legs[0].hip), rh = toW(J.legs[1].hip);
+  setBasis(ch.torso, pel, rs.clone().sub(ls), up);
+  setBasis(ch.pelvis, pel, rh.clone().sub(lh), up);
+  placeLimb(ch.neck, chest, headP);
+  // The head stays level and looks ahead, the way a runner's does, while the body leans.
+  setBasis(ch.head, headP, rs.clone().sub(ls).setY(0), new THREE.Vector3(0, 1, 0).add(headP.clone().sub(neck).multiplyScalar(1.4)));
+  ch.legs.forEach((P, i) => {
+    const Q = J.legs[i], hip = toW(Q.hip), knee = toW(Q.knee), ankle = toW(Q.ankle);
+    placeLimb(P.thigh, hip, knee); P.knee.position.copy(knee); placeLimb(P.shin, knee, ankle);
+    if (P.cuff) placeLimb(P.cuff, knee, ankle);
+    placeLimb(P.foot, toW(Q.heel), toW(Q.toe)); P.foot.scale.x = .86;
+    P.foot.position.y += .01;
+  });
+  ch.arms.forEach((P, i) => {
+    const Q = J.arms[i], sh = toW(Q.sh), el = toW(Q.elbow), ha = toW(Q.hand), ti = toW(Q.tip);
+    placeLimb(P.upper, sh, el); placeLimb(P.sleeve, sh, el); P.delt.position.copy(sh); P.elbow.position.copy(el);
+    placeLimb(P.fore, el, ha); placeLimb(P.hand, ha, ti); P.hand.scale.x = .8;
+  });
+  ch.swing.forEach(h => { h.o.rotation.x = h.x; h.o.rotation.z = (fx.sw || 0) * h.k; });
+  ch.wings.forEach((w, i) => {
+    w.visible = !!fx.eagle; if (!fx.eagle) return;
+    const sh = i ? rs : ls, sd = i ? 1 : -1;
+    w.position.copy(sh); w.position.z += .05; w.position.y -= .02;
+    w.rotation.set(0, 0, sd * (.12 + Math.sin(fx.t * 14) * .3));
+  });
+}
+function characterFor(L){
+  const key = JSON.stringify(L);
+  let ch = R3.chars.get(key);
+  if (!ch) { if (R3.chars.size > 12) clearChars(); ch = makeCharacter(L); R3.chars.set(key, ch); }
+  return ch;
+}
+// Draw a character into a square screen rectangle, using a camera that matches the view.
+function renderCharacter(target, ch, rect, cam){
+  const r = R3.renderer, dpr = Math.min(2, window.devicePixelRatio || 1);
+  const want = clamp(Math.ceil(rect.s * dpr / 128) * 128, 512, 1280);
+  if (want > R3.size) { R3.size = want; r.setSize(want, want, false); }
+  const c = R3.cam, near = .3, far = 240;
+  c.position.set(cam.x, cam.y, cam.z); c.rotation.set(0, 0, 0); c.updateMatrixWorld();
+  c.projectionMatrix.makePerspective((rect.x - cam.px) / cam.f * near, (rect.x + rect.s - cam.px) / cam.f * near, (cam.py - rect.y) / cam.f * near, (cam.py - rect.y - rect.s) / cam.f * near, near, far);
+  c.projectionMatrixInverse.copy(c.projectionMatrix).invert();
+  R3.scene.add(ch.group); r.render(R3.scene, c); R3.scene.remove(ch.group);
+  target.drawImage(r.domElement, rect.x, rect.y, rect.s, rect.s);
+}
+function draw3D(L, J, fx, wx, wy, d, rotY, scale, rectSize, rectMid){
+  if (!init3D()) return false;
+  const ch = characterFor(L), T = theme();
+  poseCharacter(ch, J, fx);
+  ch.group.position.set(wx, wy, -d); ch.group.rotation.y = rotY; ch.group.scale.setScalar(scale);
+  R3.rim.color.setRGB(...T.sun.split(',').map(v => +v / 255));
+  const dim = T.dark ? .72 : 1; R3.hemi.intensity = .62 * dim; R3.key.intensity = .62 * dim;
+  const m = proj(wx, wy + rectMid * scale, d), s = rectSize * scale * m.s;
+  const rect = { x: m.x - s / 2, y: m.y - s / 2, s };
+  if (d > 0) ch.group.position.x += curveOff(d);
+  renderCharacter(ctx, ch, rect, { x: camX, y: CAMH + camBob, z: CAM_D, f: F, px: W / 2, py: HZ });
+  return true;
+}
 function drawRunner(){
   const D = S.distract;
   let ox = 0;
@@ -1625,7 +1890,14 @@ function drawRunner(){
   const roll = R.roll + (S.stumbleT > 0 && !RM ? Math.sin(S.t * 40) * .12 : 0);
   const J = solveRig(currentPose(), roll);
   const V = { front: false, headBias: -.5, map: j => { const p = proj(S.x + ox + j.x, S.y + j.y, j.z); return { x: p.x, y: p.y, s: p.s, k: j.z }; } };
-  drawFigure(ctx, J, V, lookColors(), { t: S.t, sw: Math.sin(S.runPhase), eagle: S.eagleT > 0, shield: S.shieldT > 0 });
+  const fx = { t: S.t, sw: Math.sin(S.runPhase), eagle: S.eagleT > 0, shield: S.shieldT > 0 };
+  if (draw3D(lookColors(), J, fx, S.x + ox, S.y, 0, 0, 1, 3.6, .95)) {
+    if (fx.shield) {
+      const Cs = proj(S.x + ox, S.y + J.chest.y * .75, 0), a = .35 + .2 * Math.sin(S.t * 6);
+      ctx.strokeStyle = 'rgba(127,182,255,' + (a + .3) + ')'; ctx.fillStyle = 'rgba(127,182,255,' + a * .35 + ')'; ctx.lineWidth = Math.max(2, .05 * Cs.s);
+      ctx.beginPath(); ctx.ellipse(Cs.x, Cs.y, .6 * Cs.s, .98 * Cs.s, 0, 0, 7); ctx.fill(); ctx.stroke();
+    }
+  } else drawFigure(ctx, J, V, lookColors(), fx);
   if (D && D.phase !== 'lift') {
     const hp = proj(S.x + ox, S.y + J.head.y, J.head.z), bx = hp.x + D.side * .5 * u, by = hp.y - .65 * u;
     ctx.fillStyle = 'rgba(255,250,240,.95)'; ctx.beginPath(); ctx.arc(bx, by, .38 * u, 0, 7); ctx.fill();
@@ -1651,6 +1923,7 @@ function drawPopups(){
 function render(){
   ctx.save();
   if (S.shake > 0 && !RM) ctx.translate((Math.random() - .5) * 18 * S.shake, (Math.random() - .5) * 10 * S.shake);
+  camBob = !RM && (S.mode === 'play' || S.mode === 'finishing') ? Math.sin(S.runPhase * 2) * .02 * clamp(S.speed / 20, 0, 1) : 0;
   drawSky(); drawRoad(); drawStreaks();
   const items = [];
   const k0 = Math.floor((S.z - 3) / 12), k1 = Math.floor((S.z + FAR) / 12);
@@ -1799,10 +2072,20 @@ function drawPreview(){
   // Standing still while the look is chosen; "Test the run" switches to the sprint cycle.
   const run = pvRunning && !RM, ph = S.t * 11;
   const J = solveRig(run ? runPose(ph, .95) : STAND, 0), L = lookColors(), fx = { t: S.t, sw: run ? Math.sin(ph) : 0 };
-  const u = Math.min(h * .5, w * .34), gy = h * .93, frontX = w * .31, backX = w * .75, ub = u * .86;
+  const u = Math.min(h * .52, w * .46), gy = h * .95, frontX = w * .28, backX = w * .73, ub = u * .92;
   pctx.fillStyle = 'rgba(23,19,67,.45)';
   pctx.beginPath(); pctx.ellipse(frontX, gy, .4 * u, .06 * u, 0, 0, 7); pctx.fill();
   pctx.beginPath(); pctx.ellipse(backX, gy, .4 * ub, .06 * ub, 0, 0, 7); pctx.fill();
+  if (init3D()) {
+    const ch = characterFor(L), side = (scale, x) => ({ x: x - 1.1 * scale, y: gy - 1.95 * scale, s: 2.2 * scale });
+    poseCharacter(ch, J, fx); ch.group.scale.setScalar(1); ch.group.position.set(0, 0, 0);
+    R3.hemi.intensity = .62; R3.key.intensity = .62; R3.rim.color.set('#ffe2b0');
+    ch.group.rotation.y = Math.PI;
+    renderCharacter(pctx, ch, side(u, frontX), { x: 0, y: 1, z: 6, f: u * 6, px: frontX, py: gy - u });
+    ch.group.rotation.y = 0;
+    renderCharacter(pctx, ch, side(ub, backX), { x: 0, y: 1, z: 6, f: ub * 6, px: backX, py: gy - ub });
+    return;
+  }
   drawFigure(pctx, J, { front: true, headBias: -.5, map: j => ({ x: frontX - j.x * u, y: gy - j.y * u + j.z * .12 * u, s: u, k: -j.z }) }, L, fx);
   drawFigure(pctx, J, { front: false, headBias: -.5, map: j => ({ x: backX + j.x * ub, y: gy - j.y * ub - j.z * .25 * ub, s: ub, k: j.z }) }, L, fx);
 }
