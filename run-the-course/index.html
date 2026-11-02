@@ -540,11 +540,10 @@ const LOOKS = {
             { c:'#3d8bfd', t:'#fffaf0', n:'Blue' }, { c:'#ff7a3d', t:'#2a2270', n:'Orange' }, { c:'#fffaf0', t:'#2a2270', n:'White' }],
   nums: [{ k:'4:7', n:'2 Timothy 4:7' }, { k:'12:1', n:'Hebrews 12:1' }, { k:'3:13', n:'Philippians 3:13' }],
   bands: [{ c:'#d61f7f', n:'Pink' }, { c:'#3d8bfd', n:'Blue' }, { c:'#38c98a', n:'Green' }, { c:'#fffaf0', n:'White' }, { c:null, n:'None' }],
-  views: [{ k:'body', n:'Body' }, { k:'rig', n:'Rig x-ray' }, { k:'skeleton', n:'Skeleton' }],
   bottoms: [{ k:'pants', n:'Track pants' }, { k:'knee', n:'Knee-length shorts' }, { k:'skirt', n:'Skirt and leggings' }],
   pantColors: [{ c:'#252a4a', n:'Navy' }, { c:'#1f1f24', n:'Black' }, { c:'#5b5e68', n:'Grey' }, { c:'#6b2337', n:'Maroon' }],
 };
-const GROUPS = [['view', 'Race as', LOOKS.views], ['skin', 'Skin', LOOKS.skins], ['hair', 'Hair', LOOKS.hairs], ['hairColor', 'Hair color', LOOKS.hairColors],
+const GROUPS = [['skin', 'Skin', LOOKS.skins], ['hair', 'Hair', LOOKS.hairs], ['hairColor', 'Hair color', LOOKS.hairColors],
                 ['jersey', 'Jersey', LOOKS.jerseys], ['bottom', 'Bottoms', LOOKS.bottoms], ['pantColor', 'Bottoms color', LOOKS.pantColors], ['num', 'Jersey number', LOOKS.nums], ['band', 'Headband', LOOKS.bands]];
 const RESIST_LINES = [
   ['Fled!', 'Flee also youthful lusts (2 Tim. 2:22)'],
@@ -563,13 +562,13 @@ function loadProgress(){
   }
 }
 function saveProgress(){ try { localStorage.setItem('rtc-progress', JSON.stringify(progress)); } catch (e) {} }
-let look = { view:0, skin:3, hair:0, hairColor:0, jersey:0, bottom:0, pantColor:0, num:0, band:0, name:'' }, lookSaved = false;
+let look = { skin:3, hair:0, hairColor:0, jersey:0, bottom:0, pantColor:0, num:0, band:0, name:'' }, lookSaved = false;
 function cleanLook(){ GROUPS.forEach(([k, , list]) => { look[k] = clamp(Math.round(+look[k] || 0), 0, list.length - 1); }); look.name = String(look.name || '').slice(0, 12); }
 function loadLook(){ try { const l = JSON.parse(localStorage.getItem('rtc-look') || 'null'); if (l) { look = { ...look, ...l }; lookSaved = true; } } catch (e) {} cleanLook(); }
 function saveLook(){ lookSaved = true; try { localStorage.setItem('rtc-look', JSON.stringify(look)); } catch (e) {} }
 function lookColors(){
   return { skin:LOOKS.skins[look.skin].c, hair:LOOKS.hairs[look.hair].k, hairC:LOOKS.hairColors[look.hairColor].c,
-           jersey:LOOKS.jerseys[look.jersey], num:LOOKS.nums[look.num].k, band:LOOKS.bands[look.band].c, view:LOOKS.views[look.view].k,
+           jersey:LOOKS.jerseys[look.jersey], num:LOOKS.nums[look.num].k, band:LOOKS.bands[look.band].c,
            bottom:LOOKS.bottoms[look.bottom].k, pantC:LOOKS.pantColors[look.pantColor].c };
 }
 let muted = false;
@@ -1166,7 +1165,7 @@ function drawBeam(x, yb, hw, a){
   ctx.fillStyle = g; ctx.beginPath();
   ctx.moveTo(x - hw * .3, 0); ctx.lineTo(x + hw * .3, 0); ctx.lineTo(x + hw, yb); ctx.lineTo(x - hw, yb); ctx.closePath(); ctx.fill();
 }
-const personLook = P => ({ skin: LOOKS.skins[P.skin].c, hair: P.hair, hairC: P.hairC, jersey: { c: P.shirt, t: P.shirt }, num: '', band: null, view: 'body', bottom: 'pants', pantC: '#45414f' });
+const personLook = P => ({ skin: LOOKS.skins[P.skin].c, hair: P.hair, hairC: P.hairC, jersey: { c: P.shirt, t: P.shirt }, num: '', band: null, bottom: 'pants', pantC: '#45414f' });
 function drawChurch(x, y, s){
   const w = 1.9 * s, h = 1.5 * s;
   const g = ctx.createLinearGradient(x - w / 2, 0, x + w / 2, 0); g.addColorStop(0, '#fbf7ee'); g.addColorStop(1, '#d9d0bf');
@@ -1259,8 +1258,8 @@ function drawPrize(d){
    A 3D skeleton in meters (x = runner's right, y = up, z = forward), with human proportions
    for a young athlete about 1.66 m tall (head about 1/6.5 of height, legs about half).
    Angles swing in the forward/back plane, measured from straight down; positive = forward.
-   The same rig is skinned as a shaded body, drawn as bones, or shown as a Blender-style armature. */
-const BONE = '#e9dfc6', BONE_EDGE = '#857760', SHORTS = '#252a4a', SHOE = '#f4f4f2', SOLE = '#6d6f78';
+   The rig is skinned as a shaded body. */
+const SHORTS = '#252a4a', SHOE = '#f4f4f2', SOLE = '#6d6f78';
 const STAND = { hipH:.89, lean:0,    twist:0, legs:[{ a:0, k:.03, f:0 }, { a:0, k:.03, f:0 }], arms:[{ s:.04, e:.18, ab:.17 }, { s:.04, e:.18, ab:.17 }] };
 const AIR   = { hipH:.92, lean:.15,  twist:0, legs:[{ a:1.15, k:1.8, f:.4 }, { a:.35, k:1.3, f:.4 }], arms:[{ s:2.4, e:.5, ab:.45 }, { s:2.1, e:.6, ab:.45 }] };
 const SLIDE = { hipH:.4,  lean:-.85, twist:0, legs:[{ a:1.45, k:.1, f:.1 }, { a:.55, k:2.3, f:.5 }], arms:[{ s:-.5, e:.5, ab:.8 }, { s:1.1, e:1.0, ab:.45 }] };
@@ -1518,46 +1517,12 @@ function headBack(c, x, y, r, L, sw){
     c.fillStyle = L.band; c.fillRect(x - 2 * r, y - .4 * hh, 4 * r, .16 * hh); c.restore();
   }
 }
-function skull(c, x, y, r, front){
-  const hh = r * 1.2;
-  c.fillStyle = BONE; c.strokeStyle = BONE_EDGE; c.lineWidth = Math.max(1, .05 * r);
-  c.beginPath(); c.moveTo(x - .62 * r, y + .5 * hh); c.lineTo(x - .5 * r, y + .98 * hh); c.quadraticCurveTo(x, y + 1.12 * hh, x + .5 * r, y + .98 * hh); c.lineTo(x + .62 * r, y + .5 * hh); c.closePath(); c.fill(); c.stroke();
-  c.beginPath(); c.ellipse(x, y - .15 * hh, r, .92 * hh, 0, 0, 7); c.fill(); c.stroke();
-  if (front) {
-    c.fillStyle = '#3a2f36';
-    [-1, 1].forEach(sd => ell(c, x + sd * .4 * r, y - .02 * hh, .23 * r, .2 * hh));
-    c.beginPath(); c.moveTo(x, y + .2 * hh); c.lineTo(x - .1 * r, y + .45 * hh); c.lineTo(x + .1 * r, y + .45 * hh); c.closePath(); c.fill();
-    c.strokeStyle = BONE_EDGE; c.lineWidth = Math.max(.6, .03 * r);
-    c.beginPath(); c.moveTo(x - .4 * r, y + .72 * hh); c.lineTo(x + .4 * r, y + .72 * hh); c.stroke();
-    for (let i = -3; i <= 3; i++) { c.beginPath(); c.moveTo(x + i * .11 * r, y + .64 * hh); c.lineTo(x + i * .11 * r, y + .8 * hh); c.stroke(); }
-  } else {
-    c.strokeStyle = BONE_EDGE; c.beginPath(); c.moveTo(x, y - 1.0 * hh); c.quadraticCurveTo(x + .08 * r, y - .4 * hh, x, y + .3 * hh); c.stroke();
-  }
-}
-function octBone(c, A, B){
-  const dx = B.x - A.x, dy = B.y - A.y, len = Math.hypot(dx, dy); if (len < 1) return;
-  const nx = -dy / len, ny = dx / len, w = len * .13, mx = A.x + dx * .18, my = A.y + dy * .18;
-  c.beginPath(); c.moveTo(A.x, A.y); c.lineTo(mx + nx * w, my + ny * w); c.lineTo(B.x, B.y); c.lineTo(mx - nx * w, my - ny * w); c.closePath();
-  c.fillStyle = 'rgba(150,156,166,.92)'; c.fill(); c.strokeStyle = '#1e1e26'; c.lineWidth = 1; c.stroke();
-  c.beginPath(); c.moveTo(mx + nx * w, my + ny * w); c.lineTo(mx - nx * w, my - ny * w); c.stroke();
-  c.fillStyle = '#c9ccd2'; c.beginPath(); c.arc(A.x, A.y, Math.max(1.5, w * .6), 0, 7); c.fill(); c.stroke();
-}
-function drawArmature(c, J, M){
-  const up = (p, d) => ({ x: p.x, y: p.y + d, z: p.z });
-  const bones = [[J.pel, J.chest], [J.chest, J.neck], [J.neck, up(J.head, .14)]];
-  J.arms.forEach(A => bones.push([J.chest, A.sh], [A.sh, A.elbow], [A.elbow, A.hand], [A.hand, A.tip]));
-  J.legs.forEach(Lg => bones.push([J.pel, Lg.hip], [Lg.hip, Lg.knee], [Lg.knee, Lg.ankle], [Lg.ankle, Lg.toe]));
-  bones.forEach(([a, b]) => octBone(c, M(a), M(b)));
-  c.strokeStyle = '#4fc3f7'; c.lineWidth = 1.5;
-  [...J.arms.map(A => A.hand), ...J.legs.map(Lg => Lg.ankle)].forEach(p => { const P = M(p); c.beginPath(); c.ellipse(P.x, P.y, .12 * P.s, .06 * P.s, 0, 0, 7); c.stroke(); });
-  const G = M({ x: J.pel.x, y: 0, z: J.pel.z }); c.beginPath(); c.ellipse(G.x, G.y, .45 * G.s, .14 * G.s, 0, 0, 7); c.stroke();
-}
 
 /* ---------- Figure ----------
    V.map turns a rig point into screen {x, y, s, k}; k is depth (bigger = farther, drawn first).
    V.front is true when the camera faces the runner. */
 function drawFigure(c, J, V, L, fx){
-  const mode = L.view, M = p => V.map(p), items = [];
+  const M = p => V.map(p), items = [];
   const mid = (a, b, t = .5) => ({ x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t, z: a.z + (b.z - a.z) * t });
   const avgK = P => P.reduce((s, p) => s + p.k, 0) / P.length;
   const push = (pts, bias, f) => { const P = pts.map(M); items.push({ k: avgK(P) + bias, f: () => f(P) }); };
@@ -1568,100 +1533,73 @@ function drawFigure(c, J, V, L, fx){
   const up = { x: (J.chest.x - J.pel.x) / len, y: (J.chest.y - J.pel.y) / len, z: (J.chest.z - J.pel.z) / len };
   const ll = Math.hypot(rs.x - ls.x, rs.y - ls.y, rs.z - ls.z) || 1;
   const lat = { x: (rs.x - ls.x) / ll, y: (rs.y - ls.y) / ll, z: (rs.z - ls.z) / ll };
-  const fw = { x: 0, y: -up.z, z: up.y };
-  const at = (b, dx, du, df = 0) => ({ x: b.x + lat.x * dx + up.x * du, y: b.y + lat.y * dx + up.y * du + fw.y * df, z: b.z + lat.z * dx + up.z * du + fw.z * df });
+  const at = (b, dx, du) => ({ x: b.x + lat.x * dx + up.x * du, y: b.y + lat.y * dx + up.y * du, z: b.z + lat.z * dx + up.z * du });
   c.save(); c.lineCap = 'round'; c.lineJoin = 'round';
-  if (mode !== 'skeleton') {
-    if (fx.eagle) J.arms.forEach((A, i) => {
-      const sd = i ? 1 : -1;
-      push([A.sh, A.elbow, A.hand, { x: A.hand.x + sd * .35, y: A.hand.y - .05, z: A.hand.z - .05 },
-        { x: A.elbow.x + sd * .05, y: A.elbow.y - .32, z: A.elbow.z - .05 }, { x: A.sh.x, y: A.sh.y - .28, z: A.sh.z }], .03, P => {
-        c.fillStyle = '#fffaf0'; c.strokeStyle = '#ffc93c'; c.lineWidth = Math.max(1, .012 * P[0].s);
-        c.beginPath(); P.forEach((p, j) => j ? c.lineTo(p.x, p.y) : c.moveTo(p.x, p.y)); c.closePath(); c.fill(); c.stroke();
-      });
+  if (fx.eagle) J.arms.forEach((A, i) => {
+    const sd = i ? 1 : -1;
+    push([A.sh, A.elbow, A.hand, { x: A.hand.x + sd * .35, y: A.hand.y - .05, z: A.hand.z - .05 },
+      { x: A.elbow.x + sd * .05, y: A.elbow.y - .32, z: A.elbow.z - .05 }, { x: A.sh.x, y: A.sh.y - .28, z: A.sh.z }], .03, P => {
+      c.fillStyle = '#fffaf0'; c.strokeStyle = '#ffc93c'; c.lineWidth = Math.max(1, .012 * P[0].s);
+      c.beginPath(); P.forEach((p, j) => j ? c.lineTo(p.x, p.y) : c.moveTo(p.x, p.y)); c.closePath(); c.fill(); c.stroke();
     });
-    J.legs.forEach(Lg => {
-      push([Lg.hip, mid(Lg.hip, Lg.knee, .4), Lg.knee, mid(Lg.knee, Lg.ankle, .3), Lg.ankle], 0, P => limb(c, P, [.085, .074, .05, .058, .033], L.skin));
-      // Modest clothing: full-length pants, knee-length shorts, or leggings under a skirt.
-      if (L.bottom === 'knee') push([Lg.hip, mid(Lg.hip, Lg.knee, .5), mid(Lg.knee, Lg.ankle, .14)], -.015, P => limb(c, P, [.1, .092, .066], L.pantC));
-      else push([Lg.hip, mid(Lg.hip, Lg.knee, .4), Lg.knee, mid(Lg.knee, Lg.ankle, .3), Lg.ankle], -.015, P => limb(c, P, [.1, .09, .064, .068, .046], L.bottom === 'skirt' ? shade(L.pantC, -.35) : L.pantC));
-      push([Lg.heel, Lg.toe], -.02, P => {
-        const lift = p => ({ ...p, y: p.y + .018 * p.s });
-        c.fillStyle = SOLE; c.beginPath(); taperPath(c, lift(P[0]), lift(P[1]), .05 * P[0].s, .043 * P[1].s); c.fill();
-        limb(c, P, [.047, .04], SHOE);
-        c.strokeStyle = L.jersey.c === '#fffaf0' ? SHORTS : L.jersey.c; c.lineWidth = Math.max(1, .014 * P[0].s);
-        c.beginPath(); c.moveTo(P[0].x + (P[1].x - P[0].x) * .3, P[0].y + (P[1].y - P[0].y) * .3 + .01 * P[0].s); c.lineTo(P[0].x + (P[1].x - P[0].x) * .75, P[0].y + (P[1].y - P[0].y) * .75 - .01 * P[0].s); c.stroke();
-      });
+  });
+  J.legs.forEach(Lg => {
+    push([Lg.hip, mid(Lg.hip, Lg.knee, .4), Lg.knee, mid(Lg.knee, Lg.ankle, .3), Lg.ankle], 0, P => limb(c, P, [.085, .074, .05, .058, .033], L.skin));
+    // Modest clothing: full-length pants, knee-length shorts, or leggings under a skirt.
+    if (L.bottom === 'knee') push([Lg.hip, mid(Lg.hip, Lg.knee, .5), mid(Lg.knee, Lg.ankle, .14)], -.015, P => limb(c, P, [.1, .092, .066], L.pantC));
+    else push([Lg.hip, mid(Lg.hip, Lg.knee, .4), Lg.knee, mid(Lg.knee, Lg.ankle, .3), Lg.ankle], -.015, P => limb(c, P, [.1, .09, .064, .068, .046], L.bottom === 'skirt' ? shade(L.pantC, -.35) : L.pantC));
+    push([Lg.heel, Lg.toe], -.02, P => {
+      const lift = p => ({ ...p, y: p.y + .018 * p.s });
+      c.fillStyle = SOLE; c.beginPath(); taperPath(c, lift(P[0]), lift(P[1]), .05 * P[0].s, .043 * P[1].s); c.fill();
+      limb(c, P, [.047, .04], SHOE);
+      c.strokeStyle = L.jersey.c === '#fffaf0' ? SHORTS : L.jersey.c; c.lineWidth = Math.max(1, .014 * P[0].s);
+      c.beginPath(); c.moveTo(P[0].x + (P[1].x - P[0].x) * .3, P[0].y + (P[1].y - P[0].y) * .3 + .01 * P[0].s); c.lineTo(P[0].x + (P[1].x - P[0].x) * .75, P[0].y + (P[1].y - P[0].y) * .75 - .01 * P[0].s); c.stroke();
     });
-    J.arms.forEach(A => {
-      push([A.sh, mid(A.sh, A.elbow, .3), A.elbow, mid(A.elbow, A.hand, .3), A.hand], -.03, P => limb(c, P, [.052, .047, .035, .04, .026], L.skin));
-      push([A.sh, mid(A.sh, A.elbow, .36)], -.035, P => limb(c, P, [.058, .053], L.jersey.c));
-      push([A.hand, A.tip], -.036, P => limb(c, P, [.028, .019], L.skin));
-    });
-    push([J.chest, J.neck], .01, P => limb(c, P, [.058, .05], L.skin));
-    items.push({ k: T.k, f: () => {
-      const side = sd => [at(J.chest, sd * .065, .035), at(J.chest, sd * .15, .012), at(sd < 0 ? ls : rs, sd * .045, -.02),
-        at(J.chest, sd * .165, -.13), at(J.chest, sd * .152, -.24), at(J.pel, sd * .135, .14), at(J.pel, sd * .17, -.1)];
-      const outline = [...side(-1), ...side(1).reverse()].map(M);
-      const neckDip = M(at(J.chest, 0, V.front ? -.03 : .02));
-      const pts = [...outline.slice(0, 7), ...outline.slice(7), neckDip];
-      smoothShape(c, pts);
-      const A = M(ls), B = M(rs), g = c.createLinearGradient(A.x, A.y, B.x, B.y);
-      const lightLeft = A.x < B.x;
-      g.addColorStop(0, shade(L.jersey.c, lightLeft ? .14 : -.26)); g.addColorStop(.5, L.jersey.c); g.addColorStop(1, shade(L.jersey.c, lightLeft ? -.26 : .14));
-      c.fillStyle = g; c.fill();
-      c.strokeStyle = shade(L.jersey.c, -.3); c.lineWidth = Math.max(1, .016 * T.s);
-      const n0 = outline[0], n1 = outline[13];
-      c.beginPath(); c.moveTo(n0.x, n0.y); c.quadraticCurveTo(neckDip.x, neckDip.y + (V.front ? .03 : 0) * T.s, n1.x, n1.y); c.stroke();
-      if (T.s > 30) {
-        const N = M(at(J.chest, 0, V.front ? -.14 : -.2)), fs = (V.front ? .085 : .13) * N.s;
-        c.font = Math.round(fs) + 'px ' + DISPLAY; c.textAlign = 'center'; c.textBaseline = 'middle';
-        c.fillStyle = L.jersey.t; c.fillText(L.num, N.x, N.y, .26 * N.s);
-      }
-    } });
-    items.push({ k: T.k + .005, f: () => {
-      const P = [at(J.pel, -.14, .14), at(J.pel, -.175, -.04), at(J.pel, -.12, -.17), at(J.pel, 0, -.2), at(J.pel, .12, -.17), at(J.pel, .175, -.04), at(J.pel, .14, .14)].map(M);
-      smoothShape(c, P);
-      const g = c.createLinearGradient(P[0].x, P[0].y, P[6].x, P[6].y), pc = L.bottom === 'skirt' ? shade(L.pantC, -.35) : L.pantC;
-      g.addColorStop(0, shade(pc, .12)); g.addColorStop(1, shade(pc, -.3));
-      c.fillStyle = g; c.fill();
-    } });
-    if (L.bottom === 'skirt') items.push({ k: T.k - .06, f: () => {
-      const P = [at(J.pel, -.15, .1), at(J.pel, -.23, -.2), at(J.pel, -.3, -.42), at(J.pel, -.1, -.48), at(J.pel, .1, -.48), at(J.pel, .3, -.42), at(J.pel, .23, -.2), at(J.pel, .15, .1)].map(M);
-      smoothShape(c, P);
-      const g = c.createLinearGradient(P[0].x, P[0].y, P[7].x, P[7].y);
-      g.addColorStop(0, shade(L.pantC, .14)); g.addColorStop(.5, L.pantC); g.addColorStop(1, shade(L.pantC, -.3));
-      c.fillStyle = g; c.fill();
-      [-.15, 0, .15].forEach(t => line(M(at(J.pel, t * .6, .06)), M(at(J.pel, t * 1.7, -.45)), .008, shade(L.pantC, -.25)));
-      line(M(at(J.pel, -.15, .1)), M(at(J.pel, .15, .1)), .022, shade(L.pantC, .2));
-    } });
-    items.push({ k: H.k + V.headBias, f: () => (V.front ? headFront : headBack)(c, H.x, H.y, .115 * H.s, L, fx.sw) });
-    if (mode === 'rig') items.forEach(it => { const f = it.f; it.f = () => { c.globalAlpha = .35; f(); c.globalAlpha = 1; }; });
-  } else {
-    const bone = (a, b, w, bias = 0) => push([a, b], bias, P => { line(P[0], P[1], w * 1.45, BONE_EDGE); line(P[0], P[1], w, BONE); });
-    const knob = (p, r, bias = -.01) => push([p], bias, P => { c.fillStyle = BONE; c.strokeStyle = BONE_EDGE; c.lineWidth = Math.max(1, .01 * P[0].s); c.beginPath(); c.arc(P[0].x, P[0].y, Math.max(1, r * P[0].s), 0, 7); c.fill(); c.stroke(); });
-    J.legs.forEach(Lg => { bone(Lg.hip, Lg.knee, .042); bone(Lg.knee, Lg.ankle, .034); bone(Lg.heel, Lg.toe, .028, -.01); knob(Lg.knee, .038); knob(Lg.ankle, .028); });
-    J.arms.forEach(A => { bone(A.sh, A.elbow, .032, -.03); bone(A.elbow, A.hand, .026, -.03); bone(A.hand, A.tip, .022, -.035); knob(A.elbow, .028, -.035); knob(A.sh, .034, -.02); });
-    items.push({ k: T.k, f: () => {
-      const poly = pts => { c.beginPath(); pts.map(M).forEach((p, j) => j ? c.lineTo(p.x, p.y) : c.moveTo(p.x, p.y)); c.closePath(); };
-      c.fillStyle = BONE; c.strokeStyle = BONE_EDGE; c.lineWidth = Math.max(1, .012 * T.s);
-      poly([at(J.pel, -.15, .08), at(J.pel, -.12, -.03, .02), at(J.pel, 0, -.08, .04), at(J.pel, .12, -.03, .02), at(J.pel, .15, .08), at(J.pel, 0, .02, -.03)]);
-      c.fill(); c.stroke();
-      for (let i = 0; i < 10; i++) { const P = M(mid(J.pel, J.neck, i / 9)); c.beginPath(); c.arc(P.x, P.y, Math.max(1, .024 * P.s), 0, 7); c.fill(); c.stroke(); }
-      for (let i = 0; i < 5; i++) {
-        const base = at(J.pel, 0, .43 - i * .06);
-        [-1, 1].forEach(sd => {
-          const p0 = M(at(base, 0, 0, -.03)), p1 = M(at(base, sd * .17, -.02, .02)), p2 = M(at(base, sd * .07, -.07, .12));
-          [[.03, BONE_EDGE], [.019, BONE]].forEach(([w, col]) => { c.strokeStyle = col; c.lineWidth = Math.max(1, w * p1.s); c.beginPath(); c.moveTo(p0.x, p0.y); c.quadraticCurveTo(p1.x, p1.y, p2.x, p2.y); c.stroke(); });
-        });
-      }
-      const cl = at(J.chest, 0, -.02, .03);
-      [ls, rs].forEach(s => { line(M(cl), M(s), .032, BONE_EDGE); line(M(cl), M(s), .021, BONE); });
-    } });
-    items.push({ k: H.k + V.headBias, f: () => skull(c, H.x, H.y, .1 * H.s, V.front) });
-  }
+  });
+  J.arms.forEach(A => {
+    push([A.sh, mid(A.sh, A.elbow, .3), A.elbow, mid(A.elbow, A.hand, .3), A.hand], -.03, P => limb(c, P, [.052, .047, .035, .04, .026], L.skin));
+    push([A.sh, mid(A.sh, A.elbow, .36)], -.035, P => limb(c, P, [.058, .053], L.jersey.c));
+    push([A.hand, A.tip], -.036, P => limb(c, P, [.028, .019], L.skin));
+  });
+  push([J.chest, J.neck], .01, P => limb(c, P, [.058, .05], L.skin));
+  items.push({ k: T.k, f: () => {
+    const side = sd => [at(J.chest, sd * .065, .035), at(J.chest, sd * .15, .012), at(sd < 0 ? ls : rs, sd * .045, -.02),
+      at(J.chest, sd * .165, -.13), at(J.chest, sd * .152, -.24), at(J.pel, sd * .135, .14), at(J.pel, sd * .17, -.1)];
+    const outline = [...side(-1), ...side(1).reverse()].map(M);
+    const neckDip = M(at(J.chest, 0, V.front ? -.03 : .02));
+    const pts = [...outline.slice(0, 7), ...outline.slice(7), neckDip];
+    smoothShape(c, pts);
+    const A = M(ls), B = M(rs), g = c.createLinearGradient(A.x, A.y, B.x, B.y);
+    const lightLeft = A.x < B.x;
+    g.addColorStop(0, shade(L.jersey.c, lightLeft ? .14 : -.26)); g.addColorStop(.5, L.jersey.c); g.addColorStop(1, shade(L.jersey.c, lightLeft ? -.26 : .14));
+    c.fillStyle = g; c.fill();
+    c.strokeStyle = shade(L.jersey.c, -.3); c.lineWidth = Math.max(1, .016 * T.s);
+    const n0 = outline[0], n1 = outline[13];
+    c.beginPath(); c.moveTo(n0.x, n0.y); c.quadraticCurveTo(neckDip.x, neckDip.y + (V.front ? .03 : 0) * T.s, n1.x, n1.y); c.stroke();
+    if (T.s > 30) {
+      const N = M(at(J.chest, 0, V.front ? -.14 : -.2)), fs = (V.front ? .085 : .13) * N.s;
+      c.font = Math.round(fs) + 'px ' + DISPLAY; c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fillStyle = L.jersey.t; c.fillText(L.num, N.x, N.y, .26 * N.s);
+    }
+  } });
+  items.push({ k: T.k + .005, f: () => {
+    const P = [at(J.pel, -.14, .14), at(J.pel, -.175, -.04), at(J.pel, -.12, -.17), at(J.pel, 0, -.2), at(J.pel, .12, -.17), at(J.pel, .175, -.04), at(J.pel, .14, .14)].map(M);
+    smoothShape(c, P);
+    const g = c.createLinearGradient(P[0].x, P[0].y, P[6].x, P[6].y), pc = L.bottom === 'skirt' ? shade(L.pantC, -.35) : L.pantC;
+    g.addColorStop(0, shade(pc, .12)); g.addColorStop(1, shade(pc, -.3));
+    c.fillStyle = g; c.fill();
+  } });
+  if (L.bottom === 'skirt') items.push({ k: T.k - .06, f: () => {
+    const P = [at(J.pel, -.15, .1), at(J.pel, -.23, -.2), at(J.pel, -.3, -.42), at(J.pel, -.1, -.48), at(J.pel, .1, -.48), at(J.pel, .3, -.42), at(J.pel, .23, -.2), at(J.pel, .15, .1)].map(M);
+    smoothShape(c, P);
+    const g = c.createLinearGradient(P[0].x, P[0].y, P[7].x, P[7].y);
+    g.addColorStop(0, shade(L.pantC, .14)); g.addColorStop(.5, L.pantC); g.addColorStop(1, shade(L.pantC, -.3));
+    c.fillStyle = g; c.fill();
+    [-.15, 0, .15].forEach(t => line(M(at(J.pel, t * .6, .06)), M(at(J.pel, t * 1.7, -.45)), .008, shade(L.pantC, -.25)));
+    line(M(at(J.pel, -.15, .1)), M(at(J.pel, .15, .1)), .022, shade(L.pantC, .2));
+  } });
+  items.push({ k: H.k + V.headBias, f: () => (V.front ? headFront : headBack)(c, H.x, H.y, .115 * H.s, L, fx.sw) });
   items.sort((a, b) => b.k - a.k).forEach(it => it.f());
-  if (mode === 'rig') drawArmature(c, J, M);
   if (fx.shield) {
     const C = M(mid(J.pel, J.chest, .6)), a = .35 + .2 * Math.sin(fx.t * 6);
     c.strokeStyle = 'rgba(127,182,255,' + (a + .3) + ')'; c.fillStyle = 'rgba(127,182,255,' + a * .35 + ')'; c.lineWidth = Math.max(2, .05 * C.s);
@@ -1876,7 +1814,7 @@ $('#optGroups').addEventListener('click', e => {
   const again = $('#optGroups button[data-g="' + g + '"][data-i="' + i + '"]'); if (again) again.focus();
 });
 $('#runnerName').addEventListener('input', e => { look.name = e.target.value.slice(0, 12); saveLook(); });
-$('#randomBtn').onclick = () => { GROUPS.forEach(([k, , list]) => { if (k !== 'view') look[k] = rnd(list.length); }); saveLook(); renderRunnerOpts(); SFX.power(); };
+$('#randomBtn').onclick = () => { GROUPS.forEach(([k, , list]) => { look[k] = rnd(list.length); }); saveLook(); renderRunnerOpts(); SFX.power(); };
 $('#runnerDoneBtn').onclick = () => { saveLook(); toMenu(); };
 $('#runnerBtn').onclick = () => { audio(); showRunner(); };
 $('#changeRunnerBtn').onclick = showRunner;
